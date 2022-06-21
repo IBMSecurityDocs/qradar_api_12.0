@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Initiates a request to create a new scanProfile. The request takes one parameter - createScanRequest, which is just a POJO. To create the scan, you will need to build up a JSON object that contains the Scan Profile name and ips to scan e.g. {'name':'New Scan Profile', 'ips':['10.100.85.135']}">
+<meta name="keywords" content="/scanner/profiles/create, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_scanner_intro.html">
+<title>POST /scanner/profiles/create</title>
+</head>
+<body id="api-12.0--scanner-profiles-create-POST"><main role="main"><article role="article" aria-labelledby="d51930e10">
+<h1 class="topictitle1" id="d51930e10">POST /scanner/profiles/create</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Initiates a request to create a new scanProfile. The request takes one parameter - createScanRequest, which is just a POJO.
+ 
+ To create the scan, you will need to build up a JSON object that contains the Scan Profile name and ips to scan e.g.
+ {'name':'New Scan Profile', 'ips':['10.100.85.135']}</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /scanner/profiles/create resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /scanner/profiles/create resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d51930e60" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d51930e60 "><p>text/plain
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /scanner/profiles/create request body details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /scanner/profiles/create request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d51930e106" class="thbot">Parameter</th>
+
+<th id="d51930e109" class="thbot">Data Type</th>
+
+<th id="d51930e112" class="thbot">MIME Type</th>
+
+<th id="d51930e115" class="thbot">Description</th>
+
+<th id="d51930e118" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d51930e106 "><p>scanProfile</p>
+</td>
+
+<td headers="d51930e109 "><p>JSON</p>
+</td>
+
+<td headers="d51930e112 "><p>application/json</p>
+</td>
+
+<td headers="d51930e115 "><p>null</p>
+</td>
+
+<td headers="d51930e118 "><p>null</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /scanner/profiles/create response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /scanner/profiles/create response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d51930e175" class="thbot">HTTP Response Code</th>
+
+<th id="d51930e178" class="thbot">Unique Code</th>
+
+<th id="d51930e181" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d51930e175 "><p>200</p>
+</td>
+
+<td headers="d51930e178 "><p></p>
+</td>
+
+<td headers="d51930e181 "><p>The scan has been successfully created</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d51930e175 "><p>419</p>
+</td>
+
+<td headers="d51930e178 "><p>9101</p>
+</td>
+
+<td headers="d51930e181 "><p>Occurs when a parameter is missing or invalid</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d51930e175 "><p>500</p>
+</td>
+
+<td headers="d51930e178 "><p>1030</p>
+</td>
+
+<td headers="d51930e181 "><p>Occurs when an attempt is made to create a scan when certain conditions are not met, or when too many scan requests have been made</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d51930e238"><h2 class="sectiontitle" id="d51930e238">Response Description</h2>
+
+<p>An indicator of whether the scan has been created successfully or not.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d51930e248"><h2 class="sectiontitle" id="d51930e248">Response Sample</h2>
+
+<pre class="codeblock"><code>
+String
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d51930e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_scanner_intro.html" title="Use the references for REST API 12.0 scanner endpoints.">Scanner endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

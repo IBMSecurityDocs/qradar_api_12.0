@@ -1,0 +1,438 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Create a QNI stack.">
+<meta name="keywords" content="/qni/stacking/stacks, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_qni_intro.html">
+<title>POST /qni/stacking/stacks</title>
+</head>
+<body id="api-12.0--qni-stacking-stacks-POST"><main role="main"><article role="article" aria-labelledby="d267342e10">
+<h1 class="topictitle1" id="d267342e10">POST /qni/stacking/stacks</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Create a QNI stack.</p>
+
+<div class="section refsyn">
+<p>Create a QNI stack.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /qni/stacking/stacks resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /qni/stacking/stacks resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d267342e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d267342e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /qni/stacking/stacks request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /qni/stacking/stacks request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d267342e112" class="thbot">Parameter</th>
+
+<th id="d267342e115" class="thbot">Type</th>
+
+<th id="d267342e118" class="thbot">Optionality</th>
+
+<th id="d267342e121" class="thbot">Data Type</th>
+
+<th id="d267342e124" class="thbot">MIME Type</th>
+
+<th id="d267342e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d267342e112 "><p>fields</p>
+</td>
+
+<td headers="d267342e115 "><p>header</p>
+</td>
+
+<td headers="d267342e118 "><p>Optional</p>
+</td>
+
+<td headers="d267342e121 "><p>String</p>
+</td>
+
+<td headers="d267342e124 "><p>text/plain</p>
+</td>
+
+<td headers="d267342e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /qni/stacking/stacks request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /qni/stacking/stacks request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d267342e195" class="thbot">Parameter</th>
+
+<th id="d267342e198" class="thbot">Data Type</th>
+
+<th id="d267342e201" class="thbot">MIME Type</th>
+
+<th id="d267342e204" class="thbot">Description</th>
+
+<th id="d267342e207" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d267342e195 "><p>stack</p>
+</td>
+
+<td headers="d267342e198 "><p>Object</p>
+</td>
+
+<td headers="d267342e201 "><p>application/json</p>
+</td>
+
+<td headers="d267342e204 "><p>null</p>
+</td>
+
+<td headers="d267342e207 "><p>{
+    "hosts": [
+        {
+            "host_id": 42,
+            "host_ip": "String",
+            "primary": true
+        }
+    ],
+    "inspection_level": "String &lt;one of: BASIC, ADVANCED, ENRICHED, DEFAULT&gt;",
+    "name": "String",
+    "ports_type": "String &lt;one of: IN_4, IN_2_OUT_2, IN_1_OUT_1, IN_1_OUT_3, IN_3_OUT_1&gt;",
+    "raw_payload": 42,
+    "stack_id": 42
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /qni/stacking/stacks response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /qni/stacking/stacks response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d267342e264" class="thbot">HTTP Response Code</th>
+
+<th id="d267342e267" class="thbot">Unique Code</th>
+
+<th id="d267342e270" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d267342e264 "><p>201</p>
+</td>
+
+<td headers="d267342e267 "><p></p>
+</td>
+
+<td headers="d267342e270 "><p>The QNI stack has been created.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d267342e264 "><p>422</p>
+</td>
+
+<td headers="d267342e267 "><p>44131</p>
+</td>
+
+<td headers="d267342e270 "><p>The inspection level is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d267342e264 "><p>422</p>
+</td>
+
+<td headers="d267342e267 "><p>44132</p>
+</td>
+
+<td headers="d267342e270 "><p>The raw payload value is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d267342e264 "><p>422</p>
+</td>
+
+<td headers="d267342e267 "><p>3830131</p>
+</td>
+
+<td headers="d267342e270 "><p>The host is not available for stacking.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d267342e264 "><p>422</p>
+</td>
+
+<td headers="d267342e267 "><p>3830134</p>
+</td>
+
+<td headers="d267342e270 "><p>The stack must include a minimum of 1 host.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d267342e264 "><p>422</p>
+</td>
+
+<td headers="d267342e267 "><p>3830135</p>
+</td>
+
+<td headers="d267342e270 "><p>The stack exceeds the maximum number of hosts.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d267342e264 "><p>422</p>
+</td>
+
+<td headers="d267342e267 "><p>3830136</p>
+</td>
+
+<td headers="d267342e270 "><p>The host IP address does not match the host ID.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d267342e264 "><p>422</p>
+</td>
+
+<td headers="d267342e267 "><p>3830137</p>
+</td>
+
+<td headers="d267342e270 "><p>Two or more hosts in the stack have the same IP address.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d267342e264 "><p>422</p>
+</td>
+
+<td headers="d267342e267 "><p>3830138</p>
+</td>
+
+<td headers="d267342e270 "><p>One host must be declared as the primary host.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d267342e264 "><p>422</p>
+</td>
+
+<td headers="d267342e267 "><p>3830139</p>
+</td>
+
+<td headers="d267342e270 "><p>The stack can have only 1 host defined as the primary.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d267342e264 "><p>422</p>
+</td>
+
+<td headers="d267342e267 "><p>3830132</p>
+</td>
+
+<td headers="d267342e270 "><p>The stack name must begin with a letter.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d267342e264 "><p>422</p>
+</td>
+
+<td headers="d267342e267 "><p>3830140</p>
+</td>
+
+<td headers="d267342e270 "><p>Specify the stack name.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d267342e264 "><p>422</p>
+</td>
+
+<td headers="d267342e267 "><p>3830141</p>
+</td>
+
+<td headers="d267342e270 "><p>The stack name already exists. The stack name must be unique.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d267342e264 "><p>422</p>
+</td>
+
+<td headers="d267342e267 "><p>3830133</p>
+</td>
+
+<td headers="d267342e270 "><p>The port type is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d267342e264 "><p>500</p>
+</td>
+
+<td headers="d267342e267 "><p>1020</p>
+</td>
+
+<td headers="d267342e270 "><p>An error occurred attempting to create QNI stack.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d267342e510"><h2 class="sectiontitle" id="d267342e510">Response Description</h2>
+
+<div class="p">QNI stack. A stack contains the following fields: <ul> <li><strong>stack_id</strong> - Long - ID of the QNI
+         stack.</li>
+ <li><strong>hosts</strong> - List&lt;Host&gt; - List of QNI managed hosts in the stack.</li>
+
+         <li><strong>name</strong> - String - Name of the QNI stack..</li>
+ <li><strong>ports_type</strong> - enum - Port configuration
+         type for the QNI stack.</li>
+ <li><strong>inspection_level</strong> - <em>Optional</em> - Enumeration - Depth of content inspection. The
+possible values are:<ul>
+<li><em>BASIC</em> - Lowest level of inspection. Flows are detected by 5-tuple, and the number of
+bytes and packets that are flowing in each direction are counted.</li>
+
+<li><em>ENRICHED</em> - Each flow is identified and inspected by one of the protocol or domain
+inspectors, and many kinds of attributes can be generated from that inspection.</li>
+
+<li><em>ADVANCED</em> - The highest level of inspection. It does everything that the Enriched Flows
+levels does, but it also scans and inspects the content of the files that it finds.</li>
+
+<li><em>DEFAULT</em> - indicates that QNI host is set to use globally set inspection level
+setting.</li>
+
+</ul>
+</li>
+ <li><strong>raw_payload</strong> - <em>Optional</em> - Long - The maximum amount (Bytes) of data the QFlow
+Collector is set to capture and retain in the flow payload. Possible values are:<ul>
+<li>-1: QNI host is set to use globally set raw payload setting</li>
+
+<li>0: Turn off payload</li>
+
+<li>1 - 32768: Number of Bytes</li>
+
+</ul>
+</li>
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d267342e591"><h2 class="sectiontitle" id="d267342e591">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "hosts": [
+        {
+            "host_id": 42,
+            "host_ip": "String",
+            "primary": true
+        }
+    ],
+    "inspection_level": "String &lt;one of: BASIC, ADVANCED, ENRICHED, DEFAULT&gt;",
+    "name": "String",
+    "ports_type": "String &lt;one of: IN_4, IN_2_OUT_2, IN_1_OUT_1, IN_1_OUT_3, IN_3_OUT_1&gt;",
+    "raw_payload": 42,
+    "stack_id": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d267342e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_qni_intro.html" title="Use the references for REST API 12.0 QRadar Network Insights endpoints.">IBM QRadar Network Insights endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Adds or updates data in a reference table.">
+<meta name="keywords" content="/reference_data/tables/bulk_load/{name}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_reference_data_intro.html">
+<title>POST /reference_data/tables/bulk_load/{name}</title>
+</head>
+<body id="api-12.0--reference_data-tables-bulk_load-name-POST"><main role="main"><article role="article" aria-labelledby="d53113e10">
+<h1 class="topictitle1" id="d53113e10">POST /reference_data/tables/bulk_load/{name}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Adds or updates data in a reference table.</p>
+
+<div class="section refsyn">
+<p>Adds or updates data in a reference table.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /reference_data/tables/bulk_load/{name} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /reference_data/tables/bulk_load/{name} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d53113e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d53113e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /reference_data/tables/bulk_load/{name} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /reference_data/tables/bulk_load/{name} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d53113e112" class="thbot">Parameter</th>
+
+<th id="d53113e115" class="thbot">Type</th>
+
+<th id="d53113e118" class="thbot">Optionality</th>
+
+<th id="d53113e121" class="thbot">Data Type</th>
+
+<th id="d53113e124" class="thbot">MIME Type</th>
+
+<th id="d53113e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d53113e112 "><p>name</p>
+</td>
+
+<td headers="d53113e115 "><p>path</p>
+</td>
+
+<td headers="d53113e118 "><p>Required</p>
+</td>
+
+<td headers="d53113e121 "><p>String</p>
+</td>
+
+<td headers="d53113e124 "><p>text/plain</p>
+</td>
+
+<td headers="d53113e128 "><p>Required - The name of table to add or update data in.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d53113e112 "><p>fields</p>
+</td>
+
+<td headers="d53113e115 "><p>header</p>
+</td>
+
+<td headers="d53113e118 "><p>Optional</p>
+</td>
+
+<td headers="d53113e121 "><p>String</p>
+</td>
+
+<td headers="d53113e124 "><p>text/plain</p>
+</td>
+
+<td headers="d53113e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /reference_data/tables/bulk_load/{name} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /reference_data/tables/bulk_load/{name} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d53113e223" class="thbot">Parameter</th>
+
+<th id="d53113e226" class="thbot">Data Type</th>
+
+<th id="d53113e229" class="thbot">MIME Type</th>
+
+<th id="d53113e232" class="thbot">Description</th>
+
+<th id="d53113e235" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d53113e223 "><p>data</p>
+</td>
+
+<td headers="d53113e226 "><p>Array</p>
+</td>
+
+<td headers="d53113e229 "><p>application/json</p>
+</td>
+
+<td headers="d53113e232 "><p>Required - The JSON-formatted data to add or update in the reference table.</p>
+</td>
+
+<td headers="d53113e235 "><p>{"key1":{"col1":"Data11","col2":"Data12","col3":"Data13","col4":"Data14"},
+ "key2":{"col1":"Data21","col2":"Data22","col3":"Data23","col4":"Data24"},
+ "key3":{"col1":"Data31","col2":"Data32","col3":"Data33","col4":"Data34"},
+ "key4":{"col1":"Data41","col2":"Data42","col3":"Data43","col4":"Data44"},
+ "key5":{"col1":"Data51","col2":"Data52","col3":"Data53","col4":"Data54"},
+ "key6":{"col1":"Data61","col2":"Data62","col3":"Data63","col4":"Data64"}}
+ </p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /reference_data/tables/bulk_load/{name} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /reference_data/tables/bulk_load/{name} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d53113e292" class="thbot">HTTP Response Code</th>
+
+<th id="d53113e295" class="thbot">Unique Code</th>
+
+<th id="d53113e298" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d53113e292 "><p>200</p>
+</td>
+
+<td headers="d53113e295 "><p></p>
+</td>
+
+<td headers="d53113e298 "><p>Data was successfully added or updated in the reference table.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d53113e292 "><p>400</p>
+</td>
+
+<td headers="d53113e295 "><p>1001</p>
+</td>
+
+<td headers="d53113e298 "><p>An error occurred parsing the JSON-formatted message body.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d53113e292 "><p>404</p>
+</td>
+
+<td headers="d53113e295 "><p>1002</p>
+</td>
+
+<td headers="d53113e298 "><p>The reference table does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d53113e292 "><p>422</p>
+</td>
+
+<td headers="d53113e295 "><p>1005</p>
+</td>
+
+<td headers="d53113e298 "><p>A request parameter is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d53113e292 "><p>500</p>
+</td>
+
+<td headers="d53113e295 "><p>1020</p>
+</td>
+
+<td headers="d53113e298 "><p>An error occurred during the attempt to add or update data in the reference table.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d53113e386"><h2 class="sectiontitle" id="d53113e386">Response Description</h2>
+
+<p>Information about the reference table where data was added or updated. This returns information about the reference table but not the data that it contains.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d53113e395"><h2 class="sectiontitle" id="d53113e395">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "creation_time": 42,
+    "element_type": "String &lt;one of: ALN, NUM, IP, PORT, ALNIC, DATE&gt;",
+    "name": "String",
+    "number_of_elements": 42,
+    "time_to_live": "String",
+    "timeout_type": "String &lt;one of: UNKNOWN, FIRST_SEEN, LAST_SEEN&gt;"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d53113e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_reference_data_intro.html" title="Use the references for REST API 12.0 reference data endpoints.">Reference data endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

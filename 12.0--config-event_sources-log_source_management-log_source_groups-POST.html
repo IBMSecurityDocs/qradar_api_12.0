@@ -1,0 +1,329 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Creates a new log source group.">
+<meta name="keywords" content="/config/event_sources/log_source_management/log_source_groups, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_config_intro.html">
+<title>POST /config/event_sources/log_source_management/log_source_groups</title>
+</head>
+<body id="api-12.0--config-event_sources-log_source_management-log_source_groups-POST"><main role="main"><article role="article" aria-labelledby="d79115e10">
+<h1 class="topictitle1" id="d79115e10">POST /config/event_sources/log_source_management/log_source_groups</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Creates a new log source group. </p>
+
+<div class="section refsyn">A log source group contains the following fields: <ul>
+<li><strong>id</strong> - Long - The ID of the group.</li>
+
+<li><strong>name</strong> - String - The name of the group.</li>
+
+<li><strong>description</strong> - String - The description of the group.</li>
+
+<li><strong>parent_id</strong> - Long - The ID of the group's parent group. The root node group has a null
+parent_ID.</li>
+
+<li><strong>owner</strong> - String - The name of the user who owns the group.</li>
+
+<li><strong>modification_date</strong> - Long - The date and time (expressed as milliseconds since epoch) that
+the group was last modified.</li>
+
+<li><strong>assignable</strong> - Boolean - If log sources can be assigned to this group, the condition is set
+to 'true'; otherwise, the condition is set to 'false'. Log sources cannot be assigned directly to
+the "Other" group or to the root log source group node.</li>
+
+<li><strong>child_groups</strong> - Array&lt;Long&gt; - The list of IDs of any child log source groups that
+belong to this group.</li>
+
+</ul>
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/log_source_management/log_source_groups resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/event_sources/log_source_management/log_source_groups resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d79115e104" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d79115e104 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/log_source_management/log_source_groups request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/event_sources/log_source_management/log_source_groups request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d79115e152" class="thbot">Parameter</th>
+
+<th id="d79115e155" class="thbot">Type</th>
+
+<th id="d79115e158" class="thbot">Optionality</th>
+
+<th id="d79115e161" class="thbot">Data Type</th>
+
+<th id="d79115e164" class="thbot">MIME Type</th>
+
+<th id="d79115e168" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d79115e152 "><p>fields</p>
+</td>
+
+<td headers="d79115e155 "><p>header</p>
+</td>
+
+<td headers="d79115e158 "><p>Optional</p>
+</td>
+
+<td headers="d79115e161 "><p>String</p>
+</td>
+
+<td headers="d79115e164 "><p>text/plain</p>
+</td>
+
+<td headers="d79115e168 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/log_source_management/log_source_groups request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/event_sources/log_source_management/log_source_groups request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d79115e235" class="thbot">Parameter</th>
+
+<th id="d79115e238" class="thbot">Data Type</th>
+
+<th id="d79115e241" class="thbot">MIME Type</th>
+
+<th id="d79115e244" class="thbot">Description</th>
+
+<th id="d79115e247" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d79115e235 "><p>log_source_data</p>
+</td>
+
+<td headers="d79115e238 "><p>Object</p>
+</td>
+
+<td headers="d79115e241 "><p>application/json</p>
+</td>
+
+<td headers="d79115e244 "><p>The log source to create.</p>
+</td>
+
+<td headers="d79115e247 "><p>{
+    "description": "String",
+    "name": "String",
+    "parent_id": 42
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/log_source_management/log_source_groups response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /config/event_sources/log_source_management/log_source_groups response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d79115e304" class="thbot">HTTP Response Code</th>
+
+<th id="d79115e307" class="thbot">Unique Code</th>
+
+<th id="d79115e310" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d79115e304 "><p>201</p>
+</td>
+
+<td headers="d79115e307 "><p></p>
+</td>
+
+<td headers="d79115e310 "><p>The log source was created successfully.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d79115e304 "><p>403</p>
+</td>
+
+<td headers="d79115e307 "><p>1000</p>
+</td>
+
+<td headers="d79115e310 "><p>The endpoint cannot be used by users associated with a tenant.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d79115e304 "><p>409</p>
+</td>
+
+<td headers="d79115e307 "><p>1001</p>
+</td>
+
+<td headers="d79115e310 "><p>The 'name' parameter must be unique.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d79115e304 "><p>422</p>
+</td>
+
+<td headers="d79115e307 "><p>1002</p>
+</td>
+
+<td headers="d79115e310 "><p>The 'name' parameter is required.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d79115e304 "><p>422</p>
+</td>
+
+<td headers="d79115e307 "><p>1003</p>
+</td>
+
+<td headers="d79115e310 "><p>The 'name' parameter must not exceed 255 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d79115e304 "><p>422</p>
+</td>
+
+<td headers="d79115e307 "><p>1004</p>
+</td>
+
+<td headers="d79115e310 "><p>The 'description' parameter must not exceed 255 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d79115e304 "><p>422</p>
+</td>
+
+<td headers="d79115e307 "><p>1005</p>
+</td>
+
+<td headers="d79115e310 "><p>The parent group was not found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d79115e304 "><p>500</p>
+</td>
+
+<td headers="d79115e307 "><p>1100</p>
+</td>
+
+<td headers="d79115e310 "><p>An error occurred during the attempt to create the log source.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d79115e444"><h2 class="sectiontitle" id="d79115e444">Response Description</h2>
+
+<p>The newly created log source.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d79115e453"><h2 class="sectiontitle" id="d79115e453">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "assignable": true,
+    "child_group_ids": [
+        42
+    ],
+    "description": "String",
+    "id": 42,
+    "modification_date": 42,
+    "name": "String",
+    "owner": "String",
+    "parent_id": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d79115e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_config_intro.html" title="Use the references for REST API 12.0 configuration endpoints.">Configuration endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

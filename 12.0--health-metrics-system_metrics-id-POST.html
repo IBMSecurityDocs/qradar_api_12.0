@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Enable or disable a system metric identified by metric ID">
+<meta name="keywords" content="/health/metrics/system_metrics/{id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_health_intro.html">
+<title>POST /health/metrics/system_metrics/{id}</title>
+</head>
+<body id="api-12.0--health-metrics-system_metrics-id-POST"><main role="main"><article role="article" aria-labelledby="d246604e10">
+<h1 class="topictitle1" id="d246604e10">POST /health/metrics/system_metrics/{id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Enable or disable a system metric identified by metric ID</p>
+
+<div class="section refsyn">
+<p>Enable or disable a system metric identified by metric ID</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /health/metrics/system_metrics/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /health/metrics/system_metrics/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d246604e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d246604e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /health/metrics/system_metrics/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /health/metrics/system_metrics/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d246604e112" class="thbot">Parameter</th>
+
+<th id="d246604e115" class="thbot">Type</th>
+
+<th id="d246604e118" class="thbot">Optionality</th>
+
+<th id="d246604e121" class="thbot">Data Type</th>
+
+<th id="d246604e124" class="thbot">MIME Type</th>
+
+<th id="d246604e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d246604e112 "><p>id</p>
+</td>
+
+<td headers="d246604e115 "><p>path</p>
+</td>
+
+<td headers="d246604e118 "><p>Required</p>
+</td>
+
+<td headers="d246604e121 "><p>String</p>
+</td>
+
+<td headers="d246604e124 "><p>text/plain</p>
+</td>
+
+<td headers="d246604e128 "><p>The metric_id of the metric to get.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d246604e112 "><p>fields</p>
+</td>
+
+<td headers="d246604e115 "><p>header</p>
+</td>
+
+<td headers="d246604e118 "><p>Optional</p>
+</td>
+
+<td headers="d246604e121 "><p>String</p>
+</td>
+
+<td headers="d246604e124 "><p>text/plain</p>
+</td>
+
+<td headers="d246604e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /health/metrics/system_metrics/{id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /health/metrics/system_metrics/{id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d246604e223" class="thbot">Parameter</th>
+
+<th id="d246604e226" class="thbot">Data Type</th>
+
+<th id="d246604e229" class="thbot">MIME Type</th>
+
+<th id="d246604e232" class="thbot">Description</th>
+
+<th id="d246604e235" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d246604e223 "><p>system_metric</p>
+</td>
+
+<td headers="d246604e226 "><p>Object</p>
+</td>
+
+<td headers="d246604e229 "><p>application/json</p>
+</td>
+
+<td headers="d246604e232 "><p>The updated SystemMetric DTO with enabled field. Only the enable field is modifiable. Rest of the fields are ignored. The enable field must be a valid boolean value.</p>
+</td>
+
+<td headers="d246604e235 "><p>{
+    "enabled": true,
+    "metric_id": "String",
+    "time_resolution": 42
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /health/metrics/system_metrics/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /health/metrics/system_metrics/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d246604e292" class="thbot">HTTP Response Code</th>
+
+<th id="d246604e295" class="thbot">Unique Code</th>
+
+<th id="d246604e298" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d246604e292 "><p>200</p>
+</td>
+
+<td headers="d246604e295 "><p></p>
+</td>
+
+<td headers="d246604e298 "><p>Metric resource defined by the SystemMetric DTO.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d246604e292 "><p>404</p>
+</td>
+
+<td headers="d246604e295 "><p>1013</p>
+</td>
+
+<td headers="d246604e298 "><p>404 Resource Not Found if the metric_id does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d246604e292 "><p>500</p>
+</td>
+
+<td headers="d246604e295 "><p>1020</p>
+</td>
+
+<td headers="d246604e298 "><p>500 Internal Server Error.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d246604e356"><h2 class="sectiontitle" id="d246604e356">Response Description</h2>
+
+<div class="p">Metric resource defined by the SystemMetric DTO.
+ <ul>
+ <li><strong>Id</strong> - String - The ID of the metric to update.</li>
+
+ <li><strong>system_metric</strong> - SystemMetric DTO - The updated System Metric DTO with enabled field. Only the enable field is modifiable. The rest of the fields are ignored. The enable field must be a valid boolean value.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d246604e377"><h2 class="sectiontitle" id="d246604e377">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "enabled": true,
+    "metric_id": "String",
+    "time_resolution": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d246604e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_health_intro.html" title="Use the references for REST API 12.0 health endpoints.">Health endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

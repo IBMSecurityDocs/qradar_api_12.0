@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Update a tenant">
+<meta name="keywords" content="/config/access/tenant_management/tenants/{tenant_id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_config_intro.html">
+<title>POST /config/access/tenant_management/tenants/{tenant_id}</title>
+</head>
+<body id="api-12.0--config-access-tenant_management-tenants-tenant_id-POST"><main role="main"><article role="article" aria-labelledby="d225106e10">
+<h1 class="topictitle1" id="d225106e10">POST /config/access/tenant_management/tenants/{tenant_id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Update a tenant</p>
+
+<div class="section refsyn">
+<p>Updates an existing tenant.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/access/tenant_management/tenants/{tenant_id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/access/tenant_management/tenants/{tenant_id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d225106e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d225106e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/access/tenant_management/tenants/{tenant_id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/access/tenant_management/tenants/{tenant_id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d225106e112" class="thbot">Parameter</th>
+
+<th id="d225106e115" class="thbot">Type</th>
+
+<th id="d225106e118" class="thbot">Optionality</th>
+
+<th id="d225106e121" class="thbot">Data Type</th>
+
+<th id="d225106e124" class="thbot">MIME Type</th>
+
+<th id="d225106e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d225106e112 "><p>tenant_id</p>
+</td>
+
+<td headers="d225106e115 "><p>path</p>
+</td>
+
+<td headers="d225106e118 "><p>Required</p>
+</td>
+
+<td headers="d225106e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d225106e124 "><p>text/plain</p>
+</td>
+
+<td headers="d225106e128 "><p>Required - Integer - the tenant id to modify</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d225106e112 "><p>fields</p>
+</td>
+
+<td headers="d225106e115 "><p>header</p>
+</td>
+
+<td headers="d225106e118 "><p>Optional</p>
+</td>
+
+<td headers="d225106e121 "><p>String</p>
+</td>
+
+<td headers="d225106e124 "><p>text/plain</p>
+</td>
+
+<td headers="d225106e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/access/tenant_management/tenants/{tenant_id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/access/tenant_management/tenants/{tenant_id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d225106e223" class="thbot">Parameter</th>
+
+<th id="d225106e226" class="thbot">Data Type</th>
+
+<th id="d225106e229" class="thbot">MIME Type</th>
+
+<th id="d225106e232" class="thbot">Description</th>
+
+<th id="d225106e235" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d225106e223 "><p>tenant</p>
+</td>
+
+<td headers="d225106e226 "><p>Object</p>
+</td>
+
+<td headers="d225106e229 "><p>application/json</p>
+</td>
+
+<td headers="d225106e232 "><p>Required - Tenant - includes name, event_rate_limit (unit eps), flow_rate_limit (unit fpm) and description</p>
+</td>
+
+<td headers="d225106e235 "><p>{
+  "deleted": true,
+  "description": "String",
+  "event_rate_limit": 42,
+  "flow_rate_limit": 42,
+  "name": "String"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/access/tenant_management/tenants/{tenant_id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /config/access/tenant_management/tenants/{tenant_id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d225106e292" class="thbot">HTTP Response Code</th>
+
+<th id="d225106e295" class="thbot">Unique Code</th>
+
+<th id="d225106e298" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d225106e292 "><p>200</p>
+</td>
+
+<td headers="d225106e295 "><p></p>
+</td>
+
+<td headers="d225106e298 "><p>A tenant profile that was updated successfully and returned the updated tenant object.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d225106e292 "><p>404</p>
+</td>
+
+<td headers="d225106e295 "><p>1002</p>
+</td>
+
+<td headers="d225106e298 "><p>The tenant profile does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d225106e292 "><p>409</p>
+</td>
+
+<td headers="d225106e295 "><p>1004</p>
+</td>
+
+<td headers="d225106e298 "><p>A tenant with the given name already exists.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d225106e292 "><p>422</p>
+</td>
+
+<td headers="d225106e295 "><p>1005</p>
+</td>
+
+<td headers="d225106e298 "><p>A request parameter is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d225106e292 "><p>500</p>
+</td>
+
+<td headers="d225106e295 "><p>1020</p>
+</td>
+
+<td headers="d225106e298 "><p>Failed to retrieve/update the given tenant profile.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d225106e386"><h2 class="sectiontitle" id="d225106e386">Response Description</h2>
+
+<p>the updated tenant object</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d225106e395"><h2 class="sectiontitle" id="d225106e395">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "deleted": true,
+    "description": "String",
+    "event_rate_limit": 42,
+    "flow_rate_limit": 42,
+    "id": 42,
+    "name": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d225106e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_config_intro.html" title="Use the references for REST API 12.0 configuration endpoints.">Configuration endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

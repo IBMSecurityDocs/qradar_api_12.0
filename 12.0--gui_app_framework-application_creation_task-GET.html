@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves the status of all application installs.">
+<meta name="keywords" content="/gui_app_framework/application_creation_task, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_gui_app_framework_intro.html">
+<title>GET /gui_app_framework/application_creation_task</title>
+</head>
+<body id="api-12.0--gui_app_framework-application_creation_task-GET"><main role="main"><article role="article" aria-labelledby="d272021e10">
+<h1 class="topictitle1" id="d272021e10">GET /gui_app_framework/application_creation_task</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves the status of all application installs.</p>
+
+<div class="section refsyn">
+<p>Retrieves the status of all application installs.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /gui_app_framework/application_creation_task resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /gui_app_framework/application_creation_task resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d272021e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d272021e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /gui_app_framework/application_creation_task request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /gui_app_framework/application_creation_task request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d272021e112" class="thbot">Parameter</th>
+
+<th id="d272021e115" class="thbot">Type</th>
+
+<th id="d272021e118" class="thbot">Optionality</th>
+
+<th id="d272021e121" class="thbot">Data Type</th>
+
+<th id="d272021e124" class="thbot">MIME Type</th>
+
+<th id="d272021e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d272021e112 "><p>fields</p>
+</td>
+
+<td headers="d272021e115 "><p>query</p>
+</td>
+
+<td headers="d272021e118 "><p>Optional</p>
+</td>
+
+<td headers="d272021e121 "><p>String</p>
+</td>
+
+<td headers="d272021e124 "><p>text/plain</p>
+</td>
+
+<td headers="d272021e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d272021e112 "><p>Range</p>
+</td>
+
+<td headers="d272021e115 "><p>header</p>
+</td>
+
+<td headers="d272021e118 "><p>Optional</p>
+</td>
+
+<td headers="d272021e121 "><p>String</p>
+</td>
+
+<td headers="d272021e124 "><p>text/plain</p>
+</td>
+
+<td headers="d272021e128 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d272021e112 "><p>filter</p>
+</td>
+
+<td headers="d272021e115 "><p>query</p>
+</td>
+
+<td headers="d272021e118 "><p>Optional</p>
+</td>
+
+<td headers="d272021e121 "><p>String</p>
+</td>
+
+<td headers="d272021e124 "><p>text/plain</p>
+</td>
+
+<td headers="d272021e128 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /gui_app_framework/application_creation_task response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /gui_app_framework/application_creation_task response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d272021e246" class="thbot">HTTP Response Code</th>
+
+<th id="d272021e249" class="thbot">Unique Code</th>
+
+<th id="d272021e252" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d272021e246 "><p>200</p>
+</td>
+
+<td headers="d272021e249 "><p></p>
+</td>
+
+<td headers="d272021e252 "><p>Status list was retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d272021e246 "><p>409</p>
+</td>
+
+<td headers="d272021e249 "><p>33700</p>
+</td>
+
+<td headers="d272021e252 "><p>The application framework is currently disabled.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d272021e246 "><p>422</p>
+</td>
+
+<td headers="d272021e249 "><p>22608</p>
+</td>
+
+<td headers="d272021e252 "><p>Invalid filter criteria supplied.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d272021e246 "><p>422</p>
+</td>
+
+<td headers="d272021e249 "><p>22609</p>
+</td>
+
+<td headers="d272021e252 "><p>Only top-level-elements of the root entity can be sorted on.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d272021e246 "><p>422</p>
+</td>
+
+<td headers="d272021e249 "><p>22610</p>
+</td>
+
+<td headers="d272021e252 "><p>The selected field cannot be used for sorting.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d272021e246 "><p>500</p>
+</td>
+
+<td headers="d272021e249 "><p>1020</p>
+</td>
+
+<td headers="d272021e252 "><p>The request could not be completed.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d272021e355"><h2 class="sectiontitle" id="d272021e355">Response Description</h2>
+
+<p>A list of installation status details. For a description of what each list entry contains,
+         see /application_creation_task/{application_id}.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d272021e365"><h2 class="sectiontitle" id="d272021e365">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "application_id": 1001,
+        "status": "ERROR",
+        "error_messages": "[LOCAL : 1001 : Failed to start Docker container for application.]"
+    },
+    {
+        "application_id": 1002,
+        "status": "CREATING"
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d272021e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_gui_app_framework_intro.html" title="Use the references for REST API 12.0 GUI app framework endpoints.">GUI app framework endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

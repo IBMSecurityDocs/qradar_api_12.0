@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Updates a log source bulk task. The only field that can be updated is the 'status' field, and the only allowed value is 'CANCELLED'.">
+<meta name="keywords" content="/config/event_sources/log_source_management/log_source_bulk_tasks/{id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_config_intro.html">
+<title>POST /config/event_sources/log_source_management/log_source_bulk_tasks/{id}</title>
+</head>
+<body id="api-12.0--config-event_sources-log_source_management-log_source_bulk_tasks-id-POST"><main role="main"><article role="article" aria-labelledby="d110562e10">
+<h1 class="topictitle1" id="d110562e10">POST /config/event_sources/log_source_management/log_source_bulk_tasks/{id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Updates a log source bulk task.
+ 
+ The only field that can be updated is the 'status' field, and the only allowed value is 'CANCELLED'.</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/log_source_management/log_source_bulk_tasks/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/event_sources/log_source_management/log_source_bulk_tasks/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d110562e60" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d110562e60 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/log_source_management/log_source_bulk_tasks/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/event_sources/log_source_management/log_source_bulk_tasks/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d110562e108" class="thbot">Parameter</th>
+
+<th id="d110562e111" class="thbot">Type</th>
+
+<th id="d110562e114" class="thbot">Optionality</th>
+
+<th id="d110562e117" class="thbot">Data Type</th>
+
+<th id="d110562e120" class="thbot">MIME Type</th>
+
+<th id="d110562e124" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d110562e108 "><p>id</p>
+</td>
+
+<td headers="d110562e111 "><p>path</p>
+</td>
+
+<td headers="d110562e114 "><p>Required</p>
+</td>
+
+<td headers="d110562e117 "><p>String</p>
+</td>
+
+<td headers="d110562e120 "><p>text/plain</p>
+</td>
+
+<td headers="d110562e124 "><p>The ID of the log source bulk task to update.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d110562e108 "><p>fields</p>
+</td>
+
+<td headers="d110562e111 "><p>header</p>
+</td>
+
+<td headers="d110562e114 "><p>Optional</p>
+</td>
+
+<td headers="d110562e117 "><p>String</p>
+</td>
+
+<td headers="d110562e120 "><p>text/plain</p>
+</td>
+
+<td headers="d110562e124 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/log_source_management/log_source_bulk_tasks/{id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/event_sources/log_source_management/log_source_bulk_tasks/{id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d110562e219" class="thbot">Parameter</th>
+
+<th id="d110562e222" class="thbot">Data Type</th>
+
+<th id="d110562e225" class="thbot">MIME Type</th>
+
+<th id="d110562e228" class="thbot">Description</th>
+
+<th id="d110562e231" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d110562e219 "><p>updated_log_source_bulk_task</p>
+</td>
+
+<td headers="d110562e222 "><p>Object</p>
+</td>
+
+<td headers="d110562e225 "><p>application/json</p>
+</td>
+
+<td headers="d110562e228 "><p>The updated log source bulk task data.</p>
+</td>
+
+<td headers="d110562e231 "><p>{
+    "status": "String &lt;one of: IN_PROGRESS, COMPLETED_WITH_ERRORS, COMPLETED_SUCCESSFULLY, CANCELLING, CANCELLED&gt;"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/log_source_management/log_source_bulk_tasks/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /config/event_sources/log_source_management/log_source_bulk_tasks/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d110562e288" class="thbot">HTTP Response Code</th>
+
+<th id="d110562e291" class="thbot">Unique Code</th>
+
+<th id="d110562e294" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d110562e288 "><p>200</p>
+</td>
+
+<td headers="d110562e291 "><p></p>
+</td>
+
+<td headers="d110562e294 "><p>The log source bulk task was updated successfully.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d110562e288 "><p>404</p>
+</td>
+
+<td headers="d110562e291 "><p>1001</p>
+</td>
+
+<td headers="d110562e294 "><p>The requested log source bulk task cannot be found.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d110562e337"><h2 class="sectiontitle" id="d110562e337">Response Description</h2>
+
+<p>The updated log source bulk task.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d110562e346"><h2 class="sectiontitle" id="d110562e346">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "id": "String",
+    "operation_statuses": [
+        {
+            "http_status": 42,
+            "log_source_id": 42,
+            "message": "String",
+            "operation_type": "String &lt;one of: CREATE, UPDATE, DELETE&gt;",
+            "unique_code": 42
+        }
+    ],
+    "status": "String &lt;one of: IN_PROGRESS, COMPLETED_WITH_ERRORS, COMPLETED_SUCCESSFULLY, CANCELLING, CANCELLED&gt;"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d110562e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_config_intro.html" title="Use the references for REST API 12.0 configuration endpoints.">Configuration endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieve a list offense source addresses currently in the system.">
+<meta name="keywords" content="/siem/source_addresses, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_siem_intro.html">
+<title>GET /siem/source_addresses</title>
+</head>
+<body id="api-12.0--siem-source_addresses-GET"><main role="main"><article role="article" aria-labelledby="d74660e10">
+<h1 class="topictitle1" id="d74660e10">GET /siem/source_addresses</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieve a list offense source addresses currently in the system.</p>
+
+<div class="section refsyn">
+<p>Retrieve a list offense source addresses currently in the system.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /siem/source_addresses resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /siem/source_addresses resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d74660e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d74660e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /siem/source_addresses request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /siem/source_addresses request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d74660e112" class="thbot">Parameter</th>
+
+<th id="d74660e115" class="thbot">Type</th>
+
+<th id="d74660e118" class="thbot">Optionality</th>
+
+<th id="d74660e121" class="thbot">Data Type</th>
+
+<th id="d74660e124" class="thbot">MIME Type</th>
+
+<th id="d74660e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d74660e112 "><p>Range</p>
+</td>
+
+<td headers="d74660e115 "><p>header</p>
+</td>
+
+<td headers="d74660e118 "><p>Optional</p>
+</td>
+
+<td headers="d74660e121 "><p>String</p>
+</td>
+
+<td headers="d74660e124 "><p>text/plain</p>
+</td>
+
+<td headers="d74660e128 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d74660e112 "><p>filter</p>
+</td>
+
+<td headers="d74660e115 "><p>query</p>
+</td>
+
+<td headers="d74660e118 "><p>Optional</p>
+</td>
+
+<td headers="d74660e121 "><p>String</p>
+</td>
+
+<td headers="d74660e124 "><p>text/plain</p>
+</td>
+
+<td headers="d74660e128 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d74660e112 "><p>fields</p>
+</td>
+
+<td headers="d74660e115 "><p>query</p>
+</td>
+
+<td headers="d74660e118 "><p>Optional</p>
+</td>
+
+<td headers="d74660e121 "><p>String</p>
+</td>
+
+<td headers="d74660e124 "><p>text/plain</p>
+</td>
+
+<td headers="d74660e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /siem/source_addresses response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /siem/source_addresses response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d74660e246" class="thbot">HTTP Response Code</th>
+
+<th id="d74660e249" class="thbot">Unique Code</th>
+
+<th id="d74660e252" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d74660e246 "><p>200</p>
+</td>
+
+<td headers="d74660e249 "><p></p>
+</td>
+
+<td headers="d74660e252 "><p>The source address list was retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d74660e246 "><p>422</p>
+</td>
+
+<td headers="d74660e249 "><p>1005</p>
+</td>
+
+<td headers="d74660e252 "><p>A request parameter is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d74660e246 "><p>422</p>
+</td>
+
+<td headers="d74660e249 "><p>1010</p>
+</td>
+
+<td headers="d74660e252 "><p>The filter parameter is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d74660e246 "><p>500</p>
+</td>
+
+<td headers="d74660e249 "><p>1020</p>
+</td>
+
+<td headers="d74660e252 "><p>An error occurred while the source address list was being retrieved.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d74660e324"><h2 class="sectiontitle" id="d74660e324">Response Description</h2>
+
+<div class="p">An array of source address objects.  A source address object contains the following fields:
+ <ul>
+ <li><strong>id</strong> - Number - The ID of the source.</li>
+
+ <li><strong>source_ip</strong> - String - The IP address.</li>
+
+ <li><strong>magnitude</strong> - Number - The magnitude of the source address.</li>
+
+ <li><strong>network</strong> - String - The network of the source address.</li>
+
+ <li><strong>offense_ids</strong> - Array of Numbers - List of offense IDs the source is part of.</li>
+
+ <li><strong>local_destination_address_ids</strong> - Array of Numbers - List of local destination address IDs associated with the source address.</li>
+
+ <li><strong>event_flow_count</strong> - Number - The number of events and flows that are associated with the source.</li>
+
+ <li><strong>first_event_flow_seen</strong> - Number - The number of milliseconds since epoch when the first event or flow was seen.</li>
+
+ <li><strong>last_event_flow_seen</strong> - Number - The number of milliseconds since epoch when the last event or flow was seen.</li>
+
+ <li><strong>domain_id</strong> - Number - The ID of associated domain.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d74660e387"><h2 class="sectiontitle" id="d74660e387">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "domain_id": 42,
+        "event_flow_count": 42,
+        "first_event_flow_seen": 42,
+        "id": 42,
+        "last_event_flow_seen": 42,
+        "local_destination_address_ids": [
+            42
+        ],
+        "magnitude": 42,
+        "network": "String",
+        "offense_ids": [
+            42
+        ],
+        "source_ip": "String"
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d74660e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_siem_intro.html" title="Use the references for REST API 12.0 SIEM endpoints.">SIEM endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Updates an existing flow regex property.">
+<meta name="keywords" content="/config/flow_sources/custom_properties/regex_properties/{regex_property_id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_config_intro.html">
+<title>POST /config/flow_sources/custom_properties/regex_properties/{regex_property_id}</title>
+</head>
+<body id="api-12.0--config-flow_sources-custom_properties-regex_properties-regex_property_id-POST"><main role="main"><article role="article" aria-labelledby="d241423e10">
+<h1 class="topictitle1" id="d241423e10">POST /config/flow_sources/custom_properties/regex_properties/{regex_property_id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Updates an existing flow regex property.</p>
+
+<div class="section refsyn">
+<p>Updates an existing flow regex property.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/flow_sources/custom_properties/regex_properties/{regex_property_id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/flow_sources/custom_properties/regex_properties/{regex_property_id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d241423e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d241423e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/flow_sources/custom_properties/regex_properties/{regex_property_id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/flow_sources/custom_properties/regex_properties/{regex_property_id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d241423e112" class="thbot">Parameter</th>
+
+<th id="d241423e115" class="thbot">Type</th>
+
+<th id="d241423e118" class="thbot">Optionality</th>
+
+<th id="d241423e121" class="thbot">Data Type</th>
+
+<th id="d241423e124" class="thbot">MIME Type</th>
+
+<th id="d241423e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d241423e112 "><p>regex_property_id</p>
+</td>
+
+<td headers="d241423e115 "><p>path</p>
+</td>
+
+<td headers="d241423e118 "><p>Required</p>
+</td>
+
+<td headers="d241423e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d241423e124 "><p>text/plain</p>
+</td>
+
+<td headers="d241423e128 "><p>Required - The sequence ID of the flow regex property.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d241423e112 "><p>fields</p>
+</td>
+
+<td headers="d241423e115 "><p>header</p>
+</td>
+
+<td headers="d241423e118 "><p>Optional</p>
+</td>
+
+<td headers="d241423e121 "><p>String</p>
+</td>
+
+<td headers="d241423e124 "><p>text/plain</p>
+</td>
+
+<td headers="d241423e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/flow_sources/custom_properties/regex_properties/{regex_property_id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/flow_sources/custom_properties/regex_properties/{regex_property_id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d241423e223" class="thbot">Parameter</th>
+
+<th id="d241423e226" class="thbot">Data Type</th>
+
+<th id="d241423e229" class="thbot">MIME Type</th>
+
+<th id="d241423e232" class="thbot">Description</th>
+
+<th id="d241423e235" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d241423e223 "><p>data</p>
+</td>
+
+<td headers="d241423e226 "><p>Object</p>
+</td>
+
+<td headers="d241423e229 "><p>application/json</p>
+</td>
+
+<td headers="d241423e232 "><div class="p">Required - A JSON representation of the flow regex property object.
+         <ul>
+         <li><strong>description</strong> - Optional - String - The description of the flow regex property. </li>
+
+         <li><strong>property_type</strong> - Optional - String - The property type (string, numeric, ip, port, time) of flow regex property.</li>
+
+         <li><strong>use_for_rule_engine</strong> - Optional - Boolean - The flag that indicates if the flow regex property is parsed when the flow is captured. It is false if no value supplied.</li>
+
+         <li><strong>datetime_format</strong> - Optional - String - The date/time pattern that the flow regex property matches. It is required when property type is TIME.</li>
+
+         <li><strong>locale</strong> - Optional - String - The language tag of the locale that the property matches.The locale is required when property type is TIME.</li>
+
+         <li><strong>username</strong> - Optional - String - The owner of the event regex property. If the input username is authorized service, the prefix "API_token: " is required.</li>
+
+         </ul>
+</div>
+</td>
+
+<td headers="d241423e235 "><p>{
+    "creation_date": 42,
+    "datetime_format": "String",
+    "description": "String",
+    "id": 42,
+    "identifier": "String",
+    "locale": "String",
+    "modification_date": 42,
+    "name": "String",
+    "property_type": "String &lt;one of: string, numeric, ip, port, time&gt;",
+    "use_for_rule_engine": true,
+    "username": "String"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/flow_sources/custom_properties/regex_properties/{regex_property_id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /config/flow_sources/custom_properties/regex_properties/{regex_property_id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d241423e325" class="thbot">HTTP Response Code</th>
+
+<th id="d241423e328" class="thbot">Unique Code</th>
+
+<th id="d241423e331" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d241423e325 "><p>200</p>
+</td>
+
+<td headers="d241423e328 "><p></p>
+</td>
+
+<td headers="d241423e331 "><p>The flow regex property was updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d241423e325 "><p>403</p>
+</td>
+
+<td headers="d241423e328 "><p>1009</p>
+</td>
+
+<td headers="d241423e331 "><p>The user cannot update the resource because it only can be updated by the owner or admin user.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d241423e325 "><p>404</p>
+</td>
+
+<td headers="d241423e328 "><p>1002</p>
+</td>
+
+<td headers="d241423e331 "><p>The requested flow regex property cannot be found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d241423e325 "><p>422</p>
+</td>
+
+<td headers="d241423e328 "><p>1005</p>
+</td>
+
+<td headers="d241423e331 "><p>One or more parameters are invalid in the request.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d241423e325 "><p>500</p>
+</td>
+
+<td headers="d241423e328 "><p>1020</p>
+</td>
+
+<td headers="d241423e331 "><p>An error occurred during the attempt to update an flow regex property.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d241423e419"><h2 class="sectiontitle" id="d241423e419">Response Description</h2>
+
+<div class="p">The updated flow regex property object contains the following fields:
+         <ul>
+         <li><strong>id</strong> - Integer - The sequence ID of the flow regex property.</li>
+
+         <li><strong>identifier</strong> - String - The ID of the flow regex property.</li>
+
+         <li><strong>name</strong> - String - The name of the flow regex property.</li>
+
+         <li><strong>username</strong> - String - The owner of the flow regex property.</li>
+
+         <li><strong>description</strong> - String - The description of the flow regex property. </li>
+
+         <li><strong>property_type</strong> - String - The property type (string, numeric, ip, port, time) of flow regex property.</li>
+
+         <li><strong>use_for_rule_engine</strong> - Boolean - The flag that indicates if the flow regex property is parsed when the flow is captured.</li>
+
+         <li><strong>datetime_format</strong> - String - The date/time pattern that the flow regex property matches.</li>
+
+         <li><strong>locale</strong> - String - The language tag of the locale that the property matches.</li>
+
+         </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d241423e476"><h2 class="sectiontitle" id="d241423e476">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "creation_date": 42,
+    "datetime_format": "String",
+    "description": "String",
+    "id": 42,
+    "identifier": "String",
+    "locale": "String",
+    "modification_date": 42,
+    "name": "String",
+    "property_type": "String &lt;one of: string, numeric, ip, port, time&gt;",
+    "use_for_rule_engine": true,
+    "username": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d241423e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_config_intro.html" title="Use the references for REST API 12.0 configuration endpoints.">Configuration endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

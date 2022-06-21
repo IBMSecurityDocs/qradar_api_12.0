@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieve all the Offense Types">
+<meta name="keywords" content="/siem/offense_types, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_siem_intro.html">
+<title>GET /siem/offense_types</title>
+</head>
+<body id="api-12.0--siem-offense_types-GET"><main role="main"><article role="article" aria-labelledby="d95569e10">
+<h1 class="topictitle1" id="d95569e10">GET /siem/offense_types</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieve all the Offense Types</p>
+
+<div class="section refsyn">
+<p>Retrieve all Offense Types</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /siem/offense_types resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /siem/offense_types resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d95569e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d95569e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /siem/offense_types request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /siem/offense_types request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d95569e112" class="thbot">Parameter</th>
+
+<th id="d95569e115" class="thbot">Type</th>
+
+<th id="d95569e118" class="thbot">Optionality</th>
+
+<th id="d95569e121" class="thbot">Data Type</th>
+
+<th id="d95569e124" class="thbot">MIME Type</th>
+
+<th id="d95569e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d95569e112 "><p>Range</p>
+</td>
+
+<td headers="d95569e115 "><p>header</p>
+</td>
+
+<td headers="d95569e118 "><p>Optional</p>
+</td>
+
+<td headers="d95569e121 "><p>String</p>
+</td>
+
+<td headers="d95569e124 "><p>text/plain</p>
+</td>
+
+<td headers="d95569e128 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d95569e112 "><p>sort</p>
+</td>
+
+<td headers="d95569e115 "><p>query</p>
+</td>
+
+<td headers="d95569e118 "><p>Optional</p>
+</td>
+
+<td headers="d95569e121 "><p>String</p>
+</td>
+
+<td headers="d95569e124 "><p>text/plain</p>
+</td>
+
+<td headers="d95569e128 "><p>Optional - This parameter is used to sort the elements in a list.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d95569e112 "><p>filter</p>
+</td>
+
+<td headers="d95569e115 "><p>query</p>
+</td>
+
+<td headers="d95569e118 "><p>Optional</p>
+</td>
+
+<td headers="d95569e121 "><p>String</p>
+</td>
+
+<td headers="d95569e124 "><p>text/plain</p>
+</td>
+
+<td headers="d95569e128 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d95569e112 "><p>fields</p>
+</td>
+
+<td headers="d95569e115 "><p>query</p>
+</td>
+
+<td headers="d95569e118 "><p>Optional</p>
+</td>
+
+<td headers="d95569e121 "><p>String</p>
+</td>
+
+<td headers="d95569e124 "><p>text/plain</p>
+</td>
+
+<td headers="d95569e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /siem/offense_types response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /siem/offense_types response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d95569e274" class="thbot">HTTP Response Code</th>
+
+<th id="d95569e277" class="thbot">Unique Code</th>
+
+<th id="d95569e280" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d95569e274 "><p>200</p>
+</td>
+
+<td headers="d95569e277 "><p></p>
+</td>
+
+<td headers="d95569e280 "><p>The requested offense types list has been retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d95569e274 "><p>422</p>
+</td>
+
+<td headers="d95569e277 "><p>1005</p>
+</td>
+
+<td headers="d95569e280 "><p>A request parameter is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d95569e274 "><p>422</p>
+</td>
+
+<td headers="d95569e277 "><p>1012</p>
+</td>
+
+<td headers="d95569e280 "><p>The selected field cannot be used for sorting or it does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d95569e274 "><p>500</p>
+</td>
+
+<td headers="d95569e277 "><p>1020</p>
+</td>
+
+<td headers="d95569e280 "><p>An error occurred while attempting to retrieve the offense type list.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d95569e352"><h2 class="sectiontitle" id="d95569e352">Response Description</h2>
+
+<div class="p">The Offense Types that exist at the moment. Offense types may include custom flow/event properties only if 
+ they have been selected as part of a rule action or rule response limiter.
+ <ul>
+ <li><strong>id</strong> - Number - The ID of the offense type and what is presented in the offense's offense_type.</li>
+
+ <li><strong>property_name</strong> - String - The name of the event or flow property represented by this offense type for flow or event properties or the unique identifier for custom flow or event properties.</li>
+
+ <li><strong>name</strong> - String - The offense type's name.</li>
+
+ <li><strong>database_type</strong> - String - Database where this type is present. Possible values are: EVENTS, FLOWS, or COMMON (if it belongs to both events and flows)</li>
+
+ <li><strong>custom</strong> - boolean - True if the offense type is based on a custom flow or event property.</li>
+
+ </ul>
+
+ The following field can be sorted on: id.</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d95569e390"><h2 class="sectiontitle" id="d95569e390">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "custom": true,
+        "database_type": "String &lt;one of: EVENTS, FLOWS, COMMON&gt;",
+        "id": 42,
+        "name": "String",
+        "property_name": "String"
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d95569e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_siem_intro.html" title="Use the references for REST API 12.0 SIEM endpoints.">SIEM endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

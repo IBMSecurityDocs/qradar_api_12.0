@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves an Ariel property Generic List expression based on the supplied expression ID.">
+<meta name="keywords" content="/config/event_sources/custom_properties/property_genericlist_expressions/{expression_id}, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_config_intro.html">
+<title>GET /config/event_sources/custom_properties/property_genericlist_expressions/{expression_id}</title>
+</head>
+<body id="api-12.0--config-event_sources-custom_properties-property_genericlist_expressions-expression_id-GET"><main role="main"><article role="article" aria-labelledby="d204674e10">
+<h1 class="topictitle1" id="d204674e10">GET /config/event_sources/custom_properties/property_genericlist_expressions/{expression_id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves an Ariel property Generic List expression based on the supplied expression ID.</p>
+
+<div class="section refsyn">
+<p>Retrieves an Ariel property Generic List expression based on the supplied expression ID.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/event_sources/custom_properties/property_genericlist_expressions/{expression_id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /config/event_sources/custom_properties/property_genericlist_expressions/{expression_id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d204674e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d204674e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/event_sources/custom_properties/property_genericlist_expressions/{expression_id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /config/event_sources/custom_properties/property_genericlist_expressions/{expression_id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d204674e112" class="thbot">Parameter</th>
+
+<th id="d204674e115" class="thbot">Type</th>
+
+<th id="d204674e118" class="thbot">Optionality</th>
+
+<th id="d204674e121" class="thbot">Data Type</th>
+
+<th id="d204674e124" class="thbot">MIME Type</th>
+
+<th id="d204674e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d204674e112 "><p>expression_id</p>
+</td>
+
+<td headers="d204674e115 "><p>path</p>
+</td>
+
+<td headers="d204674e118 "><p>Required</p>
+</td>
+
+<td headers="d204674e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d204674e124 "><p>text/plain</p>
+</td>
+
+<td headers="d204674e128 "><p>Required - The Sequence ID of the Ariel property Generic List expression.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d204674e112 "><p>fields</p>
+</td>
+
+<td headers="d204674e115 "><p>query</p>
+</td>
+
+<td headers="d204674e118 "><p>Optional</p>
+</td>
+
+<td headers="d204674e121 "><p>String</p>
+</td>
+
+<td headers="d204674e124 "><p>text/plain</p>
+</td>
+
+<td headers="d204674e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/event_sources/custom_properties/property_genericlist_expressions/{expression_id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /config/event_sources/custom_properties/property_genericlist_expressions/{expression_id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d204674e218" class="thbot">HTTP Response Code</th>
+
+<th id="d204674e221" class="thbot">Unique Code</th>
+
+<th id="d204674e224" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d204674e218 "><p>200</p>
+</td>
+
+<td headers="d204674e221 "><p></p>
+</td>
+
+<td headers="d204674e224 "><p>The requested ariel property Generic List expression was successfully retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d204674e218 "><p>404</p>
+</td>
+
+<td headers="d204674e221 "><p>1002</p>
+</td>
+
+<td headers="d204674e224 "><p>The requested ariel property Generic List expression cannot be found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d204674e218 "><p>500</p>
+</td>
+
+<td headers="d204674e221 "><p>1020</p>
+</td>
+
+<td headers="d204674e224 "><p>An error occurred during the attempt to retrieve the requested ariel property Generic List expression.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d204674e281"><h2 class="sectiontitle" id="d204674e281">Response Description</h2>
+
+<div class="p">An Ariel property Generic List expression that contains the following fields:
+         <ul>
+         <li><strong>id</strong> - Integer - The sequence ID of the Ariel property Generic List expression.</li>
+
+         <li><strong>identifier</strong> - String - The ID of the Ariel property Generic List expression.</li>
+
+         <li><strong>regex_property_identifier</strong> - String - The identifier of the event regex property that this expression belongs to.</li>
+
+         <li><strong>enabled</strong> - Boolean - Flag that indicates whether this expression is enabled.</li>
+
+         <li><strong>expression</strong> - String - The Generic List expression path to find the property value from the Generic List payload. </li>
+
+         <li><strong>payload</strong> - String - Test payload. This parameter is only used in the UI so that you can verify your expression matches the expected payload.</li>
+
+         <li><strong>log_source_type_id</strong> - Integer - The expression is only applied to events for this log source type.</li>
+
+         <li><strong>log_source_id</strong> - Integer - The expression is only applied to events for this log source (more specific than type alone). </li>
+
+         <li><strong>qid</strong> - Integer - The expression is only applied to events associated with this QID record. </li>
+
+         <li><strong>low_level_category_id</strong> - Integer - The expression is only applied to events with this low level category. </li>
+
+         <li><strong>username</strong> - String - The delimiter between each member in a Generic List expression.</li>
+
+         <li><strong>delimiter</strong> - String - The delimiter between each member in a Generic List expression.</li>
+
+         </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d204674e355"><h2 class="sectiontitle" id="d204674e355">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "creation_date": 42,
+    "delimiter": "String",
+    "enabled": true,
+    "expression": "String",
+    "id": 42,
+    "identifier": "String",
+    "log_source_id": 42,
+    "log_source_type_id": 42,
+    "low_level_category_id": 42,
+    "modification_date": 42,
+    "payload": "String",
+    "qid": 42,
+    "regex_property_identifier": "String",
+    "username": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d204674e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_config_intro.html" title="Use the references for REST API 12.0 configuration endpoints.">Configuration endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

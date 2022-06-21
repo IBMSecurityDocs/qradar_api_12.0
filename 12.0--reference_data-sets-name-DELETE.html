@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Removes a reference set or purges its contents.">
+<meta name="keywords" content="/reference_data/sets/{name}, DELETE, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_reference_data_intro.html">
+<title>DELETE /reference_data/sets/{name}</title>
+</head>
+<body id="api-12.0--reference_data-sets-name-DELETE"><main role="main"><article role="article" aria-labelledby="d119722e10">
+<h1 class="topictitle1" id="d119722e10">DELETE /reference_data/sets/{name}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Removes a reference set or purges its contents.</p>
+
+<div class="section refsyn">
+<p>Removes a reference set or purges its contents.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /reference_data/sets/{name} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. DELETE /reference_data/sets/{name} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d119722e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d119722e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /reference_data/sets/{name} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. DELETE /reference_data/sets/{name} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d119722e112" class="thbot">Parameter</th>
+
+<th id="d119722e115" class="thbot">Type</th>
+
+<th id="d119722e118" class="thbot">Optionality</th>
+
+<th id="d119722e121" class="thbot">Data Type</th>
+
+<th id="d119722e124" class="thbot">MIME Type</th>
+
+<th id="d119722e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d119722e112 "><p>name</p>
+</td>
+
+<td headers="d119722e115 "><p>path</p>
+</td>
+
+<td headers="d119722e118 "><p>Required</p>
+</td>
+
+<td headers="d119722e121 "><p>String</p>
+</td>
+
+<td headers="d119722e124 "><p>text/plain</p>
+</td>
+
+<td headers="d119722e128 "><p>Required - The name of the set to remove or purge.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d119722e112 "><p>purge_only</p>
+</td>
+
+<td headers="d119722e115 "><p>query</p>
+</td>
+
+<td headers="d119722e118 "><p>Optional</p>
+</td>
+
+<td headers="d119722e121 "><p>String</p>
+</td>
+
+<td headers="d119722e124 "><p>text/plain</p>
+</td>
+
+<td headers="d119722e128 "><p>Optional - The allowed values are "false" or "true". The default value is false. Indicates if the reference set should have its contents purged (true), keeping the reference set structure. If the value is "false", or not specified the reference set is removed completely.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d119722e112 "><p>fields</p>
+</td>
+
+<td headers="d119722e115 "><p>query</p>
+</td>
+
+<td headers="d119722e118 "><p>Optional</p>
+</td>
+
+<td headers="d119722e121 "><p>String</p>
+</td>
+
+<td headers="d119722e124 "><p>text/plain</p>
+</td>
+
+<td headers="d119722e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /reference_data/sets/{name} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. DELETE /reference_data/sets/{name} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d119722e246" class="thbot">HTTP Response Code</th>
+
+<th id="d119722e249" class="thbot">Unique Code</th>
+
+<th id="d119722e252" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d119722e246 "><p>202</p>
+</td>
+
+<td headers="d119722e249 "><p></p>
+</td>
+
+<td headers="d119722e252 "><p>The reference data set's deletion or purge request was accepted and is in progress.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d119722e246 "><p>404</p>
+</td>
+
+<td headers="d119722e249 "><p>1002</p>
+</td>
+
+<td headers="d119722e252 "><p>The reference set does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d119722e246 "><p>422</p>
+</td>
+
+<td headers="d119722e249 "><p>1005</p>
+</td>
+
+<td headers="d119722e252 "><p>A request parameter is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d119722e246 "><p>500</p>
+</td>
+
+<td headers="d119722e249 "><p>1020</p>
+</td>
+
+<td headers="d119722e252 "><p>An error occurred during the attempt to remove or purge values from the reference set.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d119722e324"><h2 class="sectiontitle" id="d119722e324">Response Description</h2>
+
+<p>A status ID to retrieve the reference data set's deletion or purge status with at /api/system/task_management/tasks/{status_id}. You can also find the url in the Location header</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d119722e334"><h2 class="sectiontitle" id="d119722e334">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "completed": 42,
+    "created": 42,
+    "created_by": "String",
+    "id": 42,
+    "message": "String",
+    "modified": 42,
+    "name": "String",
+    "started": 42,
+    "status": "String &lt;one of: CANCELLED, CANCELING, CANCEL_REQUESTED, COMPLETED, CONFLICT, EXCEPTION, INITIALIZING, INTERRUPTED, PAUSED, PROCESSING, QUEUED, RESUMING&gt;"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d119722e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_reference_data_intro.html" title="Use the references for REST API 12.0 reference data endpoints.">Reference data endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Executes a deploy.">
+<meta name="keywords" content="/staged_config/deploy_status, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_staged_config_intro.html">
+<title>POST /staged_config/deploy_status</title>
+</head>
+<body id="api-12.0--staged_config-deploy_status-POST"><main role="main"><article role="article" aria-labelledby="d35430e10">
+<h1 class="topictitle1" id="d35430e10">POST /staged_config/deploy_status</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Executes a deploy.</p>
+
+<div class="section refsyn">
+<p>Executes a deploy.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/deploy_status resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /staged_config/deploy_status resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d35430e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d35430e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/deploy_status request body details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /staged_config/deploy_status request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d35430e110" class="thbot">Parameter</th>
+
+<th id="d35430e113" class="thbot">Data Type</th>
+
+<th id="d35430e116" class="thbot">MIME Type</th>
+
+<th id="d35430e119" class="thbot">Description</th>
+
+<th id="d35430e122" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d35430e110 "><p>deploy_status</p>
+</td>
+
+<td headers="d35430e113 "><p>Object</p>
+</td>
+
+<td headers="d35430e116 "><p>application/json</p>
+</td>
+
+<td headers="d35430e119 "><p>null</p>
+</td>
+
+<td headers="d35430e122 "><p>{
+    "hosts": [
+        {
+            "host_status": "String &lt;one of: SUCCESS, INITIATING, IN_PROGRESS, TIMED_OUT, ERROR&gt;",
+            "ip": "String",
+            "status": "String &lt;one of: SUCCESS, INITIATING, IN_PROGRESS, TIMED_OUT, ERROR&gt;"
+        }
+    ],
+    "initiated_by": "String",
+    "initiated_from": "String",
+    "percent_complete": 42,
+    "status": "String &lt;one of: INITIALIZING, IN_PROGRESS, COMPLETE&gt;",
+    "type": "String &lt;one of: INCREMENTAL, FULL&gt;"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /staged_config/deploy_status response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /staged_config/deploy_status response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d35430e179" class="thbot">HTTP Response Code</th>
+
+<th id="d35430e182" class="thbot">Unique Code</th>
+
+<th id="d35430e185" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d35430e179 "><p>200</p>
+</td>
+
+<td headers="d35430e182 "><p></p>
+</td>
+
+<td headers="d35430e185 "><p>The deploy was scheduled.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d35430e179 "><p>409</p>
+</td>
+
+<td headers="d35430e182 "><p>1002</p>
+</td>
+
+<td headers="d35430e185 "><p>Theere already exists a deploy in action, or there are no changes to deploy.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d35430e179 "><p>409</p>
+</td>
+
+<td headers="d35430e182 "><p>1003</p>
+</td>
+
+<td headers="d35430e185 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d35430e179 "><p>409</p>
+</td>
+
+<td headers="d35430e182 "><p>1004</p>
+</td>
+
+<td headers="d35430e185 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d35430e179 "><p>422</p>
+</td>
+
+<td headers="d35430e182 "><p>1005</p>
+</td>
+
+<td headers="d35430e185 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d35430e179 "><p>500</p>
+</td>
+
+<td headers="d35430e182 "><p>1020</p>
+</td>
+
+<td headers="d35430e185 "><p>An error occurred during the attempt to run the deploy</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d35430e288"><h2 class="sectiontitle" id="d35430e288">Response Description</h2>
+
+<div class="p">The deploy status object. A deploy status object contains the following fields:
+ <ul>
+ <li><strong>initiated_by</strong> - String - The name of the user who initiated the deploy.</li>
+
+ <li><strong>initiated_from</strong> - String - The hostname from where the deploy was initiated.</li>
+
+ <li><strong>type</strong> - String - The type of deploy: FULL or INCREMENTAL.</li>
+
+ <li><strong>status</strong> - String - The status of the deploy: UNKNOWN, START, DONE.</li>
+
+ <li><strong>hosts</strong> - Map of &lt; String, List of String &gt; - A map of status states and a list of hosts.</li>
+
+ <li><strong>error_message</strong> - String - The deployment error message.</li>
+
+ <li><strong>has_errors</strong> - Boolean - True if the deploy has encountered an error.</li>
+
+ <li><strong>percent_complete</strong> - Integer - The percentage of completion of the deploy. ( 0 - 100 )</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d35430e341"><h2 class="sectiontitle" id="d35430e341">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "hosts": [
+        {
+            "host_status": "String &lt;one of: SUCCESS, INITIATING, IN_PROGRESS, TIMED_OUT, ERROR&gt;",
+            "ip": "String",
+            "status": "String &lt;one of: SUCCESS, INITIATING, IN_PROGRESS, TIMED_OUT, ERROR&gt;"
+        }
+    ],
+    "initiated_by": "String",
+    "initiated_from": "String",
+    "percent_complete": 42,
+    "status": "String &lt;one of: INITIALIZING, IN_PROGRESS, COMPLETE&gt;",
+    "type": "String &lt;one of: INCREMENTAL, FULL&gt;"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d35430e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_staged_config_intro.html" title="Use the references for REST API 12.0 staged configuration endpoints.">Staged configuration endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

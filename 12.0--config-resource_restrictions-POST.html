@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Creates a new resource restriction.">
+<meta name="keywords" content="/config/resource_restrictions, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_config_intro.html">
+<title>POST /config/resource_restrictions</title>
+</head>
+<body id="api-12.0--config-resource_restrictions-POST"><main role="main"><article role="article" aria-labelledby="d172345e10">
+<h1 class="topictitle1" id="d172345e10">POST /config/resource_restrictions</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Creates a new resource restriction.</p>
+
+<div class="section refsyn">
+<p>Creates a new resource restriction.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/resource_restrictions resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/resource_restrictions resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d172345e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d172345e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/resource_restrictions request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/resource_restrictions request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d172345e112" class="thbot">Parameter</th>
+
+<th id="d172345e115" class="thbot">Type</th>
+
+<th id="d172345e118" class="thbot">Optionality</th>
+
+<th id="d172345e121" class="thbot">Data Type</th>
+
+<th id="d172345e124" class="thbot">MIME Type</th>
+
+<th id="d172345e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d172345e112 "><p>fields</p>
+</td>
+
+<td headers="d172345e115 "><p>header</p>
+</td>
+
+<td headers="d172345e118 "><p>Optional</p>
+</td>
+
+<td headers="d172345e121 "><p>String</p>
+</td>
+
+<td headers="d172345e124 "><p>text/plain</p>
+</td>
+
+<td headers="d172345e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/resource_restrictions request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/resource_restrictions request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d172345e195" class="thbot">Parameter</th>
+
+<th id="d172345e198" class="thbot">Data Type</th>
+
+<th id="d172345e201" class="thbot">MIME Type</th>
+
+<th id="d172345e204" class="thbot">Description</th>
+
+<th id="d172345e207" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d172345e195 "><p>resourceRestriction</p>
+</td>
+
+<td headers="d172345e198 "><p>Object</p>
+</td>
+
+<td headers="d172345e201 "><p>application/json</p>
+</td>
+
+<td headers="d172345e204 "><p>Required - The resource restriction to be added. Only one of
+            the ID fields (user_id, tenant_id, role_id) can be provided.</p>
+</td>
+
+<td headers="d172345e207 "><p>{
+    "data_window": 42,
+    "execution_time": 42,
+    "id": "String",
+    "record_limit": 42,
+    "role_id": 42,
+    "tenant_id": 42,
+    "user_id": 42
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/resource_restrictions response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /config/resource_restrictions response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d172345e264" class="thbot">HTTP Response Code</th>
+
+<th id="d172345e267" class="thbot">Unique Code</th>
+
+<th id="d172345e270" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d172345e264 "><p>200</p>
+</td>
+
+<td headers="d172345e267 "><p></p>
+</td>
+
+<td headers="d172345e270 "><p>The new resource restriction was
+                         successfully created.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d172345e264 "><p>404</p>
+</td>
+
+<td headers="d172345e267 "><p>1009</p>
+</td>
+
+<td headers="d172345e270 "><p>The consumer (user, tenant, or role) provided was not found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d172345e264 "><p>422</p>
+</td>
+
+<td headers="d172345e267 "><p>1008</p>
+</td>
+
+<td headers="d172345e270 "><p>One of: user_id, role_id, or tenant_id</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d172345e264 "><p>500</p>
+</td>
+
+<td headers="d172345e267 "><p>1010</p>
+</td>
+
+<td headers="d172345e270 "><p>An error occurred during the attempt to create a
+             resource restriction.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d172345e343"><h2 class="sectiontitle" id="d172345e343">Response Description</h2>
+
+<p>The associated restriction object.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d172345e352"><h2 class="sectiontitle" id="d172345e352">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "data_window": 42,
+    "execution_time": 42,
+    "id": "String",
+    "record_limit": 42,
+    "role_id": 42,
+    "tenant_id": 42,
+    "user_id": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d172345e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_config_intro.html" title="Use the references for REST API 12.0 configuration endpoints.">Configuration endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

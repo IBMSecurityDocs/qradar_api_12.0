@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves AQL Functions for given .">
+<meta name="keywords" content="/ariel/functions, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_ariel_intro.html">
+<title>GET /ariel/functions</title>
+</head>
+<body id="api-12.0--ariel-functions-GET"><main role="main"><article role="article" aria-labelledby="d130036e10">
+<h1 class="topictitle1" id="d130036e10">GET /ariel/functions</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves AQL Functions for given .</p>
+
+<div class="section refsyn">
+<p>Retrieves AQL Functions</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /ariel/functions resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /ariel/functions resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d130036e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d130036e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /ariel/functions request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /ariel/functions request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d130036e112" class="thbot">Parameter</th>
+
+<th id="d130036e115" class="thbot">Type</th>
+
+<th id="d130036e118" class="thbot">Optionality</th>
+
+<th id="d130036e121" class="thbot">Data Type</th>
+
+<th id="d130036e124" class="thbot">MIME Type</th>
+
+<th id="d130036e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d130036e112 "><p>database</p>
+</td>
+
+<td headers="d130036e115 "><p>query</p>
+</td>
+
+<td headers="d130036e118 "><p>Required</p>
+</td>
+
+<td headers="d130036e121 "><p>String</p>
+</td>
+
+<td headers="d130036e124 "><p>text/plain</p>
+</td>
+
+<td headers="d130036e128 "><p>Name of DB to retrieve functions for.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d130036e112 "><p>fields</p>
+</td>
+
+<td headers="d130036e115 "><p>query</p>
+</td>
+
+<td headers="d130036e118 "><p>Optional</p>
+</td>
+
+<td headers="d130036e121 "><p>String</p>
+</td>
+
+<td headers="d130036e124 "><p>text/plain</p>
+</td>
+
+<td headers="d130036e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /ariel/functions response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /ariel/functions response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d130036e218" class="thbot">HTTP Response Code</th>
+
+<th id="d130036e221" class="thbot">Unique Code</th>
+
+<th id="d130036e224" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d130036e218 "><p>200</p>
+</td>
+
+<td headers="d130036e221 "><p></p>
+</td>
+
+<td headers="d130036e224 "><p>Functions are retrieved</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d130036e251"><h2 class="sectiontitle" id="d130036e251">Response Description</h2>
+
+<p>List of AQL Functions.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d130036e261"><h2 class="sectiontitle" id="d130036e261">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "args_types": [
+            "String"
+        ],
+        "catalog": "String",
+        "class_name": "String",
+        "info": "String",
+        "name": "String",
+        "required_args": 42,
+        "required_capabilities": "String",
+        "return_type": "String",
+        "var_args": true
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d130036e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_ariel_intro.html" title="Use the references for REST API 12.0 Ariel endpoints.">Ariel endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

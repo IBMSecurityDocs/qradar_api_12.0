@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Updates an existing custom action script file. Updated custom action script files require a deployment before using.">
+<meta name="keywords" content="/analytics/custom_actions/scripts/{script_id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_analytics_intro.html">
+<title>POST /analytics/custom_actions/scripts/{script_id}</title>
+</head>
+<body id="api-12.0--analytics-custom_actions-scripts-script_id-POST"><main role="main"><article role="article" aria-labelledby="d209285e10">
+<h1 class="topictitle1" id="d209285e10">POST /analytics/custom_actions/scripts/{script_id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Updates an existing custom action script file. Updated custom action script files require a deployment before using.</p>
+
+<div class="section refsyn">
+<p>Updates an existing custom action script file. Updated custom action script files require a deployment before using.
+ 
+ Users can include an <em>optional</em> HTTP header <strong>file_name</strong> containing the custom action script file name. If not specified this is defaulted to the script id of the uploaded file.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /analytics/custom_actions/scripts/{script_id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /analytics/custom_actions/scripts/{script_id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d209285e70" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d209285e70 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /analytics/custom_actions/scripts/{script_id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /analytics/custom_actions/scripts/{script_id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d209285e118" class="thbot">Parameter</th>
+
+<th id="d209285e121" class="thbot">Type</th>
+
+<th id="d209285e124" class="thbot">Optionality</th>
+
+<th id="d209285e127" class="thbot">Data Type</th>
+
+<th id="d209285e130" class="thbot">MIME Type</th>
+
+<th id="d209285e134" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d209285e118 "><p>script_id</p>
+</td>
+
+<td headers="d209285e121 "><p>path</p>
+</td>
+
+<td headers="d209285e124 "><p>Required</p>
+</td>
+
+<td headers="d209285e127 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d209285e130 "><p>text/plain</p>
+</td>
+
+<td headers="d209285e134 "><p>Number id of the custom action script file to be updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d209285e118 "><p>fields</p>
+</td>
+
+<td headers="d209285e121 "><p>header</p>
+</td>
+
+<td headers="d209285e124 "><p>Optional</p>
+</td>
+
+<td headers="d209285e127 "><p>String</p>
+</td>
+
+<td headers="d209285e130 "><p>text/plain</p>
+</td>
+
+<td headers="d209285e134 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /analytics/custom_actions/scripts/{script_id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /analytics/custom_actions/scripts/{script_id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d209285e229" class="thbot">Parameter</th>
+
+<th id="d209285e232" class="thbot">Data Type</th>
+
+<th id="d209285e235" class="thbot">MIME Type</th>
+
+<th id="d209285e238" class="thbot">Description</th>
+
+<th id="d209285e241" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d209285e229 "><p>file</p>
+</td>
+
+<td headers="d209285e232 "><p>File</p>
+</td>
+
+<td headers="d209285e235 "><p>application/octet-stream</p>
+</td>
+
+<td headers="d209285e238 "><p><em>Required</em>. The custom action script file. Must be supplied with MIME type <em>application/octet-stream</em>.</p>
+</td>
+
+<td headers="d209285e241 "><p>File</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /analytics/custom_actions/scripts/{script_id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /analytics/custom_actions/scripts/{script_id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d209285e303" class="thbot">HTTP Response Code</th>
+
+<th id="d209285e306" class="thbot">Unique Code</th>
+
+<th id="d209285e309" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d209285e303 "><p>200</p>
+</td>
+
+<td headers="d209285e306 "><p></p>
+</td>
+
+<td headers="d209285e309 "><p>The custom action script file has been updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d209285e303 "><p>404</p>
+</td>
+
+<td headers="d209285e306 "><p>1002</p>
+</td>
+
+<td headers="d209285e309 "><p>The requested custom action script file could not be found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d209285e303 "><p>500</p>
+</td>
+
+<td headers="d209285e306 "><p>1020</p>
+</td>
+
+<td headers="d209285e309 "><p>An internal server error occurred while updating custom action script file with supplied script_id.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d209285e367"><h2 class="sectiontitle" id="d209285e367">Response Description</h2>
+
+<div class="p">Custom action script file meta-data with the following fields:
+ <ul>
+ 		<li><strong>id</strong> - Number - Unique ID of the custom action script file within the QRadar deployment.</li>
+
+ 		<li><strong>name</strong> - String - Name of the custom action script file.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d209285e388"><h2 class="sectiontitle" id="d209285e388">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "file_name": "String",
+    "id": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d209285e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_analytics_intro.html" title="Use the references for REST API 12.0 analytics endpoints.">Analytics endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

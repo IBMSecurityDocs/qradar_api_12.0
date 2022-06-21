@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Deletes an individual restore by ID.">
+<meta name="keywords" content="/backup_and_restore/restores/{id}, DELETE, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_backup_and_restore_intro.html">
+<title>DELETE /backup_and_restore/restores/{id}</title>
+</head>
+<body id="api-12.0--backup_and_restore-restores-id-DELETE"><main role="main"><article role="article" aria-labelledby="d29048e10">
+<h1 class="topictitle1" id="d29048e10">DELETE /backup_and_restore/restores/{id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Deletes an individual restore by ID.</p>
+
+<div class="section refsyn">
+ 
+ <p>Deleting a restore record that is&nbsp;INITIALIZING or&nbsp;IN_PROGRESS will not cancel the restore.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /backup_and_restore/restores/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. DELETE /backup_and_restore/restores/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d29048e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d29048e64 "><p>text/plain
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /backup_and_restore/restores/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. DELETE /backup_and_restore/restores/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d29048e112" class="thbot">Parameter</th>
+
+<th id="d29048e115" class="thbot">Type</th>
+
+<th id="d29048e118" class="thbot">Optionality</th>
+
+<th id="d29048e121" class="thbot">Data Type</th>
+
+<th id="d29048e124" class="thbot">MIME Type</th>
+
+<th id="d29048e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d29048e112 "><p>id</p>
+</td>
+
+<td headers="d29048e115 "><p>path</p>
+</td>
+
+<td headers="d29048e118 "><p>Required</p>
+</td>
+
+<td headers="d29048e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d29048e124 "><p>text/plain</p>
+</td>
+
+<td headers="d29048e128 "><p>Required. The ID of the restore to delete.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /backup_and_restore/restores/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. DELETE /backup_and_restore/restores/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d29048e190" class="thbot">HTTP Response Code</th>
+
+<th id="d29048e193" class="thbot">Unique Code</th>
+
+<th id="d29048e196" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d29048e190 "><p>204</p>
+</td>
+
+<td headers="d29048e193 "><p></p>
+</td>
+
+<td headers="d29048e196 "><p>The restore was successfully deleted.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d29048e190 "><p>404</p>
+</td>
+
+<td headers="d29048e193 "><p>1001</p>
+</td>
+
+<td headers="d29048e196 "><p>The restore does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d29048e190 "><p>422</p>
+</td>
+
+<td headers="d29048e193 "><p>1017</p>
+</td>
+
+<td headers="d29048e196 "><p>Restores can be deleted only in the&nbsp;following states: PENDING,&nbsp;REQUESTING,&nbsp;INITIALIZING, IN_PROGRESS.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d29048e190 "><p>500</p>
+</td>
+
+<td headers="d29048e193 "><p>1000</p>
+</td>
+
+<td headers="d29048e196 "><p>An error occurred during the attempt to delete the restore.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d29048e268"><h2 class="sectiontitle" id="d29048e268">Response Description</h2>
+
+<p></p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d29048e277"><h2 class="sectiontitle" id="d29048e277">Response Sample</h2>
+
+<pre class="codeblock"><code>
+
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d29048e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_backup_and_restore_intro.html" title="Use the references for REST API 12.0 backup and restore endpoints.">Backup and restore endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

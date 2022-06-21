@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Sets the access control firewall rules based on the supplied server ID.">
+<meta name="keywords" content="/system/servers/{server_id}/firewall_rules, PUT, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_system_intro.html">
+<title>PUT /system/servers/{server_id}/firewall_rules</title>
+</head>
+<body id="api-12.0--system-servers-server_id-firewall_rules-PUT"><main role="main"><article role="article" aria-labelledby="d106700e10">
+<h1 class="topictitle1" id="d106700e10">PUT /system/servers/{server_id}/firewall_rules</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Sets the access control firewall rules based on the supplied server ID.</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="PUT /system/servers/{server_id}/firewall_rules resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. PUT /system/servers/{server_id}/firewall_rules resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d106700e60" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d106700e60 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="PUT /system/servers/{server_id}/firewall_rules request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. PUT /system/servers/{server_id}/firewall_rules request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d106700e108" class="thbot">Parameter</th>
+
+<th id="d106700e111" class="thbot">Type</th>
+
+<th id="d106700e114" class="thbot">Optionality</th>
+
+<th id="d106700e117" class="thbot">Data Type</th>
+
+<th id="d106700e120" class="thbot">MIME Type</th>
+
+<th id="d106700e124" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d106700e108 "><p>server_id</p>
+</td>
+
+<td headers="d106700e111 "><p>path</p>
+</td>
+
+<td headers="d106700e114 "><p>Required</p>
+</td>
+
+<td headers="d106700e117 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d106700e120 "><p>text/plain</p>
+</td>
+
+<td headers="d106700e124 "><p>Required - The ID of the server.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="PUT /system/servers/{server_id}/firewall_rules request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. PUT /system/servers/{server_id}/firewall_rules request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d106700e191" class="thbot">Parameter</th>
+
+<th id="d106700e194" class="thbot">Data Type</th>
+
+<th id="d106700e197" class="thbot">MIME Type</th>
+
+<th id="d106700e200" class="thbot">Description</th>
+
+<th id="d106700e203" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d106700e191 "><p>rules</p>
+</td>
+
+<td headers="d106700e194 "><p>Array&lt;Object&gt;</p>
+</td>
+
+<td headers="d106700e197 "><p>application/json</p>
+</td>
+
+<td headers="d106700e200 "><div class="p">Required - A list of new rules in a JSON string. Each rule record contains the following fields: <ul>
+<li><strong>is_any_source_ip</strong> - Boolean - Whether any source IP is accepted. </li>
+
+<li><strong>port_range</strong> - String - A port range in the format of start-end. </li>
+
+<li><strong>port_type</strong> - String - one of: ANY, SINGLE, RANGE. </li>
+
+<li><strong>protocol</strong> - String - one of: ANY, TCP, UDP. </li>
+
+<li><strong>single_port</strong> - String - A single port. </li>
+
+<li><strong>source_ip</strong> - String - A specific IP address. </li>
+
+</ul>
+</div>
+</td>
+
+<td headers="d106700e203 "><p>[
+    {
+        "is_any_source_ip": true,
+        "port_range": "String",
+        "port_type": "String &lt;one of: ANY, SINGLE, RANGE&gt;",
+        "protocol": "String &lt;one of: ANY, TCP, UDP&gt;",
+        "single_port": "String",
+        "source_ip": "String"
+    }
+]</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="PUT /system/servers/{server_id}/firewall_rules response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. PUT /system/servers/{server_id}/firewall_rules response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d106700e293" class="thbot">HTTP Response Code</th>
+
+<th id="d106700e296" class="thbot">Unique Code</th>
+
+<th id="d106700e299" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d106700e293 "><p>200</p>
+</td>
+
+<td headers="d106700e296 "><p></p>
+</td>
+
+<td headers="d106700e299 "><p>The rules were updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d106700e293 "><p>404</p>
+</td>
+
+<td headers="d106700e296 "><p>1002</p>
+</td>
+
+<td headers="d106700e299 "><p>The requested server with the given server ID cannot be found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d106700e293 "><p>422</p>
+</td>
+
+<td headers="d106700e296 "><p>1005</p>
+</td>
+
+<td headers="d106700e299 "><p>One or more parameters are invalid in request.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d106700e293 "><p>500</p>
+</td>
+
+<td headers="d106700e296 "><p>1020</p>
+</td>
+
+<td headers="d106700e299 "><p>An error occurred while trying to set the access control firewall rules on the server with the given Id.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d106700e372"><h2 class="sectiontitle" id="d106700e372">Response Description</h2>
+
+<div class="p">A list of the rules in a JSON string. Each rule contains the following fields: <ul>
+<li><strong>is_any_source_ip</strong> - Boolean - Whether any source IP address is accepted. </li>
+
+<li><strong>port_range</strong> - String - A port range in the format of start-end. </li>
+
+<li><strong>port_type</strong> - String - one of: ANY, SINGLE, RANGE. </li>
+
+<li><strong>protocol</strong> - String - one of: ANY, TCP, UDP. </li>
+
+<li><strong>single_port</strong> - String - A single port. </li>
+
+<li><strong>source_ip</strong> - String - A specific IP address. </li>
+
+</ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d106700e414"><h2 class="sectiontitle" id="d106700e414">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "is_any_source_ip": true,
+        "port_range": "String",
+        "port_type": "String &lt;one of: ANY, SINGLE, RANGE&gt;",
+        "protocol": "String &lt;one of: ANY, TCP, UDP&gt;",
+        "single_port": "String",
+        "source_ip": "String"
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d106700e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_system_intro.html" title="Use the references for REST API 12.0 system endpoints.">System endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

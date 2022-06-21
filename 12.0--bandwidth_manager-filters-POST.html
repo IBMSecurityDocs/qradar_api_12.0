@@ -1,0 +1,431 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Creates a bandwidth manager filter">
+<meta name="keywords" content="/bandwidth_manager/filters, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_bandwidth_manager_intro.html">
+<title>POST /bandwidth_manager/filters</title>
+</head>
+<body id="api-12.0--bandwidth_manager-filters-POST"><main role="main"><article role="article" aria-labelledby="d122219e10">
+<h1 class="topictitle1" id="d122219e10">POST /bandwidth_manager/filters</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Creates a bandwidth manager filter</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /bandwidth_manager/filters resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /bandwidth_manager/filters resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d122219e60" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d122219e60 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /bandwidth_manager/filters request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /bandwidth_manager/filters request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d122219e108" class="thbot">Parameter</th>
+
+<th id="d122219e111" class="thbot">Type</th>
+
+<th id="d122219e114" class="thbot">Optionality</th>
+
+<th id="d122219e117" class="thbot">Data Type</th>
+
+<th id="d122219e120" class="thbot">MIME Type</th>
+
+<th id="d122219e124" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d122219e108 "><p>fields</p>
+</td>
+
+<td headers="d122219e111 "><p>header</p>
+</td>
+
+<td headers="d122219e114 "><p>Optional</p>
+</td>
+
+<td headers="d122219e117 "><p>String</p>
+</td>
+
+<td headers="d122219e120 "><p>text/plain</p>
+</td>
+
+<td headers="d122219e124 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /bandwidth_manager/filters request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /bandwidth_manager/filters request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d122219e191" class="thbot">Parameter</th>
+
+<th id="d122219e194" class="thbot">Data Type</th>
+
+<th id="d122219e197" class="thbot">MIME Type</th>
+
+<th id="d122219e200" class="thbot">Description</th>
+
+<th id="d122219e203" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d122219e191 "><p>class</p>
+</td>
+
+<td headers="d122219e194 "><p>Object</p>
+</td>
+
+<td headers="d122219e197 "><p>application/json</p>
+</td>
+
+<td headers="d122219e200 "><p>null</p>
+</td>
+
+<td headers="d122219e203 "><p>{
+    "configuration_id": 42,
+    "created_by": "String",
+    "destination_cidr": "String",
+    "destination_port": 42,
+    "destination_port_mask": 42,
+    "device_name": "String",
+    "host_id": 42,
+    "hostname": "String",
+    "id": 42,
+    "match_all": true,
+    "name": "String",
+    "partner_id": 42,
+    "source_cidr": "String",
+    "source_port": 42,
+    "source_port_mask": 42
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /bandwidth_manager/filters response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /bandwidth_manager/filters response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d122219e260" class="thbot">HTTP Response Code</th>
+
+<th id="d122219e263" class="thbot">Unique Code</th>
+
+<th id="d122219e266" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d122219e260 "><p>202</p>
+</td>
+
+<td headers="d122219e263 "><p></p>
+</td>
+
+<td headers="d122219e266 "><p>The configuration was created successfully.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d122219e260 "><p>404</p>
+</td>
+
+<td headers="d122219e263 "><p>1002</p>
+</td>
+
+<td headers="d122219e266 "><p>Unable to find the managed host by using the host_id.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d122219e260 "><p>422</p>
+</td>
+
+<td headers="d122219e263 "><p>1005</p>
+</td>
+
+<td headers="d122219e266 "><p>A parameter was passed incorrectly.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d122219e260 "><p>422</p>
+</td>
+
+<td headers="d122219e263 "><p>1004</p>
+</td>
+
+<td headers="d122219e266 "><p>The host_id parameter value must be a positive integer or null.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d122219e260 "><p>422</p>
+</td>
+
+<td headers="d122219e263 "><p>1010</p>
+</td>
+
+<td headers="d122219e266 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d122219e260 "><p>422</p>
+</td>
+
+<td headers="d122219e263 "><p>1011</p>
+</td>
+
+<td headers="d122219e266 "><p>The source_port parameter value must be a positive integer. The value must be in the range 1 - 65534.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d122219e260 "><p>422</p>
+</td>
+
+<td headers="d122219e263 "><p>1012</p>
+</td>
+
+<td headers="d122219e266 "><p>The source_port_mask parameter value must be a positive integer. The value must be in the range 1 - 65534.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d122219e260 "><p>422</p>
+</td>
+
+<td headers="d122219e263 "><p>1013</p>
+</td>
+
+<td headers="d122219e266 "><p>The destination_port parameter value must be a positive integer. The value must be in the range 1 - 65534.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d122219e260 "><p>422</p>
+</td>
+
+<td headers="d122219e263 "><p>1014</p>
+</td>
+
+<td headers="d122219e266 "><p>The destination_port_mask parameter value must be a positive integer. The value must be in the range 1 - 65534.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d122219e260 "><p>422</p>
+</td>
+
+<td headers="d122219e263 "><p>1016</p>
+</td>
+
+<td headers="d122219e266 "><p>The name parameter value must not exceed 100 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d122219e260 "><p>422</p>
+</td>
+
+<td headers="d122219e263 "><p>1017</p>
+</td>
+
+<td headers="d122219e266 "><p>The device_name parameter value must not exceed 100 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d122219e260 "><p>422</p>
+</td>
+
+<td headers="d122219e263 "><p>1018</p>
+</td>
+
+<td headers="d122219e266 "><p>The source_cidr parameter value must be a valid CIDR.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d122219e260 "><p>422</p>
+</td>
+
+<td headers="d122219e263 "><p>1019</p>
+</td>
+
+<td headers="d122219e266 "><p>The destination_cidr parameter value must be a valid CIDR.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d122219e260 "><p>422</p>
+</td>
+
+<td headers="d122219e263 "><p>1020</p>
+</td>
+
+<td headers="d122219e266 "><p>The hostname parameter value must not exceed 100 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d122219e260 "><p>422</p>
+</td>
+
+<td headers="d122219e263 "><p>1021</p>
+</td>
+
+<td headers="d122219e266 "><p>The configuration was not found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d122219e260 "><p>422</p>
+</td>
+
+<td headers="d122219e263 "><p>1022</p>
+</td>
+
+<td headers="d122219e266 "><p>The name parameter must not contain the $ character.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d122219e260 "><p>500</p>
+</td>
+
+<td headers="d122219e263 "><p>1030</p>
+</td>
+
+<td headers="d122219e266 "><p>An error occurred trying to create the filter.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d122219e536"><h2 class="sectiontitle" id="d122219e536">Response Description</h2>
+
+<p></p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d122219e544"><h2 class="sectiontitle" id="d122219e544">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "configuration_id": 42,
+    "created_by": "String",
+    "destination_cidr": "String",
+    "destination_port": 42,
+    "destination_port_mask": 42,
+    "device_name": "String",
+    "host_id": 42,
+    "hostname": "String",
+    "id": 42,
+    "match_all": true,
+    "name": "String",
+    "partner_id": 42,
+    "source_cidr": "String",
+    "source_port": 42,
+    "source_port_mask": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d122219e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_bandwidth_manager_intro.html" title="Use the references for REST API 12.0 bandwidth manager endpoints.">Bandwidth manager endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

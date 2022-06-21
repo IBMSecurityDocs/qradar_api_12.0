@@ -1,0 +1,351 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Updates the offense saved search owner only.">
+<meta name="keywords" content="/siem/offense_saved_searches/{id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_siem_intro.html">
+<title>POST /siem/offense_saved_searches/{id}</title>
+</head>
+<body id="api-12.0--siem-offense_saved_searches-id-POST"><main role="main"><article role="article" aria-labelledby="d127726e10">
+<h1 class="topictitle1" id="d127726e10">POST /siem/offense_saved_searches/{id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Updates the offense saved search owner only.</p>
+
+<div class="section refsyn">
+<p>Updates the offense saved search owner only.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /siem/offense_saved_searches/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /siem/offense_saved_searches/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d127726e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d127726e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /siem/offense_saved_searches/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /siem/offense_saved_searches/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d127726e112" class="thbot">Parameter</th>
+
+<th id="d127726e115" class="thbot">Type</th>
+
+<th id="d127726e118" class="thbot">Optionality</th>
+
+<th id="d127726e121" class="thbot">Data Type</th>
+
+<th id="d127726e124" class="thbot">MIME Type</th>
+
+<th id="d127726e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d127726e112 "><p>id</p>
+</td>
+
+<td headers="d127726e115 "><p>path</p>
+</td>
+
+<td headers="d127726e118 "><p>Required</p>
+</td>
+
+<td headers="d127726e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d127726e124 "><p>text/plain</p>
+</td>
+
+<td headers="d127726e128 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d127726e112 "><p>Range</p>
+</td>
+
+<td headers="d127726e115 "><p>header</p>
+</td>
+
+<td headers="d127726e118 "><p>Optional</p>
+</td>
+
+<td headers="d127726e121 "><p>String</p>
+</td>
+
+<td headers="d127726e124 "><p>text/plain</p>
+</td>
+
+<td headers="d127726e128 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d127726e112 "><p>filter</p>
+</td>
+
+<td headers="d127726e115 "><p>header</p>
+</td>
+
+<td headers="d127726e118 "><p>Optional</p>
+</td>
+
+<td headers="d127726e121 "><p>String</p>
+</td>
+
+<td headers="d127726e124 "><p>text/plain</p>
+</td>
+
+<td headers="d127726e128 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d127726e112 "><p>fields</p>
+</td>
+
+<td headers="d127726e115 "><p>header</p>
+</td>
+
+<td headers="d127726e118 "><p>Optional</p>
+</td>
+
+<td headers="d127726e121 "><p>String</p>
+</td>
+
+<td headers="d127726e124 "><p>text/plain</p>
+</td>
+
+<td headers="d127726e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /siem/offense_saved_searches/{id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /siem/offense_saved_searches/{id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d127726e279" class="thbot">Parameter</th>
+
+<th id="d127726e282" class="thbot">Data Type</th>
+
+<th id="d127726e285" class="thbot">MIME Type</th>
+
+<th id="d127726e288" class="thbot">Description</th>
+
+<th id="d127726e291" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d127726e279 "><p>saved_search</p>
+</td>
+
+<td headers="d127726e282 "><p>Object</p>
+</td>
+
+<td headers="d127726e285 "><p>application/json</p>
+</td>
+
+<td headers="d127726e288 "><p>null</p>
+</td>
+
+<td headers="d127726e291 "><p>{
+ "id": "1",
+ "name": "String",
+ "is_shared": true,
+ "owner": "String"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /siem/offense_saved_searches/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /siem/offense_saved_searches/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d127726e348" class="thbot">HTTP Response Code</th>
+
+<th id="d127726e351" class="thbot">Unique Code</th>
+
+<th id="d127726e354" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d127726e348 "><p>200</p>
+</td>
+
+<td headers="d127726e351 "><p></p>
+</td>
+
+<td headers="d127726e354 "><p>The offense saved search was updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d127726e348 "><p>403</p>
+</td>
+
+<td headers="d127726e351 "><p>1009</p>
+</td>
+
+<td headers="d127726e354 "><p>You do not have the required capabilities to update the offense saved search.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d127726e348 "><p>404</p>
+</td>
+
+<td headers="d127726e351 "><p>1002</p>
+</td>
+
+<td headers="d127726e354 "><p>The offense saved search does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d127726e348 "><p>409</p>
+</td>
+
+<td headers="d127726e351 "><p>1004</p>
+</td>
+
+<td headers="d127726e354 "><p>The provided user does not have the required capabilities to own the offense saved search.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d127726e348 "><p>422</p>
+</td>
+
+<td headers="d127726e351 "><p>1005</p>
+</td>
+
+<td headers="d127726e354 "><p>A request parameter is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d127726e348 "><p>500</p>
+</td>
+
+<td headers="d127726e351 "><p>1020</p>
+</td>
+
+<td headers="d127726e354 "><p>An error occurred during the attempt to update the offense saved search.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d127726e458"><h2 class="sectiontitle" id="d127726e458">Response Description</h2>
+
+<div class="p">The offense saved search after it is updated. An offense saved search object contains the following fields:
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the offense saved search.</li>
+
+ <li><strong>name</strong> - String - The name of the offense saved search.</li>
+
+ <li><strong>owner</strong> - String - The owner of the offense saved search.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d127726e484"><h2 class="sectiontitle" id="d127726e484">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "id": 42,
+    "name": "String",
+    "owner": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d127726e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_siem_intro.html" title="Use the references for REST API 12.0 SIEM endpoints.">SIEM endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

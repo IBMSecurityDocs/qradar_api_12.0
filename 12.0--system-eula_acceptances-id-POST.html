@@ -1,0 +1,288 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Updates an individual EULA acceptance.">
+<meta name="keywords" content="/system/eula_acceptances/{id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_system_intro.html">
+<title>POST /system/eula_acceptances/{id}</title>
+</head>
+<body id="api-12.0--system-eula_acceptances-id-POST"><main role="main"><article role="article" aria-labelledby="d244881e10">
+<h1 class="topictitle1" id="d244881e10">POST /system/eula_acceptances/{id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Updates an individual EULA acceptance.</p>
+
+<div class="section refsyn">
+
+<p> All users are able to call this endpoint, may only update the EULA Acceptance resource that corresponds to them.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /system/eula_acceptances/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /system/eula_acceptances/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d244881e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d244881e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /system/eula_acceptances/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /system/eula_acceptances/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d244881e112" class="thbot">Parameter</th>
+
+<th id="d244881e115" class="thbot">Type</th>
+
+<th id="d244881e118" class="thbot">Optionality</th>
+
+<th id="d244881e121" class="thbot">Data Type</th>
+
+<th id="d244881e124" class="thbot">MIME Type</th>
+
+<th id="d244881e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d244881e112 "><p>id</p>
+</td>
+
+<td headers="d244881e115 "><p>path</p>
+</td>
+
+<td headers="d244881e118 "><p>Required</p>
+</td>
+
+<td headers="d244881e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d244881e124 "><p>text/plain</p>
+</td>
+
+<td headers="d244881e128 "><p>The ID of the EULA Acceptance to update.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d244881e112 "><p>fields</p>
+</td>
+
+<td headers="d244881e115 "><p>header</p>
+</td>
+
+<td headers="d244881e118 "><p>Optional</p>
+</td>
+
+<td headers="d244881e121 "><p>String</p>
+</td>
+
+<td headers="d244881e124 "><p>text/plain</p>
+</td>
+
+<td headers="d244881e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /system/eula_acceptances/{id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /system/eula_acceptances/{id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d244881e223" class="thbot">Parameter</th>
+
+<th id="d244881e226" class="thbot">Data Type</th>
+
+<th id="d244881e229" class="thbot">MIME Type</th>
+
+<th id="d244881e232" class="thbot">Description</th>
+
+<th id="d244881e235" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d244881e223 "><p>data</p>
+</td>
+
+<td headers="d244881e226 "><p>Object</p>
+</td>
+
+<td headers="d244881e229 "><p>application/json</p>
+</td>
+
+<td headers="d244881e232 "><div class="p">The updated EULA Acceptance structure.
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the EULA Acceptance to update.</li>
+
+ <li><strong>accepted_eula</strong> - Boolean - Indicates if the EULA has been accepted. If this value is false, access to the system is restricted.</li>
+
+ </ul>
+</div>
+</td>
+
+<td headers="d244881e235 "><p>{
+    "accepted_eula": true,
+    "id": 42
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /system/eula_acceptances/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /system/eula_acceptances/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d244881e304" class="thbot">HTTP Response Code</th>
+
+<th id="d244881e307" class="thbot">Unique Code</th>
+
+<th id="d244881e310" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d244881e304 "><p>200</p>
+</td>
+
+<td headers="d244881e307 "><p></p>
+</td>
+
+<td headers="d244881e310 "><p>The EULA Acceptance was updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d244881e304 "><p>403</p>
+</td>
+
+<td headers="d244881e307 "><p>79303003</p>
+</td>
+
+<td headers="d244881e310 "><p>The EULA Acceptance cannot be updated before viewing the EULA. See the /api/system/eulas endpoint for more information.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d244881e304 "><p>404</p>
+</td>
+
+<td headers="d244881e307 "><p>79303002</p>
+</td>
+
+<td headers="d244881e310 "><p>The EULA Acceptance id does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d244881e304 "><p>500</p>
+</td>
+
+<td headers="d244881e307 "><p>79303001</p>
+</td>
+
+<td headers="d244881e310 "><p>There was an unexpected problem updating EULA Acceptance information.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d244881e383"><h2 class="sectiontitle" id="d244881e383">Response Description</h2>
+
+<div class="p">The updated EULA Acceptance structure.
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the EULA Acceptance to update.</li>
+
+ <li><strong>accepted_eula</strong> - Boolean - Indicates if the EULA has been accepted. If this value is false, access to the system is restricted.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d244881e404"><h2 class="sectiontitle" id="d244881e404">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "accepted_eula": true,
+    "id": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d244881e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_system_intro.html" title="Use the references for REST API 12.0 system endpoints.">System endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

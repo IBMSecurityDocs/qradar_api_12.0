@@ -1,0 +1,259 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Cancels an application install.">
+<meta name="keywords" content="/gui_app_framework/application_creation_task/{application_id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_gui_app_framework_intro.html">
+<title>POST /gui_app_framework/application_creation_task/{application_id}</title>
+</head>
+<body id="api-12.0--gui_app_framework-application_creation_task-application_id-POST"><main role="main"><article role="article" aria-labelledby="d210022e10">
+<h1 class="topictitle1" id="d210022e10">POST /gui_app_framework/application_creation_task/{application_id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Cancels an application install.</p>
+
+<div class="section refsyn">
+<p>Cancels the installation of an application within the Application framework.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /gui_app_framework/application_creation_task/{application_id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /gui_app_framework/application_creation_task/{application_id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d210022e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d210022e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /gui_app_framework/application_creation_task/{application_id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /gui_app_framework/application_creation_task/{application_id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d210022e112" class="thbot">Parameter</th>
+
+<th id="d210022e115" class="thbot">Type</th>
+
+<th id="d210022e118" class="thbot">Optionality</th>
+
+<th id="d210022e121" class="thbot">Data Type</th>
+
+<th id="d210022e124" class="thbot">MIME Type</th>
+
+<th id="d210022e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d210022e112 "><p>application_id</p>
+</td>
+
+<td headers="d210022e115 "><p>path</p>
+</td>
+
+<td headers="d210022e118 "><p>Required</p>
+</td>
+
+<td headers="d210022e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d210022e124 "><p>text/plain</p>
+</td>
+
+<td headers="d210022e128 "><p>Required - The application identifier.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d210022e112 "><p>status</p>
+</td>
+
+<td headers="d210022e115 "><p>query</p>
+</td>
+
+<td headers="d210022e118 "><p>Required</p>
+</td>
+
+<td headers="d210022e121 "><p>String</p>
+</td>
+
+<td headers="d210022e124 "><p>text/plain</p>
+</td>
+
+<td headers="d210022e128 "><p>Required - "CANCELLED".</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /gui_app_framework/application_creation_task/{application_id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /gui_app_framework/application_creation_task/{application_id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d210022e218" class="thbot">HTTP Response Code</th>
+
+<th id="d210022e221" class="thbot">Unique Code</th>
+
+<th id="d210022e224" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d210022e218 "><p>200</p>
+</td>
+
+<td headers="d210022e221 "><p></p>
+</td>
+
+<td headers="d210022e224 "><p>The application installation was cancelled.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d210022e218 "><p>404</p>
+</td>
+
+<td headers="d210022e221 "><p>1002</p>
+</td>
+
+<td headers="d210022e224 "><p>The application identifier could not be found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d210022e218 "><p>409</p>
+</td>
+
+<td headers="d210022e221 "><p>33000</p>
+</td>
+
+<td headers="d210022e224 "><p>The current state of the application does not allow the requested action.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d210022e218 "><p>409</p>
+</td>
+
+<td headers="d210022e221 "><p>33700</p>
+</td>
+
+<td headers="d210022e224 "><p>The application framework is currently disabled.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d210022e218 "><p>422</p>
+</td>
+
+<td headers="d210022e221 "><p>33501</p>
+</td>
+
+<td headers="d210022e224 "><p>An invalid value was supplied for the status parameter.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d210022e218 "><p>500</p>
+</td>
+
+<td headers="d210022e221 "><p>1020</p>
+</td>
+
+<td headers="d210022e224 "><p>The request could not be completed.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d210022e327"><h2 class="sectiontitle" id="d210022e327">Response Description</h2>
+
+<div class="p">Installation status details:
+ <ul>
+ <li><strong>application_id</strong> - Integer - Application identifier.</li>
+
+ <li><strong>status</strong> - String - "CANCELLED".</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d210022e349"><h2 class="sectiontitle" id="d210022e349">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "application_id": 1001,
+    "status": "CREATING"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d210022e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_gui_app_framework_intro.html" title="Use the references for REST API 12.0 GUI app framework endpoints.">GUI app framework endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

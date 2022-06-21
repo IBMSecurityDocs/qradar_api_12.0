@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Get a staged user role by ID.">
+<meta name="keywords" content="/staged_config/access/user_roles/{id}, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_staged_config_intro.html">
+<title>GET /staged_config/access/user_roles/{id}</title>
+</head>
+<body id="api-12.0--staged_config-access-user_roles-id-GET"><main role="main"><article role="article" aria-labelledby="d237616e10">
+<h1 class="topictitle1" id="d237616e10">GET /staged_config/access/user_roles/{id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Get a staged user role by ID.</p>
+
+<div class="section refsyn">
+<p>Get a staged user role by ID. The staged configuration is not active
+ until a deploy is performed.
+
+ The ADMIN or SAASADMIN capabilities are required to call this endpoint.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /staged_config/access/user_roles/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /staged_config/access/user_roles/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d237616e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d237616e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /staged_config/access/user_roles/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /staged_config/access/user_roles/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d237616e112" class="thbot">Parameter</th>
+
+<th id="d237616e115" class="thbot">Type</th>
+
+<th id="d237616e118" class="thbot">Optionality</th>
+
+<th id="d237616e121" class="thbot">Data Type</th>
+
+<th id="d237616e124" class="thbot">MIME Type</th>
+
+<th id="d237616e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d237616e112 "><p>id</p>
+</td>
+
+<td headers="d237616e115 "><p>path</p>
+</td>
+
+<td headers="d237616e118 "><p>Required</p>
+</td>
+
+<td headers="d237616e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d237616e124 "><p>text/plain</p>
+</td>
+
+<td headers="d237616e128 "><p>The ID of the staged user role to get.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d237616e112 "><p>fields</p>
+</td>
+
+<td headers="d237616e115 "><p>query</p>
+</td>
+
+<td headers="d237616e118 "><p>Optional</p>
+</td>
+
+<td headers="d237616e121 "><p>String</p>
+</td>
+
+<td headers="d237616e124 "><p>text/plain</p>
+</td>
+
+<td headers="d237616e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /staged_config/access/user_roles/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /staged_config/access/user_roles/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d237616e218" class="thbot">HTTP Response Code</th>
+
+<th id="d237616e221" class="thbot">Unique Code</th>
+
+<th id="d237616e224" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d237616e218 "><p>200</p>
+</td>
+
+<td headers="d237616e221 "><p></p>
+</td>
+
+<td headers="d237616e224 "><p>The staged user role was retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d237616e218 "><p>404</p>
+</td>
+
+<td headers="d237616e221 "><p>38341001</p>
+</td>
+
+<td headers="d237616e224 "><p>The user role id does not exist.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d237616e266"><h2 class="sectiontitle" id="d237616e266">Response Description</h2>
+
+<div class="p">A single staged User Role.
+         <ul>
+         <li><strong>id</strong> - Long - The ID of the user role.</li>
+
+         <li><strong>name</strong> - String - The name of the user role.</li>
+
+         </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d237616e288"><h2 class="sectiontitle" id="d237616e288">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "id": 42,
+    "name": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d237616e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_staged_config_intro.html" title="Use the references for REST API 12.0 staged configuration endpoints.">Staged configuration endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

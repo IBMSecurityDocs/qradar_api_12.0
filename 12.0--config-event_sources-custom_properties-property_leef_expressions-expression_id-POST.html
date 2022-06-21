@@ -1,0 +1,357 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Updates an existing Ariel Property LEEF Expression.">
+<meta name="keywords" content="/config/event_sources/custom_properties/property_leef_expressions/{expression_id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_config_intro.html">
+<title>POST /config/event_sources/custom_properties/property_leef_expressions/{expression_id}</title>
+</head>
+<body id="api-12.0--config-event_sources-custom_properties-property_leef_expressions-expression_id-POST"><main role="main"><article role="article" aria-labelledby="d5714e10">
+<h1 class="topictitle1" id="d5714e10">POST /config/event_sources/custom_properties/property_leef_expressions/{expression_id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Updates an existing Ariel Property LEEF Expression.</p>
+
+<div class="section refsyn">
+<p>Updates an existing Ariel Property LEEF Expression.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/custom_properties/property_leef_expressions/{expression_id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/event_sources/custom_properties/property_leef_expressions/{expression_id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d5714e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d5714e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/custom_properties/property_leef_expressions/{expression_id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/event_sources/custom_properties/property_leef_expressions/{expression_id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d5714e112" class="thbot">Parameter</th>
+
+<th id="d5714e115" class="thbot">Type</th>
+
+<th id="d5714e118" class="thbot">Optionality</th>
+
+<th id="d5714e121" class="thbot">Data Type</th>
+
+<th id="d5714e124" class="thbot">MIME Type</th>
+
+<th id="d5714e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d5714e112 "><p>expression_id</p>
+</td>
+
+<td headers="d5714e115 "><p>path</p>
+</td>
+
+<td headers="d5714e118 "><p>Required</p>
+</td>
+
+<td headers="d5714e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d5714e124 "><p>text/plain</p>
+</td>
+
+<td headers="d5714e128 "><p>Required - The sequence ID of the Ariel Property LEEF Expression.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d5714e112 "><p>fields</p>
+</td>
+
+<td headers="d5714e115 "><p>header</p>
+</td>
+
+<td headers="d5714e118 "><p>Optional</p>
+</td>
+
+<td headers="d5714e121 "><p>String</p>
+</td>
+
+<td headers="d5714e124 "><p>text/plain</p>
+</td>
+
+<td headers="d5714e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/custom_properties/property_leef_expressions/{expression_id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/event_sources/custom_properties/property_leef_expressions/{expression_id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d5714e223" class="thbot">Parameter</th>
+
+<th id="d5714e226" class="thbot">Data Type</th>
+
+<th id="d5714e229" class="thbot">MIME Type</th>
+
+<th id="d5714e232" class="thbot">Description</th>
+
+<th id="d5714e235" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d5714e223 "><p>data</p>
+</td>
+
+<td headers="d5714e226 "><p>Object</p>
+</td>
+
+<td headers="d5714e229 "><p>application/json</p>
+</td>
+
+<td headers="d5714e232 "><div class="p">Required - A JSON representation of the Ariel Property LEEF Expression object.
+         <ul>
+         <li><strong>regex_property_identifier</strong> - Required - String - The identifier of the Ariel Regex Property that this expression belongs to.</li>
+
+         <li><strong>enabled</strong> - Optional - Boolean - Flag that indicates whether this expression is enabled. It defaults to true if not provided.</li>
+
+         <li><strong>expression</strong> - Required - String - The key of the corresponding property value from the LEEF payload.</li>
+
+         <li><strong>payload</strong> - Optional - String - A test payload. This parameter is only used in the UI so that you can verify your expression matches the expected payload.</li>
+
+         <li><strong>log_source_type_id</strong> - Required - Integer - Optional field. If provided, this restricts the Ariel Property LEEF Expression to only evaluate against events for this log source type. Must be the id of an existing log source type.</li>
+
+         <li><strong>log_source_id</strong> - Optional - Integer - Optional field. If provided, this restricts the Ariel Property LEEF Expression to only evaluate against events for this log source. Must be the id of an existing log source.</li>
+
+         <li><strong>qid</strong> - Optional - Integer - The expression is only applied to events associated with this QID record. </li>
+
+         <li><strong>low_level_category_id</strong> - Optional - Integer - Optional field. If provided, this restricts the Ariel Property LEEF Expression to only evaluate against events for this log source type. Must be the id of an existing log source type.</li>
+
+         <li><strong>username</strong> - Optional - String - The owner of the Ariel Property LEEF Expression. If the input username is an authorized service, the prefix "API_token: " is required.</li>
+
+         </ul>
+</div>
+</td>
+
+<td headers="d5714e235 "><p>{
+    "creation_date": 42,
+    "enabled": true,
+    "expression": "String",
+    "id": 42,
+    "identifier": "String",
+    "log_source_id": 42,
+    "log_source_type_id": 42,
+    "low_level_category_id": 42,
+    "modification_date": 42,
+    "payload": "String",
+    "qid": 42,
+    "regex_property_identifier": "String",
+    "username": "String"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/custom_properties/property_leef_expressions/{expression_id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /config/event_sources/custom_properties/property_leef_expressions/{expression_id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d5714e340" class="thbot">HTTP Response Code</th>
+
+<th id="d5714e343" class="thbot">Unique Code</th>
+
+<th id="d5714e346" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d5714e340 "><p>200</p>
+</td>
+
+<td headers="d5714e343 "><p></p>
+</td>
+
+<td headers="d5714e346 "><p>The Ariel Property LEEF Expression was updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d5714e340 "><p>403</p>
+</td>
+
+<td headers="d5714e343 "><p>1009</p>
+</td>
+
+<td headers="d5714e346 "><p>The user cannot update the resource because it only can be updated by the owner or admin user.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d5714e340 "><p>404</p>
+</td>
+
+<td headers="d5714e343 "><p>1002</p>
+</td>
+
+<td headers="d5714e346 "><p>The requested Ariel Property LEEF Expression cannot be found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d5714e340 "><p>422</p>
+</td>
+
+<td headers="d5714e343 "><p>1005</p>
+</td>
+
+<td headers="d5714e346 "><p>One or more parameters are invalid in request.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d5714e340 "><p>500</p>
+</td>
+
+<td headers="d5714e343 "><p>1020</p>
+</td>
+
+<td headers="d5714e346 "><p>An error occurred during the attempt to update an Ariel Property LEEF Expression.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d5714e434"><h2 class="sectiontitle" id="d5714e434">Response Description</h2>
+
+<div class="p">The updated Ariel Property LEEF Expression object contains the following fields:
+         <ul>
+         <li><strong>id</strong> - Long - The sequence ID of the Ariel Property LEEF Expression.</li>
+
+         <li><strong>identifier</strong> - String - The ID of the Ariel property LEEF expression. This field can be used to uniquely identify the same property across all systems. Often times this field will be set to a valid rfc4122 UUID but do not rely on this since this field isn't always set to a valid rfc4122 UUID.</li>
+
+         <li><strong>regex_property_identifier</strong> - String - The identifier of the Ariel Regex Property that this expression belongs to.</li>
+
+         <li><strong>enabled</strong> - Boolean - Flag that indicates whether this expression is enabled.</li>
+
+         <li><strong>expression</strong> - String - The key of the corresponding property value from the LEEF payload.</li>
+
+         <li><strong>creation_date</strong> - Long - The epoch timestamp in milliseconds of the time the property was created.</li>
+
+         <li><strong>modification_date</strong> - Long - The epoch timestamp in milliseconds of the time the property was last modified.</li>
+
+         <li><strong>payload</strong> - String - A test payload. This parameter is only used in the UI so that you can verify your expression matches the expected payload.</li>
+
+         <li><strong>log_source_type_id</strong> - Integer - Optional field. If provided, this restricts the Ariel Property LEEF Expression to only evaluate against events for this log source type. Must be the id of an existing log source type.</li>
+
+         <li><strong>log_source_id</strong> - Integer - Optional field. If provided, this restricts the Ariel Property LEEF Expression to only evaluate against events for this log source. Must be the id of an existing log source.</li>
+
+         <li><strong>qid</strong> - Integer - Optional field. If provided, this restricts the Ariel Property LEEF Expression to only evaluate against events for this log source type. Must be the id of an existing log source type.</li>
+
+         <li><strong>low_level_category_id</strong> - Short - The expression is only applied to events with this low level category.</li>
+
+         <li><strong>username</strong> - String - The owner of the Ariel property LEEF expression.</li>
+
+         </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d5714e512"><h2 class="sectiontitle" id="d5714e512">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "creation_date": 42,
+    "enabled": true,
+    "expression": "String",
+    "id": 42,
+    "identifier": "String",
+    "log_source_id": 42,
+    "log_source_type_id": 42,
+    "low_level_category_id": 42,
+    "modification_date": 42,
+    "payload": "String",
+    "qid": 42,
+    "regex_property_identifier": "String",
+    "username": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d5714e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_config_intro.html" title="Use the references for REST API 12.0 configuration endpoints.">Configuration endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

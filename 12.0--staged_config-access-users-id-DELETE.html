@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Deletes a user from staging. To ensure safe deletion, dependencies are checked. This might take some time. An asynchronous task is started to do this check.">
+<meta name="keywords" content="/staged_config/access/users/{id}, DELETE, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_staged_config_intro.html">
+<title>DELETE /staged_config/access/users/{id}</title>
+</head>
+<body id="api-12.0--staged_config-access-users-id-DELETE"><main role="main"><article role="article" aria-labelledby="d43514e10">
+<h1 class="topictitle1" id="d43514e10">DELETE /staged_config/access/users/{id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Deletes a user from staging. To ensure safe deletion, dependencies are checked. This might take some time. An asynchronous task is started to do this check.</p>
+
+<div class="section refsyn">
+<p>Deletes a user from staging. 
+ To ensure safe deletion, dependencies are checked. This might take some time.
+ An asynchronous task is started to do this check.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /staged_config/access/users/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. DELETE /staged_config/access/users/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d43514e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d43514e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /staged_config/access/users/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. DELETE /staged_config/access/users/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d43514e112" class="thbot">Parameter</th>
+
+<th id="d43514e115" class="thbot">Type</th>
+
+<th id="d43514e118" class="thbot">Optionality</th>
+
+<th id="d43514e121" class="thbot">Data Type</th>
+
+<th id="d43514e124" class="thbot">MIME Type</th>
+
+<th id="d43514e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d43514e112 "><p>id</p>
+</td>
+
+<td headers="d43514e115 "><p>path</p>
+</td>
+
+<td headers="d43514e118 "><p>Required</p>
+</td>
+
+<td headers="d43514e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d43514e124 "><p>text/plain</p>
+</td>
+
+<td headers="d43514e128 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d43514e112 "><p>fields</p>
+</td>
+
+<td headers="d43514e115 "><p>query</p>
+</td>
+
+<td headers="d43514e118 "><p>Optional</p>
+</td>
+
+<td headers="d43514e121 "><p>String</p>
+</td>
+
+<td headers="d43514e124 "><p>text/plain</p>
+</td>
+
+<td headers="d43514e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /staged_config/access/users/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. DELETE /staged_config/access/users/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d43514e218" class="thbot">HTTP Response Code</th>
+
+<th id="d43514e221" class="thbot">Unique Code</th>
+
+<th id="d43514e224" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d43514e218 "><p>202</p>
+</td>
+
+<td headers="d43514e221 "><p></p>
+</td>
+
+<td headers="d43514e224 "><p>The User delete command has been accepted and is in progress</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d43514e218 "><p>403</p>
+</td>
+
+<td headers="d43514e221 "><p>1009</p>
+</td>
+
+<td headers="d43514e224 "><p>You do not have the proper capabilities to delete the User</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d43514e218 "><p>404</p>
+</td>
+
+<td headers="d43514e221 "><p>1002</p>
+</td>
+
+<td headers="d43514e224 "><p>The User does not exist</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d43514e218 "><p>500</p>
+</td>
+
+<td headers="d43514e221 "><p>1020</p>
+</td>
+
+<td headers="d43514e224 "><p>An error occurred while attempting to delete the User</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d43514e296"><h2 class="sectiontitle" id="d43514e296">Response Description</h2>
+
+<div class="p">A Delete Task Status object and the location header set to the task status url "/api/staged_config/access/user_delete_tasks/{task_id}". A Delete Task Status object contains the following fields:
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the task.</li>
+
+ <li><strong>message</strong> - String - The localized task message.</li>
+
+ <li><strong>status</strong> - String - The current state of the task.</li>
+
+ <li><strong>name</strong> - String - The name of the task.</li>
+
+ <li><strong>created_by</strong> - String - The name of the user who started the task.</li>
+
+ <li><strong>created</strong> - Long - The time in milliseconds since epoch since the task was created.</li>
+
+ <li><strong>started</strong> - Long - The time in milliseconds since epoch since the task was started.</li>
+
+ <li><strong>modified</strong> - Long - The time in milliseconds since epoch since the task was modified.</li>
+
+ <li><strong>completed</strong> - Long - The time in milliseconds since epoch since the task was completed.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d43514e354"><h2 class="sectiontitle" id="d43514e354">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "completed": 42,
+    "created": 42,
+    "created_by": "String",
+    "id": 42,
+    "message": "String",
+    "modified": 42,
+    "name": "String",
+    "started": 42,
+    "status": "String &lt;one of: CANCELLED, CANCELING, CANCEL_REQUESTED, COMPLETED, CONFLICT, EXCEPTION, INITIALIZING, INTERRUPTED, PAUSED, PROCESSING, QUEUED, RESUMING&gt;"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d43514e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_staged_config_intro.html" title="Use the references for REST API 12.0 staged configuration endpoints.">Staged configuration endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

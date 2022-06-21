@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Get a deployed security profile by ID.">
+<meta name="keywords" content="/config/access/security_profiles/{id}, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_config_intro.html">
+<title>GET /config/access/security_profiles/{id}</title>
+</head>
+<body id="api-12.0--config-access-security_profiles-id-GET"><main role="main"><article role="article" aria-labelledby="d172772e10">
+<h1 class="topictitle1" id="d172772e10">GET /config/access/security_profiles/{id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Get a deployed security profile by ID.</p>
+
+<div class="section refsyn">
+<p>Get a deployed security profile by ID.
+ 
+ The ADMIN or SAASADMIN capabilities are required to call this endpoint.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/access/security_profiles/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /config/access/security_profiles/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d172772e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d172772e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/access/security_profiles/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /config/access/security_profiles/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d172772e112" class="thbot">Parameter</th>
+
+<th id="d172772e115" class="thbot">Type</th>
+
+<th id="d172772e118" class="thbot">Optionality</th>
+
+<th id="d172772e121" class="thbot">Data Type</th>
+
+<th id="d172772e124" class="thbot">MIME Type</th>
+
+<th id="d172772e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d172772e112 "><p>id</p>
+</td>
+
+<td headers="d172772e115 "><p>path</p>
+</td>
+
+<td headers="d172772e118 "><p>Required</p>
+</td>
+
+<td headers="d172772e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d172772e124 "><p>text/plain</p>
+</td>
+
+<td headers="d172772e128 "><p>The ID of the security profile to get</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d172772e112 "><p>fields</p>
+</td>
+
+<td headers="d172772e115 "><p>query</p>
+</td>
+
+<td headers="d172772e118 "><p>Optional</p>
+</td>
+
+<td headers="d172772e121 "><p>String</p>
+</td>
+
+<td headers="d172772e124 "><p>text/plain</p>
+</td>
+
+<td headers="d172772e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/access/security_profiles/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /config/access/security_profiles/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d172772e218" class="thbot">HTTP Response Code</th>
+
+<th id="d172772e221" class="thbot">Unique Code</th>
+
+<th id="d172772e224" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d172772e218 "><p>200</p>
+</td>
+
+<td headers="d172772e221 "><p></p>
+</td>
+
+<td headers="d172772e224 "><p>The deployed security profile was retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d172772e218 "><p>404</p>
+</td>
+
+<td headers="d172772e221 "><p>38331001</p>
+</td>
+
+<td headers="d172772e224 "><p>The security profile id does not exist.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d172772e266"><h2 class="sectiontitle" id="d172772e266">Response Description</h2>
+
+<div class="p">A single deployed Security profile.
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the security profile. The ID of the staged and the ID of the same deployed security profile are the same.</li>
+
+ <li><strong>name</strong> - String - The name of the security profile.</li>
+
+ <li><strong>domain_ids</strong> - Array of Integers - The list of domain ids which are assigned to the security profiles. If there is no domain assigned to the security profile, the empty list will be returned.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d172772e293"><h2 class="sectiontitle" id="d172772e293">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "domain_ids": [
+        42
+    ],
+    "id": 42,
+    "name": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d172772e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_config_intro.html" title="Use the references for REST API 12.0 configuration endpoints.">Configuration endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

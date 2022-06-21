@@ -1,0 +1,291 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Updates a tagged field with specified tag number.">
+<meta name="keywords" content="/ariel/taggedfields/{tag}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_ariel_intro.html">
+<title>POST /ariel/taggedfields/{tag}</title>
+</head>
+<body id="api-12.0--ariel-taggedfields-tag-POST"><main role="main"><article role="article" aria-labelledby="d195697e10">
+<h1 class="topictitle1" id="d195697e10">POST /ariel/taggedfields/{tag}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Updates a tagged field with specified tag number.</p>
+
+<div class="section refsyn">
+<p>Updates a tagged field with specified tag number.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/taggedfields/{tag} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /ariel/taggedfields/{tag} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d195697e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d195697e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/taggedfields/{tag} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /ariel/taggedfields/{tag} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d195697e112" class="thbot">Parameter</th>
+
+<th id="d195697e115" class="thbot">Type</th>
+
+<th id="d195697e118" class="thbot">Optionality</th>
+
+<th id="d195697e121" class="thbot">Data Type</th>
+
+<th id="d195697e124" class="thbot">MIME Type</th>
+
+<th id="d195697e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d195697e112 "><p>tag</p>
+</td>
+
+<td headers="d195697e115 "><p>path</p>
+</td>
+
+<td headers="d195697e118 "><p>Required</p>
+</td>
+
+<td headers="d195697e121 "><p>String</p>
+</td>
+
+<td headers="d195697e124 "><p>text/plain</p>
+</td>
+
+<td headers="d195697e128 "><p>The number to be assigned to this tagged property</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d195697e112 "><p>format_class_name</p>
+</td>
+
+<td headers="d195697e115 "><p>query</p>
+</td>
+
+<td headers="d195697e118 "><p>Optional</p>
+</td>
+
+<td headers="d195697e121 "><p>String</p>
+</td>
+
+<td headers="d195697e124 "><p>text/plain</p>
+</td>
+
+<td headers="d195697e128 "><p>Fully qualified name of formatter class</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d195697e112 "><p>format_params</p>
+</td>
+
+<td headers="d195697e115 "><p>query</p>
+</td>
+
+<td headers="d195697e118 "><p>Optional</p>
+</td>
+
+<td headers="d195697e121 "><p>String</p>
+</td>
+
+<td headers="d195697e124 "><p>text/plain</p>
+</td>
+
+<td headers="d195697e128 "><p>Optional parameter for formatter</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d195697e112 "><p>description</p>
+</td>
+
+<td headers="d195697e115 "><p>query</p>
+</td>
+
+<td headers="d195697e118 "><p>Optional</p>
+</td>
+
+<td headers="d195697e121 "><p>String</p>
+</td>
+
+<td headers="d195697e124 "><p>text/plain</p>
+</td>
+
+<td headers="d195697e128 "><p>Optional description of tagged property</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d195697e112 "><p>fields</p>
+</td>
+
+<td headers="d195697e115 "><p>query</p>
+</td>
+
+<td headers="d195697e118 "><p>Optional</p>
+</td>
+
+<td headers="d195697e121 "><p>String</p>
+</td>
+
+<td headers="d195697e124 "><p>text/plain</p>
+</td>
+
+<td headers="d195697e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/taggedfields/{tag} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /ariel/taggedfields/{tag} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d195697e302" class="thbot">HTTP Response Code</th>
+
+<th id="d195697e305" class="thbot">Unique Code</th>
+
+<th id="d195697e308" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d195697e302 "><p>200</p>
+</td>
+
+<td headers="d195697e305 "><p></p>
+</td>
+
+<td headers="d195697e308 "><p>Tagged field was successfully updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d195697e302 "><p>404</p>
+</td>
+
+<td headers="d195697e305 "><p>1002</p>
+</td>
+
+<td headers="d195697e308 "><p>The catalog does not exist</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d195697e302 "><p>500</p>
+</td>
+
+<td headers="d195697e305 "><p>1020</p>
+</td>
+
+<td headers="d195697e308 "><p>Internal server error</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d195697e365"><h2 class="sectiontitle" id="d195697e365">Response Description</h2>
+
+<p>Updated tagged field</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d195697e375"><h2 class="sectiontitle" id="d195697e375">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "array": true,
+    "catalog": "String",
+    "created": 42,
+    "deleted": true,
+    "description": "String",
+    "format_class_name": "String",
+    "format_params": [
+        "String"
+    ],
+    "modified": 42,
+    "name": "String",
+    "nullable": true,
+    "tag": 42,
+    "type": "String &lt;one of: NULL, STRUCT, Byte, Short, Integer, Long, UnsignedByte, UnsignedShort, UnsignedInt, UnsignedLong, BigInteger, Double, Float, Port, Host, HostV4V6, HostV6, MACAddress, String, ByteArray, UnsignedIntHex, Boolean, Binary&gt;"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d195697e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_ariel_intro.html" title="Use the references for REST API 12.0 Ariel endpoints.">Ariel endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

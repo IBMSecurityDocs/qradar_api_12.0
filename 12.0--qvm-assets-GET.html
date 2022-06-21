@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="List the assets with discovered vulnerabilities present in the asset model. The response will contain all available RESTful resources">
+<meta name="keywords" content="/qvm/assets, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_qvm_intro.html">
+<title>GET /qvm/assets</title>
+</head>
+<body id="api-12.0--qvm-assets-GET"><main role="main"><article role="article" aria-labelledby="d216463e10">
+<h1 class="topictitle1" id="d216463e10">GET /qvm/assets</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">List the assets with discovered vulnerabilities present in the asset model.  The response will contain all available RESTful resources</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /qvm/assets resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /qvm/assets resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d216463e60" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d216463e60 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /qvm/assets request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /qvm/assets request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d216463e108" class="thbot">Parameter</th>
+
+<th id="d216463e111" class="thbot">Type</th>
+
+<th id="d216463e114" class="thbot">Optionality</th>
+
+<th id="d216463e117" class="thbot">Data Type</th>
+
+<th id="d216463e120" class="thbot">MIME Type</th>
+
+<th id="d216463e124" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d216463e108 "><p>savedSearchId</p>
+</td>
+
+<td headers="d216463e111 "><p>query</p>
+</td>
+
+<td headers="d216463e114 "><p>Optional</p>
+</td>
+
+<td headers="d216463e117 "><p>String</p>
+</td>
+
+<td headers="d216463e120 "><p>text/plain</p>
+</td>
+
+<td headers="d216463e124 "><p>Id of saved search</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d216463e108 "><p>savedSearchName</p>
+</td>
+
+<td headers="d216463e111 "><p>query</p>
+</td>
+
+<td headers="d216463e114 "><p>Optional</p>
+</td>
+
+<td headers="d216463e117 "><p>String</p>
+</td>
+
+<td headers="d216463e120 "><p>text/plain</p>
+</td>
+
+<td headers="d216463e124 "><p>Saved search name</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d216463e108 "><p>filters</p>
+</td>
+
+<td headers="d216463e111 "><p>query</p>
+</td>
+
+<td headers="d216463e114 "><p>Optional</p>
+</td>
+
+<td headers="d216463e117 "><p>Array&lt;Object&gt;</p>
+</td>
+
+<td headers="d216463e120 "><p>application/json</p>
+</td>
+
+<td headers="d216463e124 "><p>List of JSON objects for application of bespoke query search dataset filter.  Format [{"parameter":"&lt;value&gt;","operator":"&lt;value&gt;","value":"&lt;value&gt;"}]
+ 				  e.g. [{"parameter":"IPv4 Address","operator":"Equals","value":"10.100.85.111"}]</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /qvm/assets response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /qvm/assets response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d216463e242" class="thbot">HTTP Response Code</th>
+
+<th id="d216463e245" class="thbot">Unique Code</th>
+
+<th id="d216463e248" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d216463e242 "><p>200</p>
+</td>
+
+<td headers="d216463e245 "><p></p>
+</td>
+
+<td headers="d216463e248 "><p>The request to retrieve vulnerabilities by asset completed successfully</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d216463e242 "><p>420</p>
+</td>
+
+<td headers="d216463e245 "><p>9101</p>
+</td>
+
+<td headers="d216463e248 "><p>Invalid search parameters, search cannot be performed</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d216463e290"><h2 class="sectiontitle" id="d216463e290">Response Description</h2>
+
+<p>list of assets data</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d216463e300"><h2 class="sectiontitle" id="d216463e300">Response Sample</h2>
+
+<pre class="codeblock"><code>
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d216463e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_qvm_intro.html" title="Use the references for REST API 12.0 QRadar Vulnerability Manager endpoints.">IBM QRadar Vulnerability Manager endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

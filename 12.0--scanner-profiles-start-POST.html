@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Initiates a request to start an already created scanProfile. The request takes one parameter - scanProfileId. To get a list of scanProfileIds, simply get a list of the current scan profiles by initiating a 'profiles' request on the scanner endpoint. The scanProfileId will be validated and an appropriate message returned.">
+<meta name="keywords" content="/scanner/profiles/start, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_scanner_intro.html">
+<title>POST /scanner/profiles/start</title>
+</head>
+<body id="api-12.0--scanner-profiles-start-POST"><main role="main"><article role="article" aria-labelledby="d141297e10">
+<h1 class="topictitle1" id="d141297e10">POST /scanner/profiles/start</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Initiates a request to start an already created scanProfile. The request takes one parameter - scanProfileId.
+ 
+ To get a list of scanProfileIds, simply get a list of the current scan profiles by initiating a 'profiles' request on the
+ scanner endpoint. The scanProfileId will be validated and an appropriate message returned.</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /scanner/profiles/start resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /scanner/profiles/start resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d141297e60" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d141297e60 "><p>text/plain
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /scanner/profiles/start request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /scanner/profiles/start request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d141297e108" class="thbot">Parameter</th>
+
+<th id="d141297e111" class="thbot">Type</th>
+
+<th id="d141297e114" class="thbot">Optionality</th>
+
+<th id="d141297e117" class="thbot">Data Type</th>
+
+<th id="d141297e120" class="thbot">MIME Type</th>
+
+<th id="d141297e124" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d141297e108 "><p>scanProfileId</p>
+</td>
+
+<td headers="d141297e111 "><p>query</p>
+</td>
+
+<td headers="d141297e114 "><p>Required</p>
+</td>
+
+<td headers="d141297e117 "><p>String</p>
+</td>
+
+<td headers="d141297e120 "><p>text/plain</p>
+</td>
+
+<td headers="d141297e124 "><p>The unique id of the scan profile we want to start</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /scanner/profiles/start response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /scanner/profiles/start response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d141297e186" class="thbot">HTTP Response Code</th>
+
+<th id="d141297e189" class="thbot">Unique Code</th>
+
+<th id="d141297e192" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d141297e186 "><p>200</p>
+</td>
+
+<td headers="d141297e189 "><p></p>
+</td>
+
+<td headers="d141297e192 "><p>The scan has been successfully started</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d141297e186 "><p>422</p>
+</td>
+
+<td headers="d141297e189 "><p>1005</p>
+</td>
+
+<td headers="d141297e192 "><p>Occurs if the user does not have permission to start a scan, or the scan is in progress</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d141297e186 "><p>500</p>
+</td>
+
+<td headers="d141297e189 "><p>1030</p>
+</td>
+
+<td headers="d141297e192 "><p>Occurs when an attempt is made to start a scan when certain conditions are not met, or when too many scan requests have been made</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d141297e249"><h2 class="sectiontitle" id="d141297e249">Response Description</h2>
+
+<p>An indicator of whether the scan has been started successfully or not.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d141297e259"><h2 class="sectiontitle" id="d141297e259">Response Sample</h2>
+
+<pre class="codeblock"><code>
+String
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d141297e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_scanner_intro.html" title="Use the references for REST API 12.0 scanner endpoints.">Scanner endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

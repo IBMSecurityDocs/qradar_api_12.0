@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves Top Rules in the system sorted by response count.">
+<meta name="keywords" content="/health_data/top_rules, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_health_data_intro.html">
+<title>GET /health_data/top_rules</title>
+</head>
+<body id="api-12.0--health_data-top_rules-GET"><main role="main"><article role="article" aria-labelledby="d196198e10">
+<h1 class="topictitle1" id="d196198e10">GET /health_data/top_rules</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves Top Rules in the system sorted by response count.</p>
+
+<div class="section refsyn">
+<p>Retrieves Top Rules in the system sorted by response count</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /health_data/top_rules resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /health_data/top_rules resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d196198e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d196198e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /health_data/top_rules request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /health_data/top_rules request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d196198e112" class="thbot">Parameter</th>
+
+<th id="d196198e115" class="thbot">Type</th>
+
+<th id="d196198e118" class="thbot">Optionality</th>
+
+<th id="d196198e121" class="thbot">Data Type</th>
+
+<th id="d196198e124" class="thbot">MIME Type</th>
+
+<th id="d196198e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d196198e112 "><p>Range</p>
+</td>
+
+<td headers="d196198e115 "><p>header</p>
+</td>
+
+<td headers="d196198e118 "><p>Optional</p>
+</td>
+
+<td headers="d196198e121 "><p>String</p>
+</td>
+
+<td headers="d196198e124 "><p>text/plain</p>
+</td>
+
+<td headers="d196198e128 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d196198e112 "><p>filter</p>
+</td>
+
+<td headers="d196198e115 "><p>query</p>
+</td>
+
+<td headers="d196198e118 "><p>Optional</p>
+</td>
+
+<td headers="d196198e121 "><p>String</p>
+</td>
+
+<td headers="d196198e124 "><p>text/plain</p>
+</td>
+
+<td headers="d196198e128 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d196198e112 "><p>fields</p>
+</td>
+
+<td headers="d196198e115 "><p>query</p>
+</td>
+
+<td headers="d196198e118 "><p>Optional</p>
+</td>
+
+<td headers="d196198e121 "><p>String</p>
+</td>
+
+<td headers="d196198e124 "><p>text/plain</p>
+</td>
+
+<td headers="d196198e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /health_data/top_rules response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /health_data/top_rules response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d196198e246" class="thbot">HTTP Response Code</th>
+
+<th id="d196198e249" class="thbot">Unique Code</th>
+
+<th id="d196198e252" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d196198e246 "><p>200</p>
+</td>
+
+<td headers="d196198e249 "><p></p>
+</td>
+
+<td headers="d196198e252 "><p>The Top Rules were retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d196198e246 "><p>403</p>
+</td>
+
+<td headers="d196198e249 "><p>1009</p>
+</td>
+
+<td headers="d196198e252 "><p>Access Forbidden for Non Admin users.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d196198e246 "><p>422</p>
+</td>
+
+<td headers="d196198e249 "><p>1005</p>
+</td>
+
+<td headers="d196198e252 "><p>Unprocessable Entity. Invalid field, filter or Range parameter.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d196198e309"><h2 class="sectiontitle" id="d196198e309">Response Description</h2>
+
+<div class="p">An array of TopRuleData objects. A TopRuleData object contains the following fields:
+ <ul>
+ <li><strong>rule_name</strong> - String - The rule name.</li>
+
+ <li><strong>rule_id</strong> - Int - The rule id.</li>
+
+ <li><strong>count</strong> - Long - The response count of the rule.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d196198e336"><h2 class="sectiontitle" id="d196198e336">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "count": 42,
+        "rule_id": 42,
+        "rule_name": "String"
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d196198e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_health_data_intro.html" title="Use the references for REST API 12.0 health data endpoints.">Health data endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Creates a new calculated flow property.">
+<meta name="keywords" content="/config/flow_sources/custom_properties/calculated_properties, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_config_intro.html">
+<title>POST /config/flow_sources/custom_properties/calculated_properties</title>
+</head>
+<body id="api-12.0--config-flow_sources-custom_properties-calculated_properties-POST"><main role="main"><article role="article" aria-labelledby="d60376e10">
+<h1 class="topictitle1" id="d60376e10">POST /config/flow_sources/custom_properties/calculated_properties</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Creates a new calculated flow property.</p>
+
+<div class="section refsyn">
+<p>Creates a new calculated flow property.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/flow_sources/custom_properties/calculated_properties resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/flow_sources/custom_properties/calculated_properties resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d60376e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d60376e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/flow_sources/custom_properties/calculated_properties request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/flow_sources/custom_properties/calculated_properties request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d60376e112" class="thbot">Parameter</th>
+
+<th id="d60376e115" class="thbot">Type</th>
+
+<th id="d60376e118" class="thbot">Optionality</th>
+
+<th id="d60376e121" class="thbot">Data Type</th>
+
+<th id="d60376e124" class="thbot">MIME Type</th>
+
+<th id="d60376e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d60376e112 "><p>fields</p>
+</td>
+
+<td headers="d60376e115 "><p>header</p>
+</td>
+
+<td headers="d60376e118 "><p>Optional</p>
+</td>
+
+<td headers="d60376e121 "><p>String</p>
+</td>
+
+<td headers="d60376e124 "><p>text/plain</p>
+</td>
+
+<td headers="d60376e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/flow_sources/custom_properties/calculated_properties request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/flow_sources/custom_properties/calculated_properties request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d60376e195" class="thbot">Parameter</th>
+
+<th id="d60376e198" class="thbot">Data Type</th>
+
+<th id="d60376e201" class="thbot">MIME Type</th>
+
+<th id="d60376e204" class="thbot">Description</th>
+
+<th id="d60376e207" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d60376e195 "><p>data</p>
+</td>
+
+<td headers="d60376e198 "><p>Object</p>
+</td>
+
+<td headers="d60376e201 "><p>application/json</p>
+</td>
+
+<td headers="d60376e204 "><div class="p">Required - A JSON structure that contains the field_name-value pairs of the calculated flow property that is to be created. 
+ <ul>
+ <li><strong>name</strong> - Required - String - The name of the calculated flow property.</li>
+
+ <li><strong>description</strong> - Optional - String - The description of the calculated flow property. Defaults to an empty string.</li>
+
+ <li><strong>enabled</strong> - Optional - Boolean - Whether the calculated flow property is enabled. Defaults to true.</li>
+
+ <li><strong>first_operand</strong> - Required - Operand Object - An object describing the first operand in the expression.</li>
+
+ <li><strong>second_operand</strong> - Required - Operand Object - An object describing the second operand in the expression.</li>
+
+ <li><strong>operator</strong> - Optional -String - A string that represents one of the basic arithmetic operations in the expression. Defaults to "ADD".</li>
+
+ </ul>
+</div>
+</td>
+
+<td headers="d60376e207 "><p>{
+    "description": "String",
+    "enabled": true,
+    "first_operand": {
+        "numeric_value": 42.5,
+        "property_name": "String",
+        "type": "String &lt;one of: STATIC, PROPERTY&gt;"
+    },
+    "name": "String",
+    "operator": "String &lt;one of: ADD, SUBTRACT, MULTIPLY, DIVIDE&gt;",
+    "second_operand": {
+        "numeric_value": 42.5,
+        "property_name": "String",
+        "type": "String &lt;one of: STATIC, PROPERTY&gt;"
+    },
+    "username": "String"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/flow_sources/custom_properties/calculated_properties response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /config/flow_sources/custom_properties/calculated_properties response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d60376e297" class="thbot">HTTP Response Code</th>
+
+<th id="d60376e300" class="thbot">Unique Code</th>
+
+<th id="d60376e303" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d60376e297 "><p>201</p>
+</td>
+
+<td headers="d60376e300 "><p></p>
+</td>
+
+<td headers="d60376e303 "><p>The new calculated flow property was created.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d60376e297 "><p>403</p>
+</td>
+
+<td headers="d60376e300 "><p>1009</p>
+</td>
+
+<td headers="d60376e303 "><p>The requested create action is unauthorized.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d60376e297 "><p>409</p>
+</td>
+
+<td headers="d60376e300 "><p>1004</p>
+</td>
+
+<td headers="d60376e303 "><p>The name of the calculated property has been used.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d60376e297 "><p>422</p>
+</td>
+
+<td headers="d60376e300 "><p>1005</p>
+</td>
+
+<td headers="d60376e303 "><p>One or more parameters are invalid in the request.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d60376e297 "><p>500</p>
+</td>
+
+<td headers="d60376e300 "><p>1020</p>
+</td>
+
+<td headers="d60376e303 "><p>An error occurred during the attempt to create a new calculated flow property.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d60376e391"><h2 class="sectiontitle" id="d60376e391">Response Description</h2>
+
+<div class="p">The newly created calculated flow property that contains the following fields:
+ <ul>
+ <li><strong>id</strong> - Number - A sequence id for the calculated flow property.</li>
+
+ <li><strong>identifier</strong> - String - A string that uniquely identifies the calculated flow property.</li>
+
+ <li><strong>name</strong> - String - The name of the calculated flow property.</li>
+
+ <li><strong>description</strong> - String - The description of the calculated flow property.</li>
+
+ <li><strong>enabled</strong> - Boolean - Whether the calculated flow property is enabled.</li>
+
+ <li><strong>first_operand</strong> - String - An <strong>operand object</strong> describing the first operand in the expression.</li>
+
+ <li><strong>second_operand</strong> - String - An <strong>operand object</strong> describing the second operand in the expression.</li>
+
+ <li><strong>operator</strong> - String - A string that represents one of the basic arithmetic operations in the expression.</li>
+
+ <li><strong>username</strong> - String - The username of the creator of the calculated flow property.</li>
+ 
+ <li><strong>creation_date</strong> - Number - The time stamp for when the calculated flow property is created in milliseconds since epoch.</li>
+
+ <li><strong>modification_date</strong> - Number - The time stamp for when the calculated flow property is last modified in milliseconds since epoch.</li>
+
+ </ul>
+
+ 
+ An <strong>operand object</strong> contains the following fields: 
+ <ul> 
+ <li><strong>type</strong> - String - can be "STATIC" (for numeric operand) or "PROPERTY" (for operand that is a property).</li>
+
+ <li><strong>numeric_value</strong> - Number - when property_type is "STATIC", this is the value of the operand; otherwise, it is suppressed. </li>
+
+ <li><strong>property_name</strong> - String - when property_type is "PROPERTY", this is the name of the property that is being used as the operand; otherwise, it is suppressed.  </li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d60376e485"><h2 class="sectiontitle" id="d60376e485">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "creation_date": 42,
+    "description": "String",
+    "enabled": true,
+    "first_operand": {
+        "numeric_value": 42.5,
+        "property_name": "String",
+        "type": "String &lt;one of: STATIC, PROPERTY&gt;"
+    },
+    "id": 42,
+    "identifier": "String",
+    "modification_date": 42,
+    "name": "String",
+    "operator": "String &lt;one of: ADD, SUBTRACT, MULTIPLY, DIVIDE&gt;",
+    "second_operand": {
+        "numeric_value": 42.5,
+        "property_name": "String",
+        "type": "String &lt;one of: STATIC, PROPERTY&gt;"
+    },
+    "username": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d60376e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_config_intro.html" title="Use the references for REST API 12.0 configuration endpoints.">Configuration endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a domain by domain id.">
+<meta name="keywords" content="/config/domain_management/domains/{domain_id}, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_config_intro.html">
+<title>GET /config/domain_management/domains/{domain_id}</title>
+</head>
+<body id="api-12.0--config-domain_management-domains-domain_id-GET"><main role="main"><article role="article" aria-labelledby="d120157e10">
+<h1 class="topictitle1" id="d120157e10">GET /config/domain_management/domains/{domain_id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a domain by domain id.</p>
+
+<div class="section refsyn">
+<p>Retrieves a domain object by domain id.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/domain_management/domains/{domain_id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /config/domain_management/domains/{domain_id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d120157e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d120157e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/domain_management/domains/{domain_id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /config/domain_management/domains/{domain_id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d120157e112" class="thbot">Parameter</th>
+
+<th id="d120157e115" class="thbot">Type</th>
+
+<th id="d120157e118" class="thbot">Optionality</th>
+
+<th id="d120157e121" class="thbot">Data Type</th>
+
+<th id="d120157e124" class="thbot">MIME Type</th>
+
+<th id="d120157e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d120157e112 "><p>domain_id</p>
+</td>
+
+<td headers="d120157e115 "><p>path</p>
+</td>
+
+<td headers="d120157e118 "><p>Required</p>
+</td>
+
+<td headers="d120157e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d120157e124 "><p>text/plain</p>
+</td>
+
+<td headers="d120157e128 "><p>The ID of the domain object to retrieve.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d120157e112 "><p>fields</p>
+</td>
+
+<td headers="d120157e115 "><p>query</p>
+</td>
+
+<td headers="d120157e118 "><p>Optional</p>
+</td>
+
+<td headers="d120157e121 "><p>String</p>
+</td>
+
+<td headers="d120157e124 "><p>text/plain</p>
+</td>
+
+<td headers="d120157e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/domain_management/domains/{domain_id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /config/domain_management/domains/{domain_id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d120157e218" class="thbot">HTTP Response Code</th>
+
+<th id="d120157e221" class="thbot">Unique Code</th>
+
+<th id="d120157e224" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d120157e218 "><p>200</p>
+</td>
+
+<td headers="d120157e221 "><p></p>
+</td>
+
+<td headers="d120157e224 "><p>The domain has been successfully retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d120157e218 "><p>404</p>
+</td>
+
+<td headers="d120157e221 "><p>1002</p>
+</td>
+
+<td headers="d120157e224 "><p>No domain was found for the provided domain id.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d120157e218 "><p>500</p>
+</td>
+
+<td headers="d120157e221 "><p>1020</p>
+</td>
+
+<td headers="d120157e224 "><p>An error occurred while the domain was being retrieved.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d120157e281"><h2 class="sectiontitle" id="d120157e281">Response Description</h2>
+
+<p>A domain object.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d120157e291"><h2 class="sectiontitle" id="d120157e291">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "asset_scanner_ids": [
+        42
+    ],
+    "custom_properties": [
+        {
+            "capture_result": "String",
+            "id": 42
+        }
+    ],
+    "deleted": true,
+    "description": "String",
+    "event_collector_ids": [
+        42
+    ],
+    "flow_collector_ids": [
+        42
+    ],
+    "flow_source_ids": [
+        42
+    ],
+    "flow_vlan_ids": [
+        42
+    ],
+    "id": 42,
+    "log_source_group_ids": [
+        42
+    ],
+    "log_source_ids": [
+        42
+    ],
+    "name": "String",
+    "qvm_scanner_ids": [
+        42
+    ],
+    "tenant_id": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d120157e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_config_intro.html" title="Use the references for REST API 12.0 configuration endpoints.">Configuration endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

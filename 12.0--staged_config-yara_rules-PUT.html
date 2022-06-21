@@ -1,0 +1,238 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Uploads the supplied Yara rule file to the QRadar system. If the provided Yara file is empty - all rules are deleted from the system.">
+<meta name="keywords" content="/staged_config/yara_rules, PUT, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_staged_config_intro.html">
+<title>PUT /staged_config/yara_rules</title>
+</head>
+<body id="api-12.0--staged_config-yara_rules-PUT"><main role="main"><article role="article" aria-labelledby="d222263e10">
+<h1 class="topictitle1" id="d222263e10">PUT /staged_config/yara_rules</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Uploads the supplied Yara rule file to the QRadar system.
+ If the provided Yara file is empty - all rules are deleted from the system.</p>
+
+<div class="section refsyn">
+<p>Uploads the supplied Yara rule file to the QRadar system.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="PUT /staged_config/yara_rules resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. PUT /staged_config/yara_rules resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d222263e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d222263e64 "><p>text/plain
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="PUT /staged_config/yara_rules request body details" class="defaultstyle"><caption><span class="tablecap">Table 2. PUT /staged_config/yara_rules request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d222263e110" class="thbot">Parameter</th>
+
+<th id="d222263e113" class="thbot">Data Type</th>
+
+<th id="d222263e116" class="thbot">MIME Type</th>
+
+<th id="d222263e119" class="thbot">Description</th>
+
+<th id="d222263e122" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d222263e110 "><p>file</p>
+</td>
+
+<td headers="d222263e113 "><p>File</p>
+</td>
+
+<td headers="d222263e116 "><p>application/zip</p>
+</td>
+
+<td headers="d222263e119 "><p>Required - The Yara rule file. 
+ Must be properly-formed Yara rule content, either a TEXT file, or a TEXT file within a ZIP or TAR.GZ archive. 
+ Must be provided with MIME type text/plain, application/zip, application/x-gzip or multipart/form-data</p>
+</td>
+
+<td headers="d222263e122 "><p>File</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="PUT /staged_config/yara_rules response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. PUT /staged_config/yara_rules response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d222263e179" class="thbot">HTTP Response Code</th>
+
+<th id="d222263e182" class="thbot">Unique Code</th>
+
+<th id="d222263e185" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d222263e179 "><p>200</p>
+</td>
+
+<td headers="d222263e182 "><p></p>
+</td>
+
+<td headers="d222263e185 "><p>The supplied Yara rule file was uploaded.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d222263e179 "><p>422</p>
+</td>
+
+<td headers="d222263e182 "><p>1101</p>
+</td>
+
+<td headers="d222263e185 "><p>Must be a correctly-formatted Yara rule file.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d222263e179 "><p>422</p>
+</td>
+
+<td headers="d222263e182 "><p>1103</p>
+</td>
+
+<td headers="d222263e185 "><p>The archive file must only contain a single Yara rule file.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d222263e179 "><p>422</p>
+</td>
+
+<td headers="d222263e182 "><p>1107</p>
+</td>
+
+<td headers="d222263e185 "><p>Invalid archive file was provided.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d222263e179 "><p>500</p>
+</td>
+
+<td headers="d222263e182 "><p>1104</p>
+</td>
+
+<td headers="d222263e185 "><p>Failed to extract the contents of the archive file.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d222263e179 "><p>500</p>
+</td>
+
+<td headers="d222263e182 "><p>1105</p>
+</td>
+
+<td headers="d222263e185 "><p>Yara validator script was terminated owing to timeout.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d222263e179 "><p>500</p>
+</td>
+
+<td headers="d222263e182 "><p>1106</p>
+</td>
+
+<td headers="d222263e185 "><p>Yara validator script encountered an unknown exception.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d222263e303"><h2 class="sectiontitle" id="d222263e303">Response Description</h2>
+
+<p>In case of an error, the method returns an exception.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d222263e313"><h2 class="sectiontitle" id="d222263e313">Response Sample</h2>
+
+<pre class="codeblock"><code>
+
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d222263e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_staged_config_intro.html" title="Use the references for REST API 12.0 staged configuration endpoints.">Staged configuration endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

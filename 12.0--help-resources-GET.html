@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a list of resource documentation objects currently in the system.">
+<meta name="keywords" content="/help/resources, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_help_intro.html">
+<title>GET /help/resources</title>
+</head>
+<body id="api-12.0--help-resources-GET"><main role="main"><article role="article" aria-labelledby="d168119e10">
+<h1 class="topictitle1" id="d168119e10">GET /help/resources</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a list of resource documentation objects currently in the system.</p>
+
+<div class="section refsyn">
+<p>Retrieves a list of resource documentation objects currently in the system.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /help/resources resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /help/resources resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d168119e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d168119e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /help/resources request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /help/resources request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d168119e112" class="thbot">Parameter</th>
+
+<th id="d168119e115" class="thbot">Type</th>
+
+<th id="d168119e118" class="thbot">Optionality</th>
+
+<th id="d168119e121" class="thbot">Data Type</th>
+
+<th id="d168119e124" class="thbot">MIME Type</th>
+
+<th id="d168119e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d168119e112 "><p>Range</p>
+</td>
+
+<td headers="d168119e115 "><p>header</p>
+</td>
+
+<td headers="d168119e118 "><p>Optional</p>
+</td>
+
+<td headers="d168119e121 "><p>String</p>
+</td>
+
+<td headers="d168119e124 "><p>text/plain</p>
+</td>
+
+<td headers="d168119e128 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d168119e112 "><p>fields</p>
+</td>
+
+<td headers="d168119e115 "><p>query</p>
+</td>
+
+<td headers="d168119e118 "><p>Optional</p>
+</td>
+
+<td headers="d168119e121 "><p>String</p>
+</td>
+
+<td headers="d168119e124 "><p>text/plain</p>
+</td>
+
+<td headers="d168119e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d168119e112 "><p>filter</p>
+</td>
+
+<td headers="d168119e115 "><p>query</p>
+</td>
+
+<td headers="d168119e118 "><p>Optional</p>
+</td>
+
+<td headers="d168119e121 "><p>String</p>
+</td>
+
+<td headers="d168119e124 "><p>text/plain</p>
+</td>
+
+<td headers="d168119e128 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /help/resources response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /help/resources response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d168119e246" class="thbot">HTTP Response Code</th>
+
+<th id="d168119e249" class="thbot">Unique Code</th>
+
+<th id="d168119e252" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d168119e246 "><p>200</p>
+</td>
+
+<td headers="d168119e249 "><p></p>
+</td>
+
+<td headers="d168119e252 "><p>The resource documentation list was retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d168119e246 "><p>500</p>
+</td>
+
+<td headers="d168119e249 "><p>1020</p>
+</td>
+
+<td headers="d168119e252 "><p>An unexpected error has occurred.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d168119e294"><h2 class="sectiontitle" id="d168119e294">Response Description</h2>
+
+<div class="p">An array of resource documentation objects. A resource documentation object contains the following
+         fields:
+         <ul>
+         <li><strong>id</strong> - Number - The ID of the resource documentation object. This ID is not permanent. It might
+         change any time services are restarted.</li>
+
+         <li><strong>child_resource_ids</strong> - Array of Numbers - A list of resource documentation IDs that are the
+         children of this resource.</li>
+
+         <li><strong>endpoint_ids</strong> - Array of Numbers - A list of endpoint documentation IDs for endpoints on this
+         resource.</li>
+
+         <li><strong>resource</strong> - String - The current resource.</li>
+
+         <li><strong>path</strong> - String - The full path of the current resource.</li>
+
+         <li><strong>parent_resource_id</strong> - Number - The resource documentation ID of the parent of this resource.
+         Null if this is a root resource.</li>
+
+         <li><strong>version</strong> - String - The version of this resource.</li>
+
+         </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d168119e342"><h2 class="sectiontitle" id="d168119e342">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "child_resource_ids": [
+            42
+        ],
+        "endpoint_ids": [
+            42
+        ],
+        "id": 42,
+        "parent_resource_id": 42,
+        "path": "String",
+        "resource": "String",
+        "version": "String"
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d168119e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_help_intro.html" title="Use the references for REST API 12.0 help endpoints.">Help endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

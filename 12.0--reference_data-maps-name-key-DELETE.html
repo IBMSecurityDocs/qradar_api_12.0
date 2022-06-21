@@ -1,0 +1,288 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Remove a value from a reference map.">
+<meta name="keywords" content="/reference_data/maps/{name}/{key}, DELETE, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_reference_data_intro.html">
+<title>DELETE /reference_data/maps/{name}/{key}</title>
+</head>
+<body id="api-12.0--reference_data-maps-name-key-DELETE"><main role="main"><article role="article" aria-labelledby="d104750e10">
+<h1 class="topictitle1" id="d104750e10">DELETE /reference_data/maps/{name}/{key}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Remove a value from a reference map.</p>
+
+<div class="section refsyn">
+<p>Remove a value from a reference map.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /reference_data/maps/{name}/{key} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. DELETE /reference_data/maps/{name}/{key} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d104750e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d104750e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /reference_data/maps/{name}/{key} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. DELETE /reference_data/maps/{name}/{key} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d104750e112" class="thbot">Parameter</th>
+
+<th id="d104750e115" class="thbot">Type</th>
+
+<th id="d104750e118" class="thbot">Optionality</th>
+
+<th id="d104750e121" class="thbot">Data Type</th>
+
+<th id="d104750e124" class="thbot">MIME Type</th>
+
+<th id="d104750e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d104750e112 "><p>name</p>
+</td>
+
+<td headers="d104750e115 "><p>path</p>
+</td>
+
+<td headers="d104750e118 "><p>Required</p>
+</td>
+
+<td headers="d104750e121 "><p>String</p>
+</td>
+
+<td headers="d104750e124 "><p>text/plain</p>
+</td>
+
+<td headers="d104750e128 "><p>Required - The name of the reference map to remove a value from</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d104750e112 "><p>key</p>
+</td>
+
+<td headers="d104750e115 "><p>path</p>
+</td>
+
+<td headers="d104750e118 "><p>Required</p>
+</td>
+
+<td headers="d104750e121 "><p>String</p>
+</td>
+
+<td headers="d104750e124 "><p>text/plain</p>
+</td>
+
+<td headers="d104750e128 "><p>Required - The key of the value to remove</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d104750e112 "><p>value</p>
+</td>
+
+<td headers="d104750e115 "><p>query</p>
+</td>
+
+<td headers="d104750e118 "><p>Required</p>
+</td>
+
+<td headers="d104750e121 "><p>String</p>
+</td>
+
+<td headers="d104750e124 "><p>text/plain</p>
+</td>
+
+<td headers="d104750e128 "><p>Required - The value to remove from the reference map. Note: Date values must be represented in milliseconds since the Unix Epoch January 1st 1970.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d104750e112 "><p>fields</p>
+</td>
+
+<td headers="d104750e115 "><p>query</p>
+</td>
+
+<td headers="d104750e118 "><p>Optional</p>
+</td>
+
+<td headers="d104750e121 "><p>String</p>
+</td>
+
+<td headers="d104750e124 "><p>text/plain</p>
+</td>
+
+<td headers="d104750e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /reference_data/maps/{name}/{key} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. DELETE /reference_data/maps/{name}/{key} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d104750e274" class="thbot">HTTP Response Code</th>
+
+<th id="d104750e277" class="thbot">Unique Code</th>
+
+<th id="d104750e280" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d104750e274 "><p>200</p>
+</td>
+
+<td headers="d104750e277 "><p></p>
+</td>
+
+<td headers="d104750e280 "><p>The reference map has had a value removed</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d104750e274 "><p>404</p>
+</td>
+
+<td headers="d104750e277 "><p>1002</p>
+</td>
+
+<td headers="d104750e280 "><p>The reference map does not exist</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d104750e274 "><p>404</p>
+</td>
+
+<td headers="d104750e277 "><p>1003</p>
+</td>
+
+<td headers="d104750e280 "><p>The record does not exist in the reference map</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d104750e274 "><p>422</p>
+</td>
+
+<td headers="d104750e277 "><p>1005</p>
+</td>
+
+<td headers="d104750e280 "><p>A request parameter is not valid</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d104750e274 "><p>500</p>
+</td>
+
+<td headers="d104750e277 "><p>1020</p>
+</td>
+
+<td headers="d104750e280 "><p>An error occurred while attempting to remove the value from the reference map</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d104750e367"><h2 class="sectiontitle" id="d104750e367">Response Description</h2>
+
+<p>Information about the reference map that had an element removed. This returns information about map but not the contained data.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d104750e377"><h2 class="sectiontitle" id="d104750e377">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "creation_time": 42,
+    "element_type": "String &lt;one of: ALN, NUM, IP, PORT, ALNIC, DATE&gt;",
+    "key_label": "String",
+    "name": "String",
+    "number_of_elements": 42,
+    "time_to_live": "String",
+    "timeout_type": "String &lt;one of: UNKNOWN, FIRST_SEEN, LAST_SEEN&gt;",
+    "value_label": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d104750e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_reference_data_intro.html" title="Use the references for REST API 12.0 reference data endpoints.">Reference data endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

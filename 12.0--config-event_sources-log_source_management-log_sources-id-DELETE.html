@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Deletes a log source by ID.">
+<meta name="keywords" content="/config/event_sources/log_source_management/log_sources/{id}, DELETE, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_config_intro.html">
+<title>DELETE /config/event_sources/log_source_management/log_sources/{id}</title>
+</head>
+<body id="api-12.0--config-event_sources-log_source_management-log_sources-id-DELETE"><main role="main"><article role="article" aria-labelledby="d245806e10">
+<h1 class="topictitle1" id="d245806e10">DELETE /config/event_sources/log_source_management/log_sources/{id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Deletes a log source by ID.</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /config/event_sources/log_source_management/log_sources/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. DELETE /config/event_sources/log_source_management/log_sources/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d245806e60" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d245806e60 "><p>text/plain
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /config/event_sources/log_source_management/log_sources/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. DELETE /config/event_sources/log_source_management/log_sources/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d245806e108" class="thbot">Parameter</th>
+
+<th id="d245806e111" class="thbot">Type</th>
+
+<th id="d245806e114" class="thbot">Optionality</th>
+
+<th id="d245806e117" class="thbot">Data Type</th>
+
+<th id="d245806e120" class="thbot">MIME Type</th>
+
+<th id="d245806e124" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d245806e108 "><p>id</p>
+</td>
+
+<td headers="d245806e111 "><p>path</p>
+</td>
+
+<td headers="d245806e114 "><p>Required</p>
+</td>
+
+<td headers="d245806e117 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d245806e120 "><p>text/plain</p>
+</td>
+
+<td headers="d245806e124 "><p>The ID of the log source to delete.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /config/event_sources/log_source_management/log_sources/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. DELETE /config/event_sources/log_source_management/log_sources/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d245806e186" class="thbot">HTTP Response Code</th>
+
+<th id="d245806e189" class="thbot">Unique Code</th>
+
+<th id="d245806e192" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d245806e186 "><p>204</p>
+</td>
+
+<td headers="d245806e189 "><p></p>
+</td>
+
+<td headers="d245806e192 "><p>The log source was deleted successfully.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d245806e186 "><p>403</p>
+</td>
+
+<td headers="d245806e189 "><p>1000</p>
+</td>
+
+<td headers="d245806e192 "><p>The endpoint cannot be used by users associated with a tenant.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d245806e186 "><p>404</p>
+</td>
+
+<td headers="d245806e189 "><p>1010</p>
+</td>
+
+<td headers="d245806e192 "><p>The log source ID was not found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d245806e186 "><p>422</p>
+</td>
+
+<td headers="d245806e189 "><p>1001</p>
+</td>
+
+<td headers="d245806e192 "><p>The requested log source cannot be deleted because its type_id corresponds to an internal log source type.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d245806e186 "><p>422</p>
+</td>
+
+<td headers="d245806e189 "><p>1002</p>
+</td>
+
+<td headers="d245806e192 "><p>This method is not supported for this log source because it is part of a bulk group.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d245806e186 "><p>500</p>
+</td>
+
+<td headers="d245806e189 "><p>1020</p>
+</td>
+
+<td headers="d245806e192 "><p>An error occurred while attempting to delete the log source.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d245806e295"><h2 class="sectiontitle" id="d245806e295">Response Description</h2>
+
+<p></p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d245806e304"><h2 class="sectiontitle" id="d245806e304">Response Sample</h2>
+
+<pre class="codeblock"><code>
+
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d245806e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_config_intro.html" title="Use the references for REST API 12.0 configuration endpoints.">Configuration endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

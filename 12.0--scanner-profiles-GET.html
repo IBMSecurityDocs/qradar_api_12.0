@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves all of the currently created scan profiles. No parameters are required and the following information should be retrieved for each scan profile - scanProfileId - scanProfileName - description - scanType - scannerName">
+<meta name="keywords" content="/scanner/profiles, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_scanner_intro.html">
+<title>GET /scanner/profiles</title>
+</head>
+<body id="api-12.0--scanner-profiles-GET"><main role="main"><article role="article" aria-labelledby="d172135e10">
+<h1 class="topictitle1" id="d172135e10">GET /scanner/profiles</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves all of the currently created scan profiles. No parameters are required and the following information 
+ should be retrieved for each scan profile
+ 
+ 	- scanProfileId
+  - scanProfileName
+  - description
+  - scanType
+  - scannerName</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /scanner/profiles resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /scanner/profiles resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d172135e60" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d172135e60 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+<p>There are no parameters for this endpoint.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /scanner/profiles response codes" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /scanner/profiles response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d172135e107" class="thbot">HTTP Response Code</th>
+
+<th id="d172135e110" class="thbot">Unique Code</th>
+
+<th id="d172135e113" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d172135e107 "><p>200</p>
+</td>
+
+<td headers="d172135e110 "><p></p>
+</td>
+
+<td headers="d172135e113 "><p>The list of scan profiles was successfully returned</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d172135e107 "><p>500</p>
+</td>
+
+<td headers="d172135e110 "><p>1030</p>
+</td>
+
+<td headers="d172135e113 "><p>Occurs when an attempt is made to list scan profiles when certain conditions are not met, or when too many scan requests have been made</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d172135e155"><h2 class="sectiontitle" id="d172135e155">Response Description</h2>
+
+<p>The list of scan profiles currently configured in QVM</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d172135e165"><h2 class="sectiontitle" id="d172135e165">Response Sample</h2>
+
+<pre class="codeblock"><code>
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d172135e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_scanner_intro.html" title="Use the references for REST API 12.0 scanner endpoints.">Scanner endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

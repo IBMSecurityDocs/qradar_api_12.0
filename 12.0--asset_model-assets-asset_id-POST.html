@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Update an asset with several pertinent pieces of information.">
+<meta name="keywords" content="/asset_model/assets/{asset_id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_asset_model_intro.html">
+<title>POST /asset_model/assets/{asset_id}</title>
+</head>
+<body id="api-12.0--asset_model-assets-asset_id-POST"><main role="main"><article role="article" aria-labelledby="d98238e10">
+<h1 class="topictitle1" id="d98238e10">POST /asset_model/assets/{asset_id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Update an asset with several pertinent pieces of information.</p>
+
+<div class="section refsyn">
+<p>Update an asset with several pertinent pieces of information. The <strong>asset_id</strong> tag is mandatory, and is the unique identifier for an asset. 
+ This field is available through the <strong>/asset_model/assets</strong> or <strong>/asset_model/saved_searches/{saved_search_id}/results</strong> query. 
+ To update properties, the property type id which is available through the <strong>/asset_model/properties</strong> query should be provided along
+ with the new value. See the sample provided demonstrating an example asset update.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /asset_model/assets/{asset_id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /asset_model/assets/{asset_id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d98238e76" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d98238e76 "><p>text/plain
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /asset_model/assets/{asset_id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /asset_model/assets/{asset_id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d98238e124" class="thbot">Parameter</th>
+
+<th id="d98238e127" class="thbot">Type</th>
+
+<th id="d98238e130" class="thbot">Optionality</th>
+
+<th id="d98238e133" class="thbot">Data Type</th>
+
+<th id="d98238e136" class="thbot">MIME Type</th>
+
+<th id="d98238e140" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d98238e124 "><p>asset_id</p>
+</td>
+
+<td headers="d98238e127 "><p>path</p>
+</td>
+
+<td headers="d98238e130 "><p>Required</p>
+</td>
+
+<td headers="d98238e133 "><p>String</p>
+</td>
+
+<td headers="d98238e136 "><p>text/plain</p>
+</td>
+
+<td headers="d98238e140 "><p>Unique identifier of the asset to update.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /asset_model/assets/{asset_id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /asset_model/assets/{asset_id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d98238e207" class="thbot">Parameter</th>
+
+<th id="d98238e210" class="thbot">Data Type</th>
+
+<th id="d98238e213" class="thbot">MIME Type</th>
+
+<th id="d98238e216" class="thbot">Description</th>
+
+<th id="d98238e219" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d98238e207 "><p>asset</p>
+</td>
+
+<td headers="d98238e210 "><p>JSON</p>
+</td>
+
+<td headers="d98238e213 "><p>application/json</p>
+</td>
+
+<td headers="d98238e216 "><p>JSON representation of an asset.</p>
+</td>
+
+<td headers="d98238e219 "><p>{
+  "properties": [
+    {
+      "type_id": 1001,
+      "value": "given name value"
+    },
+    {
+      "type_id": 1002,
+      "value": "unified name value"
+    }
+  ]
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /asset_model/assets/{asset_id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /asset_model/assets/{asset_id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d98238e276" class="thbot">HTTP Response Code</th>
+
+<th id="d98238e279" class="thbot">Unique Code</th>
+
+<th id="d98238e282" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d98238e276 "><p>202</p>
+</td>
+
+<td headers="d98238e279 "><p></p>
+</td>
+
+<td headers="d98238e282 "><p>The request to update the asset was successful. The update will take place when the asset profile application receives the request.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d98238e276 "><p>422</p>
+</td>
+
+<td headers="d98238e279 "><p>1005</p>
+</td>
+
+<td headers="d98238e282 "><p>One or more of the requested property updates were invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d98238e276 "><p>500</p>
+</td>
+
+<td headers="d98238e279 "><p>1020</p>
+</td>
+
+<td headers="d98238e282 "><p>The server encountered an error registering the update with the asset profile application.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d98238e340"><h2 class="sectiontitle" id="d98238e340">Response Description</h2>
+
+<p>Information about the asset that was updated.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d98238e349"><h2 class="sectiontitle" id="d98238e349">Response Sample</h2>
+
+<pre class="codeblock"><code>
+String
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d98238e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_asset_model_intro.html" title="Use the references for REST API 12.0 asset model endpoints.">Asset model endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

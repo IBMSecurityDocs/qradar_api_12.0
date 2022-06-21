@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Update a filter by ID.">
+<meta name="keywords" content="/bandwidth_manager/filters/{id}, DELETE, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_bandwidth_manager_intro.html">
+<title>DELETE /bandwidth_manager/filters/{id}</title>
+</head>
+<body id="api-12.0--bandwidth_manager-filters-id-DELETE"><main role="main"><article role="article" aria-labelledby="d141615e10">
+<h1 class="topictitle1" id="d141615e10">DELETE /bandwidth_manager/filters/{id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Update a filter by ID.</p>
+
+<div class="section refsyn">
+<p>Update a filter by ID.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /bandwidth_manager/filters/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. DELETE /bandwidth_manager/filters/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d141615e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d141615e64 "><p>text/plain
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /bandwidth_manager/filters/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. DELETE /bandwidth_manager/filters/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d141615e112" class="thbot">Parameter</th>
+
+<th id="d141615e115" class="thbot">Type</th>
+
+<th id="d141615e118" class="thbot">Optionality</th>
+
+<th id="d141615e121" class="thbot">Data Type</th>
+
+<th id="d141615e124" class="thbot">MIME Type</th>
+
+<th id="d141615e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d141615e112 "><p>id</p>
+</td>
+
+<td headers="d141615e115 "><p>path</p>
+</td>
+
+<td headers="d141615e118 "><p>Required</p>
+</td>
+
+<td headers="d141615e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d141615e124 "><p>text/plain</p>
+</td>
+
+<td headers="d141615e128 "><p>null</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /bandwidth_manager/filters/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. DELETE /bandwidth_manager/filters/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d141615e190" class="thbot">HTTP Response Code</th>
+
+<th id="d141615e193" class="thbot">Unique Code</th>
+
+<th id="d141615e196" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d141615e190 "><p>204</p>
+</td>
+
+<td headers="d141615e193 "><p></p>
+</td>
+
+<td headers="d141615e196 "><p>The filter has been deleted.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d141615e190 "><p>404</p>
+</td>
+
+<td headers="d141615e193 "><p>1020</p>
+</td>
+
+<td headers="d141615e196 "><p>The filter does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d141615e190 "><p>420</p>
+</td>
+
+<td headers="d141615e193 "><p>1023</p>
+</td>
+
+<td headers="d141615e196 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d141615e190 "><p>500</p>
+</td>
+
+<td headers="d141615e193 "><p>1021</p>
+</td>
+
+<td headers="d141615e196 "><p>An error occurred attempting to retrieve the filter.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d141615e268"><h2 class="sectiontitle" id="d141615e268">Response Description</h2>
+
+<p></p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d141615e277"><h2 class="sectiontitle" id="d141615e277">Response Sample</h2>
+
+<pre class="codeblock"><code>
+
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d141615e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_bandwidth_manager_intro.html" title="Use the references for REST API 12.0 bandwidth manager endpoints.">Bandwidth manager endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

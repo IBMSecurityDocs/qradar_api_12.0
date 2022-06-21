@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a list of all tagged field lookups.">
+<meta name="keywords" content="/ariel/lookups, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_ariel_intro.html">
+<title>GET /ariel/lookups</title>
+</head>
+<body id="api-12.0--ariel-lookups-GET"><main role="main"><article role="article" aria-labelledby="d54672e10">
+<h1 class="topictitle1" id="d54672e10">GET /ariel/lookups</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a list of all tagged field lookups.</p>
+
+<div class="section refsyn">
+<p>Retrieves a list of all tagged field lookups</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /ariel/lookups resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /ariel/lookups resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d54672e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d54672e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /ariel/lookups request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /ariel/lookups request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d54672e112" class="thbot">Parameter</th>
+
+<th id="d54672e115" class="thbot">Type</th>
+
+<th id="d54672e118" class="thbot">Optionality</th>
+
+<th id="d54672e121" class="thbot">Data Type</th>
+
+<th id="d54672e124" class="thbot">MIME Type</th>
+
+<th id="d54672e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d54672e112 "><p>fields</p>
+</td>
+
+<td headers="d54672e115 "><p>query</p>
+</td>
+
+<td headers="d54672e118 "><p>Optional</p>
+</td>
+
+<td headers="d54672e121 "><p>String</p>
+</td>
+
+<td headers="d54672e124 "><p>text/plain</p>
+</td>
+
+<td headers="d54672e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /ariel/lookups response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /ariel/lookups response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d54672e190" class="thbot">HTTP Response Code</th>
+
+<th id="d54672e193" class="thbot">Unique Code</th>
+
+<th id="d54672e196" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d54672e190 "><p>200</p>
+</td>
+
+<td headers="d54672e193 "><p></p>
+</td>
+
+<td headers="d54672e196 "><p>The lookup list was retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d54672e190 "><p>500</p>
+</td>
+
+<td headers="d54672e193 "><p>1020</p>
+</td>
+
+<td headers="d54672e196 "><p>Internal server error</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d54672e238"><h2 class="sectiontitle" id="d54672e238">Response Description</h2>
+
+<p>The list of available tagged field lookups.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d54672e248"><h2 class="sectiontitle" id="d54672e248">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "default_value": "String",
+        "map": {
+            "String": "String"
+        },
+        "name": "String",
+        "type": "String &lt;one of: NULL, STRUCT, Byte, Short, Integer, Long, UnsignedByte, UnsignedShort, UnsignedInt, UnsignedLong, BigInteger, Double, Float, Port, Host, HostV4V6, HostV6, MACAddress, String, ByteArray, UnsignedIntHex, Boolean, Binary&gt;"
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d54672e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_ariel_intro.html" title="Use the references for REST API 12.0 Ariel endpoints.">Ariel endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

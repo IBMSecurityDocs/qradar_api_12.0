@@ -1,0 +1,326 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a list of QNI configurations. The list contains a single configuration.">
+<meta name="keywords" content="/qni/hosts/{host_id}/configs, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_qni_intro.html">
+<title>GET /qni/hosts/{host_id}/configs</title>
+</head>
+<body id="api-12.0--qni-hosts-host_id-configs-GET"><main role="main"><article role="article" aria-labelledby="d70930e10">
+<h1 class="topictitle1" id="d70930e10">GET /qni/hosts/{host_id}/configs</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a list of QNI configurations. The list contains a single configuration.</p>
+
+<div class="section refsyn">
+<p>Retrieves a list of QNI configurations. The list contains a single configuration.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /qni/hosts/{host_id}/configs resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /qni/hosts/{host_id}/configs resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d70930e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d70930e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /qni/hosts/{host_id}/configs request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /qni/hosts/{host_id}/configs request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d70930e112" class="thbot">Parameter</th>
+
+<th id="d70930e115" class="thbot">Type</th>
+
+<th id="d70930e118" class="thbot">Optionality</th>
+
+<th id="d70930e121" class="thbot">Data Type</th>
+
+<th id="d70930e124" class="thbot">MIME Type</th>
+
+<th id="d70930e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d70930e112 "><p>host_id</p>
+</td>
+
+<td headers="d70930e115 "><p>path</p>
+</td>
+
+<td headers="d70930e118 "><p>Required</p>
+</td>
+
+<td headers="d70930e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d70930e124 "><p>text/plain</p>
+</td>
+
+<td headers="d70930e128 "><p>Long The ID of the QNI host.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d70930e112 "><p>Range</p>
+</td>
+
+<td headers="d70930e115 "><p>header</p>
+</td>
+
+<td headers="d70930e118 "><p>Optional</p>
+</td>
+
+<td headers="d70930e121 "><p>String</p>
+</td>
+
+<td headers="d70930e124 "><p>text/plain</p>
+</td>
+
+<td headers="d70930e128 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d70930e112 "><p>fields</p>
+</td>
+
+<td headers="d70930e115 "><p>query</p>
+</td>
+
+<td headers="d70930e118 "><p>Optional</p>
+</td>
+
+<td headers="d70930e121 "><p>String</p>
+</td>
+
+<td headers="d70930e124 "><p>text/plain</p>
+</td>
+
+<td headers="d70930e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d70930e112 "><p>filter</p>
+</td>
+
+<td headers="d70930e115 "><p>query</p>
+</td>
+
+<td headers="d70930e118 "><p>Optional</p>
+</td>
+
+<td headers="d70930e121 "><p>String</p>
+</td>
+
+<td headers="d70930e124 "><p>text/plain</p>
+</td>
+
+<td headers="d70930e128 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /qni/hosts/{host_id}/configs response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /qni/hosts/{host_id}/configs response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d70930e274" class="thbot">HTTP Response Code</th>
+
+<th id="d70930e277" class="thbot">Unique Code</th>
+
+<th id="d70930e280" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d70930e274 "><p>200</p>
+</td>
+
+<td headers="d70930e277 "><p></p>
+</td>
+
+<td headers="d70930e280 "><p>QNI Configuration has been successfully retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d70930e274 "><p>404</p>
+</td>
+
+<td headers="d70930e277 "><p>44001</p>
+</td>
+
+<td headers="d70930e280 "><p>The QNI host ID does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d70930e274 "><p>422</p>
+</td>
+
+<td headers="d70930e277 "><p>44020</p>
+</td>
+
+<td headers="d70930e280 "><p>The QNI host ID is less than or equal to 0.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d70930e274 "><p>500</p>
+</td>
+
+<td headers="d70930e277 "><p>44010</p>
+</td>
+
+<td headers="d70930e280 "><p>An internal server error occurred while processing a request.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d70930e352"><h2 class="sectiontitle" id="d70930e352">Response Description</h2>
+
+<div class="p">An array containing a single QNI Configuration object. This is the current configuration of a QNI host.
+ <ul>
+ 		<li><strong>id</strong> - Number - ID of the QNI configuration. Always equals 1 because QNI host has only one configuration.</li>
+
+ 		<li><strong>host_id</strong> - Number - ID of the QNI host.</li>
+
+ 		<li><strong>inspection_level</strong> - Enumeration - Depth of content inspection. The possible values are:<ul>
+<li><em>BASIC</em> - Lowest level of inspection. Flows are detected by 5-tuple, and the number of
+bytes and packets that are flowing in each direction are counted.</li>
+
+<li><em>ENRICHED</em> - Each flow is identified and inspected by one of the protocol or domain
+inspectors. The inspection can generate many kinds of attributes.</li>
+
+<li><em>ADVANCED</em> - The highest level of inspection. It does everything that the Enriched Flows
+levels does, but it also scans and inspects the content of the files that it finds.</li>
+
+<li><em>DEFAULT</em> - The QNI host uses the globally-set inspection level setting.</li>
+
+</ul>
+</li>
+
+ 		<li><strong>raw_payload</strong> - Long - The maximum amount of data (bytes) that the QFlow Collector is
+set to capture and retain in the flow payload. Possible values are:<ul>
+<li>-1: The QNI host is set to use the globally-set raw payload setting.</li>
+
+<li>0: Turn the payload off.</li>
+
+<li>1 - 32768: The number of bytes.</li>
+
+</ul>
+</li>
+
+ 		<li><strong>ports</strong> - Array - Array of configured network card ports. Each port has the following fields:
+ 			<ul>
+ 				<li><strong>port_id</strong> - Number - The ID of the port.</li>
+
+ 				<li><strong>type</strong> - Enumeration - The mode that the port is used in. The possible values are <em>RECEIVE</em>, <em>TRANSMIT</em>. <em>RECEIVE</em> type indicates the port is configured to receive traffic. <em>TRANSMIT</em> type indicates the port is transmitting traffic duplicated from another port.</li>
+
+ 				<li><strong>source_port_id</strong> - Number - The ID of the port the that re-transmits the traffic. Only populated if port type is <em>TRANSMIT</em>.</li>
+
+ 			</ul>
+
+ 		</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d70930e455"><h2 class="sectiontitle" id="d70930e455">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "host_id": 42,
+        "id": 42,
+        "inspection_level": "String &lt;one of: BASIC, ADVANCED, ENRICHED, DEFAULT&gt;",
+        "ports": [
+            {
+                "id": 42,
+                "source_port_id": 42,
+                "type": "String &lt;one of: RECEIVE, TRANSMIT&gt;"
+            }
+        ],
+        "raw_payload": 42
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d70930e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_qni_intro.html" title="Use the references for REST API 12.0 QRadar Network Insights endpoints.">IBM QRadar Network Insights endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a list of the ethernet network interfaces based on the supplied server ID.">
+<meta name="keywords" content="/system/servers/{server_id}/network_interfaces/ethernet, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_system_intro.html">
+<title>GET /system/servers/{server_id}/network_interfaces/ethernet</title>
+</head>
+<body id="api-12.0--system-servers-server_id-network_interfaces-ethernet-GET"><main role="main"><article role="article" aria-labelledby="d108813e10">
+<h1 class="topictitle1" id="d108813e10">GET /system/servers/{server_id}/network_interfaces/ethernet</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a list of the ethernet network interfaces based on the supplied server ID.</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /system/servers/{server_id}/network_interfaces/ethernet resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /system/servers/{server_id}/network_interfaces/ethernet resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d108813e60" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d108813e60 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /system/servers/{server_id}/network_interfaces/ethernet request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /system/servers/{server_id}/network_interfaces/ethernet request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d108813e108" class="thbot">Parameter</th>
+
+<th id="d108813e111" class="thbot">Type</th>
+
+<th id="d108813e114" class="thbot">Optionality</th>
+
+<th id="d108813e117" class="thbot">Data Type</th>
+
+<th id="d108813e120" class="thbot">MIME Type</th>
+
+<th id="d108813e124" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d108813e108 "><p>server_id</p>
+</td>
+
+<td headers="d108813e111 "><p>path</p>
+</td>
+
+<td headers="d108813e114 "><p>Required</p>
+</td>
+
+<td headers="d108813e117 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d108813e120 "><p>text/plain</p>
+</td>
+
+<td headers="d108813e124 "><p>Required - The id of the server.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d108813e108 "><p>Range</p>
+</td>
+
+<td headers="d108813e111 "><p>header</p>
+</td>
+
+<td headers="d108813e114 "><p>Optional</p>
+</td>
+
+<td headers="d108813e117 "><p>String</p>
+</td>
+
+<td headers="d108813e120 "><p>text/plain</p>
+</td>
+
+<td headers="d108813e124 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d108813e108 "><p>fields</p>
+</td>
+
+<td headers="d108813e111 "><p>query</p>
+</td>
+
+<td headers="d108813e114 "><p>Optional</p>
+</td>
+
+<td headers="d108813e117 "><p>String</p>
+</td>
+
+<td headers="d108813e120 "><p>text/plain</p>
+</td>
+
+<td headers="d108813e124 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d108813e108 "><p>filter</p>
+</td>
+
+<td headers="d108813e111 "><p>query</p>
+</td>
+
+<td headers="d108813e114 "><p>Optional</p>
+</td>
+
+<td headers="d108813e117 "><p>String</p>
+</td>
+
+<td headers="d108813e120 "><p>text/plain</p>
+</td>
+
+<td headers="d108813e124 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /system/servers/{server_id}/network_interfaces/ethernet response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /system/servers/{server_id}/network_interfaces/ethernet response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d108813e270" class="thbot">HTTP Response Code</th>
+
+<th id="d108813e273" class="thbot">Unique Code</th>
+
+<th id="d108813e276" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d108813e270 "><p>200</p>
+</td>
+
+<td headers="d108813e273 "><p></p>
+</td>
+
+<td headers="d108813e276 "><p>A list of the ethernet network interfaces were retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d108813e270 "><p>404</p>
+</td>
+
+<td headers="d108813e273 "><p>1002</p>
+</td>
+
+<td headers="d108813e276 "><p>The requested server with the given server ID cannot be found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d108813e270 "><p>422</p>
+</td>
+
+<td headers="d108813e273 "><p>1005</p>
+</td>
+
+<td headers="d108813e276 "><p>One or more parameters are invalid in request.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d108813e270 "><p>500</p>
+</td>
+
+<td headers="d108813e273 "><p>1020</p>
+</td>
+
+<td headers="d108813e276 "><p>An error occurred while trying to retrieve the ethernet interfaces on the server with the given ID.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d108813e270 "><p>500</p>
+</td>
+
+<td headers="d108813e273 "><p>1022</p>
+</td>
+
+<td headers="d108813e276 "><p>Timeout while performing the task.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d108813e363"><h2 class="sectiontitle" id="d108813e363">Response Description</h2>
+
+<div class="p">A list of the ethernet network interfaces. Each ethernet network interface contains the following
+fields: <ul>
+<li><strong>device_name</strong> - String - The name of the network interface. </li>
+
+<li><strong>desc</strong> - String - The description of the network interface. </li>
+
+<li><strong>role</strong> - String - The role of the network interface. One of: regular, management,
+hacrossover, hacrossover_disabled, monitor, disabled.</li>
+
+<li><strong>ipversion</strong> - String - The verson of the IP address that is configured on the network
+interface. One of: ipv4, ipv6.</li>
+
+<li><strong>ip</strong> - String - The IP that is configured on the network interface. </li>
+
+<li><strong>mask</strong> - String - The netmask that is configured on the network interface </li>
+
+<li><strong>is_auto_ip</strong> - Boolean - Is the IP auto-configured? </li>
+
+<li><strong>is_cable_linked</strong> - String - Is the network interface cable linked? One of: true, false,
+unknown.</li>
+
+<li><strong>is_moving_config_with_active_ha</strong> - Boolean -Applies the same settings to a new active HA
+server during failover.</li>
+
+<li><strong>hacrossover_params</strong> - String - A map of key-value pairs of HA crossover parameters if the
+network interface is used for HA crossover.</li>
+
+</ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d108813e426"><h2 class="sectiontitle" id="d108813e426">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "desc": "String",
+        "device_name": "String",
+        "hacrossover_params": {
+            "String": "String"
+        },
+        "ip": "String",
+        "ipversion": "String &lt;one of: ipv4, ipv6&gt;",
+        "is_auto_ip": true,
+        "is_cable_linked": "String &lt;one of: true, false, unknown&gt;",
+        "is_moving_config_with_active_ha": true,
+        "mask": "String",
+        "role": "String &lt;one of: regular, management, hacrossover, hacrossover_disabled, monitor, disabled, slave, slave_disabled&gt;"
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d108813e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_system_intro.html" title="Use the references for REST API 12.0 system endpoints.">System endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

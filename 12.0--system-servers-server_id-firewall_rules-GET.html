@@ -1,0 +1,287 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a list of access control firewall rules based on the supplied server ID.">
+<meta name="keywords" content="/system/servers/{server_id}/firewall_rules, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_system_intro.html">
+<title>GET /system/servers/{server_id}/firewall_rules</title>
+</head>
+<body id="api-12.0--system-servers-server_id-firewall_rules-GET"><main role="main"><article role="article" aria-labelledby="d218270e10">
+<h1 class="topictitle1" id="d218270e10">GET /system/servers/{server_id}/firewall_rules</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a list of access control firewall rules based on the supplied server ID.</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /system/servers/{server_id}/firewall_rules resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /system/servers/{server_id}/firewall_rules resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d218270e60" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d218270e60 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /system/servers/{server_id}/firewall_rules request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /system/servers/{server_id}/firewall_rules request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d218270e108" class="thbot">Parameter</th>
+
+<th id="d218270e111" class="thbot">Type</th>
+
+<th id="d218270e114" class="thbot">Optionality</th>
+
+<th id="d218270e117" class="thbot">Data Type</th>
+
+<th id="d218270e120" class="thbot">MIME Type</th>
+
+<th id="d218270e124" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d218270e108 "><p>server_id</p>
+</td>
+
+<td headers="d218270e111 "><p>path</p>
+</td>
+
+<td headers="d218270e114 "><p>Required</p>
+</td>
+
+<td headers="d218270e117 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d218270e120 "><p>text/plain</p>
+</td>
+
+<td headers="d218270e124 "><p>Required - The ID of the server.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d218270e108 "><p>Range</p>
+</td>
+
+<td headers="d218270e111 "><p>header</p>
+</td>
+
+<td headers="d218270e114 "><p>Optional</p>
+</td>
+
+<td headers="d218270e117 "><p>String</p>
+</td>
+
+<td headers="d218270e120 "><p>text/plain</p>
+</td>
+
+<td headers="d218270e124 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d218270e108 "><p>fields</p>
+</td>
+
+<td headers="d218270e111 "><p>query</p>
+</td>
+
+<td headers="d218270e114 "><p>Optional</p>
+</td>
+
+<td headers="d218270e117 "><p>String</p>
+</td>
+
+<td headers="d218270e120 "><p>text/plain</p>
+</td>
+
+<td headers="d218270e124 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d218270e108 "><p>filter</p>
+</td>
+
+<td headers="d218270e111 "><p>query</p>
+</td>
+
+<td headers="d218270e114 "><p>Optional</p>
+</td>
+
+<td headers="d218270e117 "><p>String</p>
+</td>
+
+<td headers="d218270e120 "><p>text/plain</p>
+</td>
+
+<td headers="d218270e124 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /system/servers/{server_id}/firewall_rules response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /system/servers/{server_id}/firewall_rules response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d218270e270" class="thbot">HTTP Response Code</th>
+
+<th id="d218270e273" class="thbot">Unique Code</th>
+
+<th id="d218270e276" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d218270e270 "><p>200</p>
+</td>
+
+<td headers="d218270e273 "><p></p>
+</td>
+
+<td headers="d218270e276 "><p>The rules records was retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d218270e270 "><p>404</p>
+</td>
+
+<td headers="d218270e273 "><p>1002</p>
+</td>
+
+<td headers="d218270e276 "><p>The requested server with the given server ID cannot be found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d218270e270 "><p>422</p>
+</td>
+
+<td headers="d218270e273 "><p>1005</p>
+</td>
+
+<td headers="d218270e276 "><p>One or more parameters are invalid in request.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d218270e270 "><p>500</p>
+</td>
+
+<td headers="d218270e273 "><p>1020</p>
+</td>
+
+<td headers="d218270e276 "><p>An error occurred while trying to retrieve the requested access control firewall rules on the server with the given ID.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d218270e348"><h2 class="sectiontitle" id="d218270e348">Response Description</h2>
+
+<div class="p">A list of the rules. Each rule record contains the following fields: <ul>
+<li><strong>is_any_source_ip</strong> - Boolean - Whether any source IP is accepted. </li>
+
+<li><strong>port_range</strong> - String - A port range in the format of start-end. </li>
+
+<li><strong>port_type</strong> - String - one of: ANY, SINGLE, RANGE. </li>
+
+<li><strong>protocol</strong> - String - one of: ANY, TCP, UDP. </li>
+
+<li><strong>single_port</strong> - String - A single port. </li>
+
+<li><strong>source_ip</strong> - String - A specific IP address. </li>
+
+</ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d218270e391"><h2 class="sectiontitle" id="d218270e391">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "is_any_source_ip": true,
+        "port_range": "String",
+        "port_type": "String &lt;one of: ANY, SINGLE, RANGE&gt;",
+        "protocol": "String &lt;one of: ANY, TCP, UDP&gt;",
+        "single_port": "String",
+        "source_ip": "String"
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d218270e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_system_intro.html" title="Use the references for REST API 12.0 system endpoints.">System endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Retrieves a list of configurations.">
+<meta name="keywords" content="/bandwidth_manager/configurations, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version120_bandwidth_manager_intro.html">
+<title>GET /bandwidth_manager/configurations</title>
+</head>
+<body id="api-12.0--bandwidth_manager-configurations-GET"><main role="main"><article role="article" aria-labelledby="d64776e10">
+<h1 class="topictitle1" id="d64776e10">GET /bandwidth_manager/configurations</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves a list of configurations.</p>
+
+<div class="section refsyn">
+<p>Retrieves a list of configurations</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /bandwidth_manager/configurations resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /bandwidth_manager/configurations resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d64776e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d64776e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /bandwidth_manager/configurations request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /bandwidth_manager/configurations request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d64776e112" class="thbot">Parameter</th>
+
+<th id="d64776e115" class="thbot">Type</th>
+
+<th id="d64776e118" class="thbot">Optionality</th>
+
+<th id="d64776e121" class="thbot">Data Type</th>
+
+<th id="d64776e124" class="thbot">MIME Type</th>
+
+<th id="d64776e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d64776e112 "><p>Range</p>
+</td>
+
+<td headers="d64776e115 "><p>header</p>
+</td>
+
+<td headers="d64776e118 "><p>Optional</p>
+</td>
+
+<td headers="d64776e121 "><p>String</p>
+</td>
+
+<td headers="d64776e124 "><p>text/plain</p>
+</td>
+
+<td headers="d64776e128 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d64776e112 "><p>sort</p>
+</td>
+
+<td headers="d64776e115 "><p>query</p>
+</td>
+
+<td headers="d64776e118 "><p>Optional</p>
+</td>
+
+<td headers="d64776e121 "><p>String</p>
+</td>
+
+<td headers="d64776e124 "><p>text/plain</p>
+</td>
+
+<td headers="d64776e128 "><p>Optional - This parameter is used to sort the elements in a list.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d64776e112 "><p>filter</p>
+</td>
+
+<td headers="d64776e115 "><p>query</p>
+</td>
+
+<td headers="d64776e118 "><p>Optional</p>
+</td>
+
+<td headers="d64776e121 "><p>String</p>
+</td>
+
+<td headers="d64776e124 "><p>text/plain</p>
+</td>
+
+<td headers="d64776e128 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d64776e112 "><p>fields</p>
+</td>
+
+<td headers="d64776e115 "><p>query</p>
+</td>
+
+<td headers="d64776e118 "><p>Optional</p>
+</td>
+
+<td headers="d64776e121 "><p>String</p>
+</td>
+
+<td headers="d64776e124 "><p>text/plain</p>
+</td>
+
+<td headers="d64776e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /bandwidth_manager/configurations response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /bandwidth_manager/configurations response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d64776e274" class="thbot">HTTP Response Code</th>
+
+<th id="d64776e277" class="thbot">Unique Code</th>
+
+<th id="d64776e280" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d64776e274 "><p>200</p>
+</td>
+
+<td headers="d64776e277 "><p></p>
+</td>
+
+<td headers="d64776e280 "><p>The configurations were retrieved.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d64776e274 "><p>422</p>
+</td>
+
+<td headers="d64776e277 "><p>1010</p>
+</td>
+
+<td headers="d64776e280 "><p>A filter parameter is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d64776e274 "><p>422</p>
+</td>
+
+<td headers="d64776e277 "><p>1030</p>
+</td>
+
+<td headers="d64776e280 "><p>A sort parameter is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d64776e274 "><p>500</p>
+</td>
+
+<td headers="d64776e277 "><p>1020</p>
+</td>
+
+<td headers="d64776e280 "><p>An error occurred during the attempt to retrieve the configurations.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d64776e352"><h2 class="sectiontitle" id="d64776e352">Response Description</h2>
+
+<div class="p">An array of configuration objects. A configuration object contains the following fields:
+ <ul>
+ <li><strong>Id</strong> - Long - The ID that is automatically generated for the configuration. The ID is unique for each configuration that is created.</li>
+
+ <li><strong>name</strong> - String - The name of the configuration.</li>
+
+ <li><strong>host_id</strong> - Long - The ID of the managed host for the configuration. If the ID is null, the configuration applies to all hosts in the deployment.</li>
+
+ <li><strong>device_name</strong> - String - The network device for the configuration.If the name is null, the configuration applies to all devices.</li>
+
+ <li><strong>kb_limit</strong> - Long - The bandwidth limit for the configuration in kilobytes/sec.</li>
+
+ <li><strong>created_by</strong> - String - The created_by field is automatically populated with USER, QRADAR-SAF, QRADAR-SF or QRADAR-AQS-PRIO.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d64776e395"><h2 class="sectiontitle" id="d64776e395">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "created_by": "String",
+        "device_name": "String",
+        "host_id": 42,
+        "hostname": "String",
+        "id": 42,
+        "kb_limit": 42,
+        "name": "String"
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d64776e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version120_bandwidth_manager_intro.html" title="Use the references for REST API 12.0 bandwidth manager endpoints.">Bandwidth manager endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>
