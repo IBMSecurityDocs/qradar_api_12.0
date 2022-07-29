@@ -113,7 +113,11 @@
 <td headers="d283204e132 "><p>text/plain</p>
 </td>
 
-<td headers="d283204e136 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+<td headers="d283204e136 "><p>A filter is required to identify which IP address to lookup. Only EQUALS and IN are
+supported.</p>
+
+<div class="p">Examples: <pre class="codeblock"><code>"ip_address" = "127.0.0.1"
+"ip_address" IN ( "127.0.0.1", "127.0.0.2" )</code></pre></div>
 </td>
 
 </tr>
